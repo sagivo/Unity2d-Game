@@ -17,4 +17,8 @@ public class Enemy : MonoBehaviour {
 			transform.position += transform.forward*Speed*Time.deltaTime;
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		Destroy(gameObject);
+	}
 }
