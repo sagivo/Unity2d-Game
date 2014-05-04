@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Ship : MonoBehaviour {
 
-	public float Speed = 200;
+	public float Speed = 2000;
 
 
 	// Use this for initialization
