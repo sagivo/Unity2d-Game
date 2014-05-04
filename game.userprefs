@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Ship.cs">
     <Files>
-      <File FileName="Assets/Scripts/Ship.cs" Line="17" Column="3" />
-      <File FileName="Assets/Scripts/Ship.cs" Line="17" Column="3" />
+      <File FileName="Assets/Scripts/Ship.cs" Line="19" Column="35" />
       <File FileName="Assets/Scripts/Enemy.cs" Line="15" Column="1" />
+      <File FileName="Assets/Scripts/CameraFollow.cs" Line="4" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

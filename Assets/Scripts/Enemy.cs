@@ -12,7 +12,9 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.LookAt(Player.transform.position);
-		transform.position += transform.forward*Speed*Time.deltaTime;
+		if (Player){
+			transform.LookAt(Player.transform.position);
+			transform.position += transform.forward*Speed*Time.deltaTime;
+		}
 	}
 }
