@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
-	public float Speed = 5;
+	public float Speed = 10;
 	public GameObject Player;
 
 	// Use this for initialization
