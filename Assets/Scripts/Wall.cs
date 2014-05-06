@@ -15,7 +15,6 @@ public class Wall : MonoBehaviour {
 
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log("hit wall");
 		if (other.gameObject.transform.parent) Destroy(gameObject.transform.parent.gameObject);
 		else Destroy(other.gameObject);
 	}

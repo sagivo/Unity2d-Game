@@ -7,8 +7,6 @@ public class Ship : MonoBehaviour {
 	public GameObject Bullet;
 	public GameObject Canon;
 
-	bool canPutCanon = false;
-
 	// Use this for initialization
 	void Start () {
 	}
