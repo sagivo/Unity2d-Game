@@ -23,6 +23,6 @@ public class Game : MonoBehaviour {
 
 	void spawnEnemy(){
 		Enemies.Add( (GameObject)Instantiate(EnemyToSpwn,new Vector3(Random.Range(-40f,40f),Random.Range(-40f,40f),-1f),Quaternion.identity) );
-		Invoke("spawnEnemy",Random.Range(0,SpawnEnemiesEvery));
+		Invoke("spawnEnemy",Random.Range(0, SpawnEnemiesEvery));
 	}
 }

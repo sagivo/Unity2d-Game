@@ -24,7 +24,7 @@ public class Ship : MonoBehaviour {
 
 	void shot()
 	{
-		Instantiate(Bullet, transform.position, transform.rotation);
+		Instantiate(Bullet, new Vector3(transform.position.x, transform.position.y + 5 , -1) , transform.rotation);
 	}
 
 	void putCanon(){
