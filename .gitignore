@@ -5,3 +5,4 @@ Assembly-CSharp.csproj
 game-csharp.sln
 game.sln
 game.userprefs
+.DS_Store
