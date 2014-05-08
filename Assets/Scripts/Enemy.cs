@@ -2,32 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Enemy : MonoBehaviour {
+/// <summary>
+/// base class for enemy types. to create an enemy inherit this class
+/// </summary>
+public class Enemy : Liveable {
+	public enum Type {spaceShip, Kamikazi}
 	public float Speed = 10;
-	public GameObject Player;
 
-	Game game;
+	void Start(){
+		Game.Enemies.Add(this);
+	}
 
-	// Use this for initialization
-	void Start () {
-		game = Game.Instance;
-		if (Player == null) Player = GameObject.FindWithTag("Player");
+	void OnDestroy(){
+		Game.Enemies.Remove(this);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		if (Player){
-			transform.LookAt(Player.transform.position);
-			transform.position += transform.forward*Speed*Time.deltaTime;
-		}
-	}
-
-	void OnTriggerEnter2D(Collider2D other) {
-		die();
-	}
-
-	void die(){
-		game.Enemies.Remove(gameObject);
-		Destroy(gameObject);
-	}
 }

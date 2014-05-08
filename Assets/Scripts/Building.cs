@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Canon : Liveable {
-	
+public class Building : Liveable {
+
+
 }
