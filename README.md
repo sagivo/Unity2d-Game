@@ -1,4 +1,6 @@
 Unity2d-Game
 ============
 
-Unity2d Game Sample Template
+A community-driven 2D Game.  
+Please read the [wiki](https://github.com/sagivo/Unity2d-Game/wiki) first.  
+Join our [Facebook group](https://www.facebook.com/groups/688592461201094/).
