@@ -5,7 +5,7 @@ public class Liveable : BaseObj {
 	
 	public int Health;
 	public int Level;
-	public enum Status {Live, Destroyed, Building, Repair}
+	public enum Status {Live, Destroyed, Upgrading, Repair}
 
 	public System.Action<object> OnHit;
 	public System.Action<object> OnDie;
