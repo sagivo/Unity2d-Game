@@ -1,8 +1,33 @@
+# =============== #
+# Unity generated #
+# =============== #
 Temp/
+Obj/
+UnityGenerated/
 Library/
-Assembly-CSharp-vs.csproj
-Assembly-CSharp.csproj
-game-csharp.sln
-game.sln
-game.userprefs
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
