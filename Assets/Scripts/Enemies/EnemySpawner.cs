@@ -8,12 +8,16 @@ public class EnemySpawner : Enemy
 	public float SpawnEvery = 20f;
 	//private
 	int currentEnemyCount = 0;
-
 	float nextSpawn;
-	// Use this for initialization
+
 	void Start ()
 	{
 		nextSpawn = Time.time + SpawnEvery;
+	}
+
+	void Update ()
+	{
+		CheckSpawn ();
 	}
 
 	void ReleaseEnemy ()
@@ -29,11 +33,5 @@ public class EnemySpawner : Enemy
 			ReleaseEnemy ();
 			nextSpawn = Time.time + SpawnEvery;
 		}
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		CheckSpawn ();
 	}
 }
