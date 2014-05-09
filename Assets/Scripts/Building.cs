@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Canon : Liveable {
+public class Building : Liveable {
 
 	void Start(){
-		Game.Canons.Add(this);
+		Game.Buildings.Add(this);
 	}
 	
 	void OnDestroy(){
-		Game.Canons.Remove(this);
+		Game.Buildings.Remove(this);
 	}
 
 }
