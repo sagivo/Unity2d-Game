@@ -4,18 +4,16 @@ using System.Collections;
 public class EnemySpawner : Enemy
 {
 	public GameObject EnemyToSpawn;
-
 	public int MaxEnemies = 5;
-	public float WaitTime = 20f;
+	public float SpawnEvery = 20f;
+	//private
+	int currentEnemyCount = 0;
 
-	private int currentEnemyCount = 0;
-	private float currentTime = 0f;
-	private float goalTime = 0f;
-
+	float nextSpawn;
 	// Use this for initialization
 	void Start ()
 	{
-		goalTime = WaitTime;
+		nextSpawn = Time.time + SpawnEvery;
 	}
 
 	void ReleaseEnemy ()
@@ -26,24 +24,10 @@ public class EnemySpawner : Enemy
 
 	void CheckSpawn ()
 	{
-		if (currentEnemyCount < MaxEnemies) 
+		if (currentEnemyCount < MaxEnemies && Time.time > nextSpawn) 
 		{
-			float currDeltaTime = Time.deltaTime * 10;
-
-			if (currentTime == 0) 
-			{
-				currentTime += currDeltaTime;
-			}
-
-			if (currentTime >= goalTime) 
-			{
-				ReleaseEnemy ();
-				goalTime += WaitTime;
-			}
-			else 
-			{
-				currentTime += currDeltaTime;
-			}
+			ReleaseEnemy ();
+			nextSpawn = Time.time + SpawnEvery;
 		}
 	}
 	

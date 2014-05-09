@@ -2,32 +2,26 @@
 using System.Collections;
 
 public class EnemyFollower : Enemy {
-	
-	// Use this for initialization
+
+	public GameObject Target;
+
 	void Start () 
 	{
-		Target = GameObject.FindGameObjectWithTag ("Player");
+		if (Target == null) Target = GameObject.FindGameObjectWithTag("Player");
 		IsAutoMove = true;
 	}	
 	
+	void Update () 
+	{
+		if (IsMoving == true) Move();
+	}
+
 	public void Move()
 	{
 		if(Target != null)
 		{
-			float Step = Speed * Time.deltaTime;
-			this.transform.position = Vector3.MoveTowards(transform.position, 
-			                                              Target.transform.position, 
-			                                              Step);
+			this.transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, Speed * Time.deltaTime);
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		if (IsMoving == true)
-		{
-			Move();
-		}
 
-	}
 }
