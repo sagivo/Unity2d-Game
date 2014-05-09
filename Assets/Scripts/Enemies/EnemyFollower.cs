@@ -4,30 +4,27 @@ using System.Collections;
 public class EnemyFollower : Enemy {
 	
 	// Use this for initialization
-	void Start () {
-		//OnMove = delegate( MoveTowardTarget);
+	void Start () 
+	{
 		Target = GameObject.FindGameObjectWithTag ("Player");
-		StartMoving();
-	}
-	
+		IsAutoMove = true;
+	}	
 	
 	public void Move()
 	{
 		if(Target != null)
 		{
-			float fStep = Speed * Time.deltaTime;
+			float Step = Speed * Time.deltaTime;
 			this.transform.position = Vector3.MoveTowards(transform.position, 
 			                                              Target.transform.position, 
-			                                              fStep);
+			                                              Step);
 		}
 	}
-	
-	
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (isMoving == true)
+		if (IsMoving == true)
 		{
 			Move();
 		}
