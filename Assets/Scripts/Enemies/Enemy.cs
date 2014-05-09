@@ -12,15 +12,15 @@ public class Enemy : Liveable
 	public bool IsAutoMove = true;
 	public float Speed = 10;
 
-	public void DecreaseHealth(int amount)
-	{
-		Health -= amount;
-	}
-
 	void Start()
 	{
 		Game.Enemies.Add(this);
 		if(IsAutoMove == true) IsMoving = true;
+	}
+
+	public void DecreaseHealth(int amount)
+	{
+		Health -= amount;
 	}
 	
 	void OnDestroy()
