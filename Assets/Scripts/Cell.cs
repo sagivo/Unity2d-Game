@@ -5,6 +5,7 @@ public class Cell : BaseObj {
 
 	public enum CellType {Empty, Player, Canon, Building};
 	public CellType Type;
+	public bool Selected;
 	SpriteRenderer sprite;
 	//events
 	public delegate void HitEvent(object sender, object args); public HitEvent OnHit;
@@ -14,10 +15,15 @@ public class Cell : BaseObj {
 	}
 
 	void OnMouseEnter() {
-		sprite.color = Color.cyan;
+		if (!Selected) sprite.color = Color.cyan;
 	} 
 
 	void OnMouseExit() {
-		sprite.color = Color.white;
+		if (!Selected) sprite.color = Color.white;
+	}
+
+	void OnMouseDown() {
+		sprite.color = (sprite.color == Color.red) ? Color.white : Color.red;
+		Selected = !Selected;
 	}
 }
