@@ -6,7 +6,16 @@ public class Bullet : Liveable {
 
 	void Start () {
 		rigidbody2D.velocity = transform.forward * Speed;
-
 	}
 
+	void OnBecameInvisible () {
+		DestroyObject(this);
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if(other.gameObject.tag == "WALL")
+		{
+			DestroyObject(this.gameObject);
+		}
+	}
 }

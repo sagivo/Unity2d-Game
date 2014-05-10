@@ -10,11 +10,21 @@ public class Enemy : Liveable {
 	public float Speed = 10;
 
 	void Start(){
-		Game.Enemies.Add(this);
+		if(Game)
+		{
+			Game.Enemies.Add(this);
+		}
 	}
 
 	void OnDestroy(){
-		Game.Enemies.Remove(this);
+		if(Game)
+		{
+			Game.Enemies.Remove(this);
+		}
 	}
-	
+
+	void Update()
+	{
+		transform.position = new Vector3(transform.position.x + 0.01f,transform.position.y,transform.position.z);
+	}
 }
