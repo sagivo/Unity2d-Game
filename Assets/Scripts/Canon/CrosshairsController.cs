@@ -17,19 +17,19 @@ public class CrosshairsController : MonoBehaviour
 
 		void Awake ()
 		{
-				if (!mouseCursor) {
-						mouseCursor = (GameObject)Instantiate (cursor);
-				}
+			if (!mouseCursor) {
+				mouseCursor = (GameObject)Instantiate (cursor);
+			}
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
-				if (isShowns && mouseCursor) {				
-						Vector3 mousePos = Input.mousePosition;
-						Vector3 wantedPosition = Camera.main.ScreenToWorldPoint (new Vector3 (mousePos.x, mousePos.y, 1f));
-						mouseCursor.transform.position = wantedPosition;
-				}			
+			if (isShowns && mouseCursor) {				
+				Vector3 mousePos = Input.mousePosition;
+				Vector3 wantedPosition = Camera.main.ScreenToWorldPoint (new Vector3 (mousePos.x, mousePos.y, 1f));
+				mouseCursor.transform.position = wantedPosition;
+			}			
 		}
 }
 

@@ -3,31 +3,27 @@ using System.Collections;
 
 public class Canon : Liveable
 {
-
 		//canon types
 		public enum CanonType
 		{
 			Regular,
 			AutoAim
 		}
-		
+
 		//public
 		public CanonType type;
 
 		//bullet travel speed
 		[Range(0.001f, 0.1f)] 
 		public float bulletSpeed = 0.001f;
-
-
-		//private 
-		private bool isActive = false;
-		
+	
 		//the ammo
 		public GameObject ammoPrefab;
 		
 		//spawner for the bullets
 		private GameObject bulletSpawnerLayer;
-
+		
+		//the current target for the auto aim
 		private GameObject aquieredTarget;
 	
 		void Start ()
@@ -36,7 +32,7 @@ public class Canon : Liveable
 					Game.Canons.Add (this);
 			}
 			
-			//find the layer
+			//find the layer on which we will be spawning our bullets
 			bulletSpawnerLayer = GameObject.FindGameObjectWithTag("SPAWNS");
 		}
 	
@@ -60,7 +56,9 @@ public class Canon : Liveable
 			}
 			else if(type == CanonType.AutoAim && aquieredTarget)
 			{
-				Debug.Log(aquieredTarget.transform.position.x);
+				//TODO: need to fire here
+				
+				//rotating toward the current enemy
 				rotateToPosition(Camera.main.ScreenToWorldPoint(aquieredTarget.transform.position),this.transform.position);
 			}
 		}
