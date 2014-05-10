@@ -26,6 +26,6 @@ public class Enemy : Liveable {
 	void Update()
 	{
 		//used this for testing
-//		transform.position = new Vector3(transform.position.x + 0.01f,transform.position.y,transform.position.z);
+		transform.position = new Vector3(transform.position.x + 0.01f,transform.position.y,transform.position.z);
 	}
 }

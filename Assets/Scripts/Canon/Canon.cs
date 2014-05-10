@@ -16,7 +16,11 @@ public class Canon : Liveable
 		//bullet travel speed
 		[Range(0.001f, 0.1f)] 
 		public float bulletSpeed = 0.001f;
-	
+		
+		[Range(5, 0.1f)] 
+		public float fireRate = 1f;
+		private float timer;
+
 		//the ammo
 		public GameObject ammoPrefab;
 		
@@ -51,22 +55,28 @@ public class Canon : Liveable
 				
 				//handle mouse behaviours
 				if (Input.GetMouseButtonDown (0)) {
-					Fire ();
-				}
+					Fire(Input.mousePosition);
+			}
 			}
 			else if(type == CanonType.AutoAim && aquieredTarget)
 			{
-				//TODO: need to fire here
 				
 				//rotating toward the current enemy
-				rotateToPosition(Camera.main.ScreenToWorldPoint(aquieredTarget.transform.position),this.transform.position);
+				rotateToPosition(Camera.main.WorldToScreenPoint(aquieredTarget.transform.position),this.transform.position);
+
+				//TODO: need to fire here
+				timer += Time.deltaTime;
+				if(timer > fireRate)
+				{
+					Fire(Camera.main.WorldToScreenPoint(aquieredTarget.transform.position));
+					timer = 0 ;// reset timer for fire rate
+				}
 			}
 		}
 		
 		//fire 
-		private void Fire ()
+		private void Fire (Vector3 pos)
 		{
-			Vector3 pos = Input.mousePosition;
 			pos.z = transform.position.z - Camera.main.transform.position.z;
 			pos = Camera.main.ScreenToWorldPoint (pos);
 	
