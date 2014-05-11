@@ -28,6 +28,4 @@ public class Enemy : Liveable
 		Game.Enemies.Remove(this);
 	}
 
-
-
 }
