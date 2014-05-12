@@ -12,7 +12,7 @@ public class Enemy : Liveable
 	public bool IsAutoMove = true;
 	public float Speed = 10;
 
-	void Start()
+	void Start() 
 	{
 		Game.Enemies.Add(this);
 		if(IsAutoMove == true) IsMoving = true;
