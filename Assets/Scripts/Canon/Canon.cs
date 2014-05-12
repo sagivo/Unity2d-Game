@@ -66,6 +66,8 @@ public class Canon : Liveable
 					timer = 0 ;// reset timer for fire rate
 				}
 			}
+
+			
 		}
 		
 		//fire 
@@ -93,5 +95,10 @@ public class Canon : Liveable
 			if(type == CanonType.AutoAim && other.tag == "ENEMY" && !aquieredTarget){
 				aquieredTarget = other.gameObject;
 			}
+		}
+
+		public void DecreaseHealth(int amount)
+		{
+			Health -= amount;
 		}
 }

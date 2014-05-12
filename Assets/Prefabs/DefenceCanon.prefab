@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game: {fileID: 0}
+  healthBar: {fileID: 100004, guid: bd61b2df0f9f641a288987480f8af648, type: 2}
   Health: 0
   Level: 0
   type: 1

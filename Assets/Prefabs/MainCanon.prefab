@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game: {fileID: 0}
+  healthBar: {fileID: 0}
   Health: 0
   Level: 0
   type: 0
