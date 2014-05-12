@@ -96,7 +96,7 @@ public class Canon : Liveable
 		}
 	
 		void OnTriggerEnter2D(Collider2D other) {
-			if(type == CanonType.AutoAim && other.tag == "Enemy" && !aquieredTarget)
+			if(type == CanonType.AutoAim && other.tag == "ENEMY" && !aquieredTarget)
 			{
 				aquieredTarget = other.gameObject;
 			}

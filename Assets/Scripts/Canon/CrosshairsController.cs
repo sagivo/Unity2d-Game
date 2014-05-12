@@ -17,6 +17,7 @@ public class CrosshairsController : MonoBehaviour
 
 		void Awake ()
 		{
+			Screen.showCursor = false;
 			if (!mouseCursor) {
 				mouseCursor = (GameObject)Instantiate (cursor);
 			}
