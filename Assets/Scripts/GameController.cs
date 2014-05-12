@@ -12,10 +12,4 @@ public class GameController : Singleton<GameController> {
 	public List<Building> Buildings = new List<Building>(); //populate this list each time you create a building.
 	public List<Canon> Canons = new List<Canon>(); //populate this list each time you create a building.
 
-
-	void Awake(){
-		Debug.Log('0');
-	}
-	
-
 }
