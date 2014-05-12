@@ -4,8 +4,7 @@ using System.Collections;
 public class Canon : Liveable
 {
 		//canon types
-		public enum CanonType
-		{
+		public enum CanonType{
 			Regular,
 			AutoAim
 		}
@@ -32,10 +31,9 @@ public class Canon : Liveable
 	
 		void Start ()
 		{
-			if (Game) {
+			if (Game){
 					Game.Canons.Add (this);
 			}
-			
 			//find the layer on which we will be spawning our bullets
 			bulletSpawnerLayer = GameObject.FindGameObjectWithTag("SPAWNS");
 		}
@@ -49,25 +47,21 @@ public class Canon : Liveable
 
 		void Update ()
 		{
-			if(type == CanonType.Regular){
+			if(type == CanonType.Regular)
+			{
 				//Rotating the canon to the croshair
 				rotateToPosition(Input.mousePosition,this.transform.position);
 				
 				//handle mouse behaviours
 				if (Input.GetMouseButtonDown (0)) {
 					Fire(Input.mousePosition);
-			}
-			}
-			else if(type == CanonType.AutoAim && aquieredTarget)
-			{
-				
+				}
+			}else if(type == CanonType.AutoAim && aquieredTarget){
 				//rotating toward the current enemy
 				rotateToPosition(Camera.main.WorldToScreenPoint(aquieredTarget.transform.position),this.transform.position);
-
 				//TODO: need to fire here
 				timer += Time.deltaTime;
-				if(timer > fireRate)
-				{
+				if(timer > fireRate){
 					Fire(Camera.main.WorldToScreenPoint(aquieredTarget.transform.position));
 					timer = 0 ;// reset timer for fire rate
 				}
@@ -79,7 +73,6 @@ public class Canon : Liveable
 		{
 			pos.z = transform.position.z - Camera.main.transform.position.z;
 			pos = Camera.main.ScreenToWorldPoint (pos);
-	
 			Quaternion q = Quaternion.FromToRotation (Vector3.up, pos - transform.position);
 			GameObject go = (GameObject)Instantiate (ammoPrefab, this.transform.position, q);
 			go.transform.parent = bulletSpawnerLayer.transform;
@@ -95,9 +88,9 @@ public class Canon : Liveable
 			transform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle));
 		}
 	
-		void OnTriggerEnter2D(Collider2D other) {
-			if(type == CanonType.AutoAim && other.tag == "ENEMY" && !aquieredTarget)
-			{
+		void OnTriggerEnter2D(Collider2D other) 
+		{
+			if(type == CanonType.AutoAim && other.tag == "ENEMY" && !aquieredTarget){
 				aquieredTarget = other.gameObject;
 			}
 		}
