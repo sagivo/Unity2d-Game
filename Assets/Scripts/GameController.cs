@@ -2,8 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class GameController : MonoBehaviour {
-	public static GameController Instance; //always call this instance to get the current game
+public class GameController : Singleton<GameController> {
 	public int Level;
 	public Player Player;
 	public int Score;
@@ -13,8 +12,10 @@ public class GameController : MonoBehaviour {
 	public List<Building> Buildings = new List<Building>(); //populate this list each time you create a building.
 	public List<Canon> Canons = new List<Canon>(); //populate this list each time you create a building.
 
+
 	void Awake(){
-		Instance = this;
+		Debug.Log('0');
 	}
+	
 
 }
