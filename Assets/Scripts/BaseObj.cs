@@ -8,6 +8,4 @@ public class BaseObj : MonoBehaviour {
 	void Awake () {
 		Game = GameController.Instance;
 	}
-	
-
 }
