@@ -725,6 +725,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: 4421fa4e35a1e47c99dd0bf7996954b8, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4421fa4e35a1e47c99dd0bf7996954b8, type: 2}
   m_RootGameObject: {fileID: 1225888205}
@@ -787,7 +791,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Radius: 3.52999997
+  m_Radius: .400000006
   m_Center: {x: 0, y: 0}
 --- !u!114 &1225888209
 MonoBehaviour:
