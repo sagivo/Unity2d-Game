@@ -11,63 +11,45 @@ public class Canon : Liveable
 
 		//public
 		public CanonType type;
-
-		//bullet travel speed
 		[Range(0.001f, 0.1f)] 
 		public float bulletSpeed = 0.001f;
-		
 		[Range(5, 0.1f)] 
-		public float fireRate = 1f;
-		private float timer;
-
-		//the ammo
-		public GameObject ammoPrefab;
-		
-		//spawner for the bullets
-		private GameObject bulletSpawnerLayer;
+		public float fireRate = 1f;		
+		public GameObject ammoPrefab;				
 		
 		//the current target for the auto aim
-		private GameObject aquieredTarget;
-	
+		GameObject target;
+		GameObject bulletSpawnerLayer;
+		float nextShoot;
+		
 		void Start ()
 		{
-			if (Game){
-					Game.Canons.Add (this);
-			}
-			//find the layer on which we will be spawning our bullets
-			bulletSpawnerLayer = GameObject.FindGameObjectWithTag("SPAWNS");
+			nextShoot += fireRate;
+			Game.Canons.Add(this);			
+			bulletSpawnerLayer = GameObject.FindGameObjectWithTag("SPAWNS"); //find the layer on which we will be spawning our bullets
 		}
 	
 		void OnDestroy ()
 		{
-			if (Game) {
-					Game.Canons.Remove (this);
-			}
+			Game.Canons.Remove (this);
 		}
 
 		void Update ()
 		{
 			if(type == CanonType.Regular)
 			{
-				//Rotating the canon to the croshair
 				rotateToPosition(Input.mousePosition,this.transform.position);
-				
-				//handle mouse behaviours
-				if (Input.GetMouseButtonDown (0)) {
-					Fire(Input.mousePosition);
-				}
-			}else if(type == CanonType.AutoAim && aquieredTarget){
-				//rotating toward the current enemy
-				rotateToPosition(Camera.main.WorldToScreenPoint(aquieredTarget.transform.position),this.transform.position);
-				//TODO: need to fire here
-				timer += Time.deltaTime;
-				if(timer > fireRate){
-					Fire(Camera.main.WorldToScreenPoint(aquieredTarget.transform.position));
-					timer = 0 ;// reset timer for fire rate
+				if (Input.GetMouseButtonDown(0)) Fire(Input.mousePosition); //TODO: change to touch
+			} 
+			else if(type == CanonType.AutoAim && target){
+			rotateToPosition(Camera.main.WorldToScreenPoint(target.transform.position),this.transform.position);				
+				if (nextShoot < Time.time){
+				Fire(Camera.main.WorldToScreenPoint(target.transform.position));
+					nextShoot = Time.time + fireRate;
 				}
 			}
 		}
-		
+
 		//fire 
 		private void Fire (Vector3 pos)
 		{
@@ -90,8 +72,8 @@ public class Canon : Liveable
 	
 		void OnTriggerEnter2D(Collider2D other) 
 		{
-			if(type == CanonType.AutoAim && other.tag == "ENEMY" && !aquieredTarget){
-				aquieredTarget = other.gameObject;
+			if(type == CanonType.AutoAim && other.tag == "ENEMY" && !target){
+			target = other.gameObject;
 			}
 		}
 }
