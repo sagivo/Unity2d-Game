@@ -42,3 +42,19 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
+  - name: BG
+    userID: 1
+    uniqueID: 3065126927
+    locked: 0
+  - name: GAME
+    userID: 2
+    uniqueID: 2960056561
+    locked: 0
+  - name: HUD
+    userID: 3
+    uniqueID: 2975899457
+    locked: 0
+  - name: OVERLAY
+    userID: 4
+    uniqueID: 4006918597
+    locked: 0
