@@ -1652,12 +1652,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920c05de3378d429ba175dd196c5ca6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  Health: 0
-  Level: 0
-  Bullet: {fileID: 100000, guid: 99ecc692f77264859915029abc753aee, type: 2}
-  AvailableWepons: []
-  ActiveWeapon: {fileID: 0}
 --- !u!50 &2060214566
 Rigidbody2D:
   m_ObjectHideFlags: 0

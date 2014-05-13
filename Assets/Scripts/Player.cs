@@ -2,10 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Player : Liveable {
+public class Player : BaseObj {
 
-	public GameObject Bullet;
-	public List<Weapon> AvailableWepons;
-	public Weapon ActiveWeapon;
-	
 }

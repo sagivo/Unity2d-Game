@@ -16,6 +16,4 @@ public class Liveable : BaseObj {
 	public System.Action<object> OnRepairStart;
 	public System.Action<object> OnRepairEnd;
 
-
-
 }
