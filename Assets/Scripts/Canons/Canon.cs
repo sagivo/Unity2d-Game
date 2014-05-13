@@ -21,8 +21,8 @@ public class Canon : Liveable
 	
 		void Start ()
 		{
-			nextShoot += fireRate;
 			Game.Canons.Add (this);			
+			nextShoot += fireRate;
 			bulletSpawnerLayer = new GameObject("Spawns");
 		}
 

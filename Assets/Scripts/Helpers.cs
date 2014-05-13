@@ -7,7 +7,8 @@ public static class Helpers {
 	public static GameObject CloestToObject(object[] list, GameObject obj){
 		List<GameObject> l = new List<GameObject>();
 		foreach(var o in list){
-			if (o is GameObject) l.Add(o as GameObject);
+			if (o.GetType().IsSubclassOf(typeof(BaseObj))) 
+				l.Add(((BaseObj)o).gameObject);
 		}
 		return CloestToObject(l, obj);
 	}

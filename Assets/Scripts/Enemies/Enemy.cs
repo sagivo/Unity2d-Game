@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Enemy : Liveable 
 {
-	public float Speed = 10;
+	public float Speed = 3;
 	public GameObject Target;
 
 	void Start() 
