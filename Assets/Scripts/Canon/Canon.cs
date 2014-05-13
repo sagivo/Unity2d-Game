@@ -17,21 +17,21 @@ public class Canon : Liveable
 				bulletSpeed = 0.001f;
 		[Range(5, 0.1f)] 
 		public float
-				fireRate = 1f;		
+				fireRate = 1f;
 		public GameObject ammoPrefab;				
-		
+	
 		//the current target for the auto aim
 		GameObject target;
 		GameObject bulletSpawnerLayer;
 		float nextShoot;
-		
+	
 		void Start ()
 		{
 				nextShoot += fireRate;
 				Game.Canons.Add (this);			
-				bulletSpawnerLayer = GameObject.FindGameObjectWithTag ("SPAWNS"); //find the layer on which we will be spawning our bullets
+				bulletSpawnerLayer = new GameObject ("Spawns");
 		}
-	
+
 		void OnDestroy ()
 		{
 				Game.Canons.Remove (this);
@@ -71,16 +71,11 @@ public class Canon : Liveable
 				float angle = Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg;
 				transform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle));
 		}
-	
+
 		void OnTriggerEnter2D (Collider2D other)
 		{
-				if (type == CanonType.AutoAim && other.tag == "ENEMY" && !target) {
+				if (type == CanonType.AutoAim && other.tag == "Enemy" && !target) {
 						target = other.gameObject;
 				}
-		}
-
-		public void DecreaseHealth (int amount)
-		{
-				Health -= amount;
 		}
 }

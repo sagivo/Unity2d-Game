@@ -11,5 +11,9 @@ public class GameController : Singleton<GameController> {
 	public List<Enemy> Enemies = new List<Enemy>(); //populate this list each time you create an enemy.
 	public List<Building> Buildings = new List<Building>(); //populate this list each time you create a building.
 	public List<Canon> Canons = new List<Canon>(); //populate this list each time you create a building.
+	Sprite Sprite;
 
+	void a(){
+
+	}
 }

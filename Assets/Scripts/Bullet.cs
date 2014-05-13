@@ -15,7 +15,7 @@ public class Bullet : Liveable {
 	void OnTriggerEnter2D(Collider2D other) {
 
 		//when the bullet hits the walls of end of game area. Delete the bullet
-		if(other.gameObject.tag == "WALL")
+		if(other.gameObject.tag == "Wall")
 		{
 			DestroyObject(this.gameObject);
 		}
