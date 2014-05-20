@@ -5,6 +5,10 @@ public class Kamikazi : Enemy {
 
 	void Start () {
 		findTarget();
+		OnHit += (o) => {
+			var hited = (o as Collider2D).gameObject;
+			if (Helpers.IsSubClassOf<Canon>(hited)) Destroy(hited);
+		};
 	}
 	 
 	void Update () {

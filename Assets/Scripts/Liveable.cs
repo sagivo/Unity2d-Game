@@ -22,4 +22,9 @@ public class Liveable : BaseObj {
 		transform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle));
 	}
 
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (OnHit != null) OnHit(other);
+	}
+
 }

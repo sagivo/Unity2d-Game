@@ -23,4 +23,12 @@ public static class Helpers {
 		}
 		return closest;
 	}
+
+	public static bool IsSubClassOf<T>(GameObject o){
+		MonoBehaviour[] list = o.GetComponents<MonoBehaviour>();
+		foreach(MonoBehaviour mb in list)
+			if (mb is T) return true;
+		return false;
+	}
+
 }
