@@ -10,7 +10,7 @@ public class Kamikazi : Enemy {
 	void Update () {
 		if (Target != null){
 			LookAt2d(Target.transform);
-
+			transform.position = Vector2.MoveTowards(transform.position, Target.transform.position, Speed*Time.deltaTime);
 		}
 	}
 
