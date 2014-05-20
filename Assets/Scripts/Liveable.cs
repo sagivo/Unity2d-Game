@@ -16,12 +16,6 @@ public class Liveable : BaseObj {
 	public System.Action<object> OnRepairStart;
 	public System.Action<object> OnRepairEnd;
 
-	protected void LookAt2d(Transform target){
-		var dir = Camera.main.ScreenToWorldPoint(target.position) - Camera.main.ScreenToWorldPoint(transform.position);
-		var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg -90;
-		transform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle));
-	}
-
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (OnHit != null) OnHit(other);

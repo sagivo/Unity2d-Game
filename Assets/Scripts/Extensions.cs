@@ -31,4 +31,10 @@ public static class Extensions {
 		}
 		return closest;
 	}
+
+	public static void LookAt2d(this Transform thisTransform, Transform lookAt){
+		var dir = Camera.main.ScreenToWorldPoint(lookAt.position) - Camera.main.ScreenToWorldPoint(thisTransform.position);
+		var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg -90;
+		thisTransform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle));
+	}
 }
