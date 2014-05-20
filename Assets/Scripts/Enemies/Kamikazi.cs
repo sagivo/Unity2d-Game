@@ -7,7 +7,7 @@ public class Kamikazi : Enemy {
 		findTarget();
 		OnHit += (o) => {
 			var hited = (o as Collider2D).gameObject;
-			if (Helpers.IsSubClassOf<Canon>(hited)) Destroy(hited);
+			if (hited.IsSubClassOf<BaseObj>()) Destroy(hited);
 		};
 	}
 	 
@@ -19,7 +19,7 @@ public class Kamikazi : Enemy {
 	}
 
 	void findTarget() {
-		Target = Helpers.CloestToObject(Game.Canons.ToArray(), gameObject);
+		Target = gameObject.CloestToObject(Game.Canons.ToArray());
 		if (Target == null) Invoke("findTarget",1);
 	}
 
