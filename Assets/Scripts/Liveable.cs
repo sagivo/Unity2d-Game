@@ -10,7 +10,7 @@ public class Liveable : BaseObj {
 	public enum StatusType {Live, Destroyed, Upgrading, Repair}
 	public StatusType Status;
 
-	public System.Action<object> OnHit;
+	public System.Action<Collider2D> OnHit;
 	public System.Action OnDie;
 	public System.Action<object> OnBuildStart;
 	public System.Action<object> OnBuildEnd;

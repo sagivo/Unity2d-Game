@@ -12,7 +12,7 @@ public class Enemy : Liveable
 	{
 		Game.Enemies.Add(this);
 		OnHit += (o) => {
-			if (System.Array.IndexOf(hitTags, (o as Collider2D).gameObject.tag) > -1) Destroy(gameObject);
+			if (System.Array.IndexOf(hitTags, o.gameObject.tag) > -1) Destroy(gameObject);
 		};
 	}
 
