@@ -3,15 +3,16 @@ using System.Collections;
 
 public class Kamikazi : Enemy {
 
-	void Start () {
+	protected new void Start(){
+		base.Start();
+		Debug.Log("kami");
 		findTarget();
 		OnHit += (o) => {
-			var hited = (o as Collider2D).gameObject;
-			if (hited.IsSubClassOf<Canon>() || hited.IsSubClassOf<Bullet>()) Destroy(hited); Destroy(gameObject);
+			Debug.Log("aaa3");
 		};
 	}
 	 
-	void Update () {
+	protected new void Update(){
 		if (Target != null){
 			transform.LookAt2d(Target.transform);
 			transform.position = Vector2.MoveTowards(transform.position, Target.transform.position, Speed*Time.deltaTime);

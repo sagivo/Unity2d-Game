@@ -5,7 +5,10 @@ public class BaseObj : MonoBehaviour {
 
 	protected GameController Game;
 	
-	void Awake () {
+	protected void Awake () {
 		Game = GameController.Instance;
 	}
+
+	protected void Start(){}
+	protected void Update(){}
 }

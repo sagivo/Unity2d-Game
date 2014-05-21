@@ -7,12 +7,22 @@ public class Enemy : Liveable
 	public float Speed = 3;
 	public GameObject Target;
 
-	string[] hitTags = { "Bullet", "Player", "Enemy" };
-	void Start() 
-	{
+	//string[] hitTags = { "Bullet", "Player", "Enemy" };
+
+	protected new void Start(){
+		base.Start();
+		Debug.Log("enemy");
 		Game.Enemies.Add(this);
-		OnHit += (o) => {
-			if (System.Array.IndexOf(hitTags, o.gameObject.tag) > -1) Destroy(gameObject);
+
+		OnHit = (o) => {
+			Debug.Log("aaa");
+			//if (System.Array.IndexOf(hitTags, o.gameObject.tag) > -1) Destroy(gameObject);
+			if (o.gameObject.IsSubClassOf<Bullet>())
+				Health -= o.gameObject.GetComponent<Bullet>().Damage;
+		};
+
+		OnDie += () => {
+			Destroy(gameObject);
 		};
 	}
 

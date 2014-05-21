@@ -19,8 +19,8 @@ public class Canon : Liveable
 		GameObject bulletSpawnerLayer;
 		float nextShoot;
 	
-		void Start ()
-		{
+		protected new void Start(){
+		base.Start();
 			Game.Canons.Add (this);			
 			nextShoot += fireRate;
 			bulletSpawnerLayer = new GameObject("Spawns");
@@ -30,8 +30,8 @@ public class Canon : Liveable
 			Game.Canons.Remove(this);
 		}
 
-		void Update ()
-		{
+		protected new void Update(){
+			base.Update();
 			if (type == CanonType.Regular) {
 				rotateToPosition (Input.mousePosition, this.transform.position);
 				if (Input.GetMouseButtonDown (0))

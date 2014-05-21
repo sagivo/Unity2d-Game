@@ -16,7 +16,8 @@ public class Cell : BaseObj {
 	//events
 	public delegate void HitEvent(object sender, object args); public HitEvent OnHit;
 
-	void Start(){
+	protected new void Start(){
+		base.Start();
 		Game.Cells.Add(this);
 		sprite = gameObject.GetComponent<SpriteRenderer>();
 	}

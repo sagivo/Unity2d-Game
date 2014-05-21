@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Building : Liveable {
 
-	void Start(){
+	protected new void Start(){
+		base.Start();
 		Game.Buildings.Add(this);
 	}
 	
