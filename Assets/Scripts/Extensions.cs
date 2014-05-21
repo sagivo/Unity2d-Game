@@ -34,8 +34,12 @@ public static class Extensions {
 	}
 
 	public static void LookAt2d(this Transform thisTransform, Transform lookAt){
+		LookAt2d(thisTransform,lookAt,-90);
+	}
+
+	public static void LookAt2d(this Transform thisTransform, Transform lookAt, float rotate){
 		var dir = Camera.main.ScreenToWorldPoint(lookAt.position) - Camera.main.ScreenToWorldPoint(thisTransform.position);
-		var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg -90;
+		var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - rotate;
 		thisTransform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle));
 	}
 }

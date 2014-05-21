@@ -80,8 +80,8 @@ CircleCollider2D:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Radius: .200000003
+  m_IsTrigger: 0
+  m_Radius: .100000001
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:

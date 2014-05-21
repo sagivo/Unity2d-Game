@@ -5,10 +5,8 @@ public class Kamikazi : Enemy {
 
 	protected new void Start(){
 		base.Start();
-		Debug.Log("kami");
 		findTarget();
 		OnHit += (o) => {
-			Debug.Log("aaa3");
 		};
 	}
 	 

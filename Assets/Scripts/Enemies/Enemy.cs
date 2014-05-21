@@ -11,14 +11,13 @@ public class Enemy : Liveable
 
 	protected new void Start(){
 		base.Start();
-		Debug.Log("enemy");
 		Game.Enemies.Add(this);
 
 		OnHit = (o) => {
-			Debug.Log("aaa");
 			//if (System.Array.IndexOf(hitTags, o.gameObject.tag) > -1) Destroy(gameObject);
-			if (o.gameObject.IsSubClassOf<Bullet>())
-				Health -= o.gameObject.GetComponent<Bullet>().Damage;
+			if (o.gameObject.IsSubClassOf<Bullet>()){
+				DecHealth(o.gameObject.GetComponent<Bullet>().Damage);
+			}
 		};
 
 		OnDie += () => {
