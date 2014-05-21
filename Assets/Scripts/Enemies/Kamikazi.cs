@@ -7,7 +7,7 @@ public class Kamikazi : Enemy {
 		findTarget();
 		OnHit += (o) => {
 			var hited = (o as Collider2D).gameObject;
-			if (hited.IsSubClassOf<BaseObj>()) Destroy(hited);
+			if (hited.IsSubClassOf<Canon>() || hited.IsSubClassOf<Bullet>()) Destroy(hited); Destroy(gameObject);
 		};
 	}
 	 

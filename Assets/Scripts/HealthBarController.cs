@@ -16,5 +16,7 @@ public class HealthBarController : MonoBehaviour
 		float difference = newValue - originalValue;
 		hbProgress.transform.Translate (new Vector3 (-difference, 0f, 0f));
 		if (transform.parent) transform.rotation = new Quaternion (0f, 0f, 0f, -transform.parent.rotation.z);	
+
+		//TODO: renderer.bounds.extents to set height 
 	}
 }
