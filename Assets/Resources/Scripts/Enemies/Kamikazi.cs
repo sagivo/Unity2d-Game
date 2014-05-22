@@ -10,6 +10,8 @@ public class Kamikazi : Enemy {
 	}
 	 
 	protected new void Update(){
+		base.Update();
+
 		if (Target != null){
 			transform.LookAt2d(Target.transform);
 			transform.position = Vector2.MoveTowards(transform.position, Target.transform.position, Speed*Time.deltaTime);

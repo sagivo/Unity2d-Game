@@ -7,9 +7,10 @@ public class Enemy : Liveable
 	public float Speed = 3;
 	public GameObject Target;
 
-	//string[] hitTags = { "Bullet", "Player", "Enemy" };
+	SpriteRenderer spriteRenderer;
 
 	protected new void Start(){
+		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();
 		base.Start();
 		Game.Enemies.Add(this);
 
@@ -17,6 +18,9 @@ public class Enemy : Liveable
 			//if (System.Array.IndexOf(hitTags, o.gameObject.tag) > -1) Destroy(gameObject);
 			if (o.gameObject.IsSubClassOf<Bullet>()){
 				DecHealth(o.gameObject.GetComponent<Bullet>().Damage);
+				spriteRenderer.color = Color.red;
+				CancelInvoke("switchBackToOriginalColor");
+				Invoke("switchBackToOriginalColor", .2f);
 			}
 		};
 
@@ -29,6 +33,9 @@ public class Enemy : Liveable
 	{
 		Game.Enemies.Remove(this);
 	}
-	
+
+	void switchBackToOriginalColor(){
+		spriteRenderer.color = Color.white;
+	}
 
 }

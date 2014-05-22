@@ -4,8 +4,7 @@ using System.Collections;
 public class Canon : Liveable
 {
 	//canon types
-	public enum CanonType
-	{ Regular, AutoAim}
+	public enum CanonType{ Regular, AutoAim}
 
 	public CanonType type;
 	[Range(0.001f, 0.1f)] 
