@@ -2,12 +2,11 @@
 using System.Collections;
 
 public class Kamikazi : Enemy {
+	public int Damage = 30;
 
 	protected new void Start(){
 		base.Start();
 		findTarget();
-		OnHit += (o) => {
-		};
 	}
 	 
 	protected new void Update(){
