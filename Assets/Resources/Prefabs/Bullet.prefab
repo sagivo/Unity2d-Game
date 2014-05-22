@@ -63,9 +63,9 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_Mass: 9.99999975e-05
+  m_Mass: .100000001
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_FixedAngle: 0
   m_IsKinematic: 0
@@ -80,7 +80,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Radius: .100000001
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
@@ -94,10 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: defc64ee72e3e4ee7863c64956f5a4bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  Level: 0
-  Status: 0
-  Speed: 100
+  Speed: 200
   Damage: 10
 --- !u!212 &21200000
 SpriteRenderer:

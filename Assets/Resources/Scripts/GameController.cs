@@ -12,6 +12,10 @@ public class GameController : Singleton<GameController> {
 	public List<Building> Buildings = new List<Building>(); //populate this list each time you create a building.
 	public List<Canon> Canons = new List<Canon>(); //populate this list each time you create a building.
 	public List<Defense> Defenses = new List<Defense>(); //populate this list each time you create a building.
+	public GameObject spawnerLayer;
 	Sprite Sprite;
 
+	void Start(){
+		spawnerLayer = new GameObject("Spawns");		
+	}
 }

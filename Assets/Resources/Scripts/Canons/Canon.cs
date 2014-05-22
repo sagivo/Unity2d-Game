@@ -15,7 +15,6 @@ public class Canon : Liveable
 
 	//the current target for the auto aim
 	GameObject target;
-	GameObject bulletSpawnerLayer;
 	float nextShoot;
 
 	protected new void Start(){
@@ -23,7 +22,6 @@ public class Canon : Liveable
 		Game.Canons.Add (this);			
 		
 		nextShoot += fireRate;
-		bulletSpawnerLayer = new GameObject("Spawns");
 		OnHit += (o) => {
 			if (o.gameObject.IsSubClassOf<Kamikazi>()){
 				DecHealth(o.gameObject.GetComponent<Kamikazi>().Damage);
@@ -61,7 +59,7 @@ public class Canon : Liveable
 		pos = Camera.main.ScreenToWorldPoint (pos);
 		Quaternion q = Quaternion.FromToRotation (Vector3.up, pos - transform.position);
 		GameObject go = (GameObject)Instantiate (ammoPrefab, this.transform.position, q);
-		go.transform.parent = bulletSpawnerLayer.transform;
+		go.transform.parent = Game.spawnerLayer.transform;
 		go.rigidbody2D.AddForce (go.transform.up * bulletSpeed);
 	}
 

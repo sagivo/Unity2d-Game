@@ -2,14 +2,14 @@
 using System.Collections;
 
 public class AutoCanon : Defense {
+	public GameObject bullet;
 	GameObject target;
-	GameObject bullet;
 
 	protected  new void Start () {
 		base.Start();
 
+		//if (bullet == null) bullet = (Instantiate(Resources.Load("Prefabs/Bullet")) as GameObject);
 		InvokeRepeating("shoot",1,1);
-		if (bullet == null) bullet = (Instantiate(Resources.Load("Prefabs/Bullet")) as GameObject);
 	}
 	
 	protected new void Update () {
@@ -22,7 +22,7 @@ public class AutoCanon : Defense {
 	}
 
 	void shoot(){
-		Instantiate (bullet, transform.position, transform.rotation);
+		if (target != null) Instantiate (bullet, transform.position, transform.rotation);
 	}
 
 }
