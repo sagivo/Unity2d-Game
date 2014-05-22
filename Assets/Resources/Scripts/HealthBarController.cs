@@ -1,14 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HealthBarController : MonoBehaviour
+public class HealthBarController : BaseObj
 {	
 	public float health = 100f;	
-	public GameObject hbProgress;
 
-	// Update is called once per frame
-	void Update ()
+	GameObject hbProgress;
+	protected new void Start (){
+		hbProgress = transform.Find("HP Bar").gameObject;
+	}
+
+	protected new void Update ()
 	{
+		if (hbProgress == null) return;
 		float originalValue = hbProgress.renderer.bounds.min.x;
 		float calculate = Mathf.Clamp (health / 100f, 0f, 1f);
 		hbProgress.transform.localScale = new Vector3 (calculate, 1f, 1f);

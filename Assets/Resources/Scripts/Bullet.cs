@@ -7,6 +7,9 @@ public class Bullet : Liveable {
 
 	protected string[] hitTags = { "Bullet", "Enemy" };
 
+	protected new void Awake(){
+		ShowHealthBar = false;
+	}
 
 	protected new void Start(){
 		base.Start();
