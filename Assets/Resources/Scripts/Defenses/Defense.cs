@@ -9,9 +9,5 @@ public class Defense : Liveable {
 
 		OnDie += () => { Game.Defenses.Remove (this); };
 	}
-	
-	protected new void Update () {
-		base.Update();
-	}
 
 }

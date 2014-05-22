@@ -25,7 +25,7 @@ public static class Extensions {
 	public static GameObject CloestToObject(this GameObject obj, List<GameObject> list){
 		if (list.Count == 0) return null;
 		float minDistance = 100000f;
-		GameObject closest = new GameObject();
+		GameObject closest = null;
 		foreach(var entity in list){
 			var distance = Vector3.Distance(entity.transform.position, obj.transform.position);
 			if (distance < minDistance){ minDistance = distance; closest = entity;}

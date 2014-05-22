@@ -2,15 +2,17 @@
 using System.Collections;
 
 public class EnemySpawner : BaseObj {
-	public float spawnEvery = 2;
+	public float spawnEvery = 4;
 	public GameObject[] Enemies; 
 
 	protected new void Start () {
+		base.Start();
+
 		Invoke("spawn", Random.Range(0,spawnEvery));
 	}
 	
 	protected new void Update () {
-	
+		base.Update();
 	}
 
 	void spawn(){

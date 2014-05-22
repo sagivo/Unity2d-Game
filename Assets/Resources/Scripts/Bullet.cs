@@ -1,26 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bullet : Liveable {
+public class Bullet : BaseObj {
 	public float Speed = 500;
 	public int Damage = 10;
 
 	protected string[] hitTags = { "Bullet", "Enemy" };
 
-	protected new void Awake(){
-		ShowHealthBar = false;
-	}
-
 	protected new void Start(){
 		base.Start();
+
 		rigidbody2D.velocity = transform.forward * Speed;
-		OnHit += (o) => {
-			if (System.Array.IndexOf(hitTags, o.gameObject.tag) > -1) Destroy(gameObject);
-		};
-
+		rigidbody2D.AddForce (transform.up * Speed);
 	}
 
-	void OnBecameInvisible () {
-		DestroyObject(this);
+	void OnTriggerEnter2D(Collider2D other){
+		if (System.Array.IndexOf(hitTags, other.gameObject.tag) > -1) Destroy(gameObject);
 	}
+	
 }
