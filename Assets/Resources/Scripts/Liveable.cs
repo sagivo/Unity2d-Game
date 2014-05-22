@@ -3,9 +3,6 @@ using System.Collections;
 
 public class Liveable : BaseObj {
 
-	//public delegate void OnHitDel(Collider2D o);
-	//public OnHitDel OnHit;
-
 	public int Health {get{return health;} }
 	public int Level;
 	public enum StatusType {Live, Destroyed, Upgrading, Repair}

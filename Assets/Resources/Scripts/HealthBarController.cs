@@ -6,8 +6,9 @@ public class HealthBarController : BaseObj
 	public float health = 100f;	
 
 	GameObject hbProgress;
+
 	protected new void Start (){
-		hbProgress = transform.Find("HP Bar").gameObject;
+		if (transform.Find("HP Bar")) hbProgress = transform.Find("HP Bar").gameObject;
 	}
 
 	protected new void Update ()

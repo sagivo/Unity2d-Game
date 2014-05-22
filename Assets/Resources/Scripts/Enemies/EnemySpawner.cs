@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemySpawner : MonoBehaviour {
+public class EnemySpawner : BaseObj {
+	public float spawnEvery = 2;
+	public GameObject[] Enemies; 
 
-	// Use this for initialization
-	void Start () {
-	
+	protected new void Start () {
+		Invoke("spawn", Random.Range(0,spawnEvery));
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	protected new void Update () {
 	
+	}
+
+	void spawn(){
+		Instantiate(Enemies[0],new Vector3( transform.position.x + Random.Range(-5,5), transform.position.y + Random.Range(-2,2)),Quaternion.identity );
+		Invoke("spawn", Random.Range(0,spawnEvery));
 	}
 }
