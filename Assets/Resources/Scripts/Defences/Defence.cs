@@ -8,6 +8,6 @@ public class Defence : Liveable {
 
 		Game.Defences.Add (this);
 		OnDie += () => { Game.Defences.Remove (this); };
-	}
+	} 
 
 }
