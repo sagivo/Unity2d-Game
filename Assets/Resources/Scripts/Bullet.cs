@@ -8,7 +8,6 @@ public class Bullet : BaseObj {
 	protected string[] hitTags = { "Bullet", "Enemy" };
 
 	protected new void Start(){
-		L("created");
 		base.Start();
 
 		transform.parent = Game.spawnerLayer.transform;
