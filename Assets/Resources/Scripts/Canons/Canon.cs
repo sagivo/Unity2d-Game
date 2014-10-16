@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Canon : Liveable
@@ -24,7 +24,7 @@ public class Canon : Liveable
 		nextShoot += fireRate;
 		OnHit += (o) => {
 			if (o.gameObject.IsSubClassOf<Kamikazi>()){
-				DecHealth(o.gameObject.GetComponent<Kamikazi>().Damage);
+				DecHealth(o.gameObject.GetComponent<Kamikazi>().damage);
 			}
 		};
 
