@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Cell : BaseObj {
@@ -18,7 +18,7 @@ public class Cell : BaseObj {
 
 	protected new void Start(){
 		base.Start();
-		Game.Cells.Add(this);
+		Game.cells.Add(this);
 		sprite = gameObject.GetComponent<SpriteRenderer>();
 	}
 
@@ -36,7 +36,7 @@ public class Cell : BaseObj {
 	}
 	
 	void OnDestroy(){
-		Game.Cells.Remove(this);
+		Game.cells.Remove(this);
 	}
 
 }

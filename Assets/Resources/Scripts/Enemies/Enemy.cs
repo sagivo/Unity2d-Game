@@ -12,7 +12,7 @@ public class Enemy : Liveable
 	protected new void Start(){
 		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();
 		base.Start();
-		Game.Enemies.Add(this);
+		Game.enemies.Add(this);
 
 		OnHit = (o) => {
 			//if (System.Array.IndexOf(hitTags, o.gameObject.tag) > -1) Destroy(gameObject);
@@ -31,7 +31,7 @@ public class Enemy : Liveable
 
 	void OnDestroy()
 	{
-		Game.Enemies.Remove(this);
+		Game.enemies.Remove(this);
 	}
 
 	void switchBackToOriginalColor(){

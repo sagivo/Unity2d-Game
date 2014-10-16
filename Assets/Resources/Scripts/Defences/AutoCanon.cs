@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class AutoCanon : Defence {
@@ -15,7 +15,7 @@ public class AutoCanon : Defence {
 	protected new void Update () {
 		base.Update();
 
-		target = gameObject.CloestToObject(Game.Enemies.ToArray());
+		target = gameObject.CloestToObject(Game.enemies.ToArray());
 		if (target != null){
 			transform.LookAt2d(target.transform,90);
 		}

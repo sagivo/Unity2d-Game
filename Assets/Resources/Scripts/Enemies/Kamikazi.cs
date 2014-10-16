@@ -19,7 +19,7 @@ public class Kamikazi : Enemy {
 	}
 
 	void findTarget() {
-		target = gameObject.CloestToObject(Game.Canons.ToArray());
+		target = gameObject.CloestToObject(Game.canons.ToArray());
 		if (target == null) Invoke("findTarget",1);
 	}
 	

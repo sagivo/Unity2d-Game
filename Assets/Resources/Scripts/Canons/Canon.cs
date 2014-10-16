@@ -19,7 +19,7 @@ public class Canon : Liveable
 
 	protected new void Start(){
 		base.Start();
-		Game.Canons.Add (this);			
+		Game.canons.Add (this);			
 		
 		nextShoot += fireRate;
 		OnHit += (o) => {
@@ -34,7 +34,7 @@ public class Canon : Liveable
 	}
 
 	void OnDestroy (){
-		Game.Canons.Remove(this);
+		Game.canons.Remove(this);
 	}
 
 	protected new void Update(){
