@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class Bullet : BaseObj {
-	public float Speed = 200;
-	public int Damage = 10;
+	public float speed = 200;
+	public int damage = 10;
 
 	protected string[] hitTags = { "Bullet", "Enemy" };
 
@@ -12,8 +12,8 @@ public class Bullet : BaseObj {
 		base.Start();
 
 		transform.parent = Game.spawnerLayer.transform;
-		rigidbody2D.AddForce (transform.up * Speed);
-		rigidbody2D.velocity = transform.forward * Speed;
+		rigidbody2D.AddForce (transform.up * speed);
+		rigidbody2D.velocity = transform.forward * speed;
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
