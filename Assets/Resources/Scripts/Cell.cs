@@ -3,9 +3,9 @@ using System.Collections;
 
 public class Cell : BaseObj {
 
-	public enum CellType {Empty, Player, Canon, Building};
-	public CellType Type;
-	public bool Selected;
+	public enum cellType {Empty, Player, Canon, Building};
+	public cellType type;
+	public bool selected;
 
 	//colors
 	public Color ColorSelected = Color.red;
@@ -23,16 +23,16 @@ public class Cell : BaseObj {
 	}
 
 	void OnMouseEnter() {
-		if (!Selected) sprite.color = ColorOver;
+		if (!selected) sprite.color = ColorOver;
 	} 
 
 	void OnMouseExit() {
-		if (!Selected) sprite.color = ColorBase;
+		if (!selected) sprite.color = ColorBase;
 	}
 
 	void OnMouseDown() {
 		sprite.color = (sprite.color == ColorSelected) ? ColorBase : ColorSelected;
-		Selected = !Selected;
+		selected = !selected;
 	}
 	
 	void OnDestroy(){
