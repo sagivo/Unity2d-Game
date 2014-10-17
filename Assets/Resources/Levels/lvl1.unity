@@ -525,11 +525,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
       value: 4
-=======
-      value: 5
->>>>>>> 222fa97ee6b9fdee1e757af2483b82abf91ec017
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
@@ -1392,11 +1388,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 34a4a7e5a47594b40ac714fd48b61dfb, type: 2}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
       value: 3
-=======
-      value: 4
->>>>>>> 222fa97ee6b9fdee1e757af2483b82abf91ec017
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34a4a7e5a47594b40ac714fd48b61dfb, type: 2}
@@ -1589,11 +1581,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
       value: 1
-=======
-      value: 2
->>>>>>> 222fa97ee6b9fdee1e757af2483b82abf91ec017
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
@@ -1671,14 +1659,9 @@ MonoBehaviour:
   enemies:
   - {fileID: 100000, guid: a4079fadde8a44dde8c91afed04d9e10, type: 2}
   spawnPoints:
-<<<<<<< HEAD
   - {fileID: 1590323977}
   - {fileID: 1283253713}
   - {fileID: 147040034}
-=======
-  - {fileID: 71094393}
-  - {fileID: 2134420031}
->>>>>>> 222fa97ee6b9fdee1e757af2483b82abf91ec017
 --- !u!4 &1745475351
 Transform:
   m_ObjectHideFlags: 0
@@ -1689,14 +1672,9 @@ Transform:
   m_LocalPosition: {x: -.396450043, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-<<<<<<< HEAD
   - {fileID: 1590323977}
   - {fileID: 1283253713}
   - {fileID: 147040034}
-=======
-  - {fileID: 71094393}
-  - {fileID: 2134420031}
->>>>>>> 222fa97ee6b9fdee1e757af2483b82abf91ec017
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1 &1852844285
