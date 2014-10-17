@@ -20,6 +20,9 @@ public class Liveable : BaseObj {
 	int health = 100;
 	HealthBarController healthBar;
 
+	public int mineralCost = 10;
+	public int diamondCost = 1;
+
 	protected new void Start(){
 		base.Start();
 		Status = StatusType.Live;
@@ -42,6 +45,10 @@ public class Liveable : BaseObj {
 		if (OnHealthChanged!=null) OnHealthChanged(Health); 
 		if (health <= 0 && OnDie!=null) OnDie();
 		healthBar.health = Health;
+	}
+
+	public bool canBuild(){
+		return (mineralCost <= Game.minerals || diamondCost <= Game.diamonds);
 	}
 
 }

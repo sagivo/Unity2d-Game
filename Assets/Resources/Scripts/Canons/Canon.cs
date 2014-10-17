@@ -17,6 +17,10 @@ public class Canon : Liveable
 	GameObject target;
 	float nextShoot;
 
+	//ovveride
+	new public int mineralCost = 20;
+	new public int diamondCost = 1;
+
 	protected new void Start(){
 		base.Start();
 		Game.canons.Add (this);			

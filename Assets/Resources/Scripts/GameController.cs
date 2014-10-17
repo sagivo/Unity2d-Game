@@ -15,6 +15,9 @@ public class GameController : Singleton<GameController> {
 	public List<Defence> defences = new List<Defence>(); //populate this list each time you create a building.
 	public GameObject spawnerLayer;
 	Sprite Sprite;
+	//resources
+	public int minerals = 50;
+	public int diamonds = 3;
 
 	void Start(){
 		spawnerLayer = new GameObject("Spawns");		
