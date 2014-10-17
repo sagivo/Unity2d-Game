@@ -26,7 +26,6 @@ public class Liveable : BaseObj {
 		if (ShowHealthBar) {
 
 			var hb = Instantiate(Resources.Load("Prefabs/HealthBar"),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
-			//L(hb);
 			hb.transform.parent = transform;
 			healthBar = hb.AddComponent<HealthBarController>(); healthBar.health = Health;
 		}
@@ -34,7 +33,6 @@ public class Liveable : BaseObj {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		//L(other);
 		if (OnHit != null) OnHit(other);
 	}
 
