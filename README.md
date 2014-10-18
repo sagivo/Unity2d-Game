@@ -9,4 +9,4 @@ Join our development here - [Facebook group](https://www.facebook.com/groups/688
 [Game Specs](https://docs.google.com/presentation/d/1PxVB5uX5lVhBTMCCCCkIBSnwDcSZNMvuctG_pP9c4qg/edit#slide=id.g3858c9d95_063)
 
 
-*Compatible with Unity3d V# 4.5.6 (Beta)*
+*Compatible with Unity3d V# 4.6 (Beta)*
