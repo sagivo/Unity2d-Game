@@ -4,7 +4,7 @@ using System.Collections;
 public class Liveable : BaseObj {
 
 	public int Health {get{return health;} }
-	public int level;
+	public int Level;
 	public enum StatusType {Live, Destroyed, Upgrading, Repair}
 	public StatusType Status;
 	public bool ShowHealthBar = true;
