@@ -22,21 +22,30 @@ public class Cell : BaseObj {
 		sprite = gameObject.GetComponent<SpriteRenderer>();
 	}
 
-	void OnMouseEnter() {
-		if (!selected) sprite.color = ColorOver;
-	} 
-
-	void OnMouseExit() {
-		if (!selected) sprite.color = ColorBase;
+	protected new void Update(){
+		base.Update();
+		if (Input.GetMouseButtonDown(0)) OnMouseDown();
 	}
-
+	
 	void OnMouseDown() {
-		sprite.color = (sprite.color == ColorSelected) ? ColorBase : ColorSelected;
-		selected = !selected;
+		CastRay();
 	}
 	
 	void OnDestroy(){
 		Game.cells.Remove(this);
+	}
+
+	
+	void CastRay() {
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+		var hit = Physics2D.Raycast(ray.origin,Vector2.zero ,100 , ( 1 << LayerMask.NameToLayer("Cells") ));
+		if (hit && hit.collider.gameObject == gameObject && hit.collider.GetComponent<Cell>() == this){
+			Debug.Log("Hit object: " + hit.collider.gameObject.name);
+			hit.collider.gameObject.GetComponent<SpriteRenderer>().color = ((hit.collider.gameObject.GetComponent<SpriteRenderer>().color == ColorSelected) ? ColorBase : ColorSelected);
+			//selected = !selected;
+		}
+		//*/
 	}
 
 }

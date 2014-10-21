@@ -10,10 +10,11 @@ public class Menu : BaseObj {
 		base.Awake();
 
 		anim = GetComponent<Animator>();
+		anim.SetTrigger("Open");
 	}
 	
 	// Update is called once per frame
 	public void Open () {
-		anim.SetTrigger("Open");
+
 	}
 }

@@ -14,11 +14,11 @@ TagManager:
   Builtin Layer 2: Ignore Raycast
   Builtin Layer 3: 
   Builtin Layer 4: Water
-  Builtin Layer 5: 
+  Builtin Layer 5: UI
   Builtin Layer 6: 
   Builtin Layer 7: 
-  User Layer 8: 
-  User Layer 9: 
+  User Layer 8: Cells
+  User Layer 9: Liveable
   User Layer 10: 
   User Layer 11: 
   User Layer 12: 
@@ -42,13 +42,17 @@ TagManager:
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:
-  - name: Default
-    userID: 0
-    uniqueID: 0
-    locked: 0
   - name: Bg
     userID: 1
     uniqueID: 3065126927
+    locked: 0
+  - name: Cells
+    userID: 6
+    uniqueID: 700998417
+    locked: 0
+  - name: Default
+    userID: 0
+    uniqueID: 0
     locked: 0
   - name: Game
     userID: 2
@@ -61,6 +65,10 @@ TagManager:
   - name: Overlay
     userID: 4
     uniqueID: 4006918597
+    locked: 0
+  - name: Liveable
+    userID: 7
+    uniqueID: 412041089
     locked: 0
   - name: Enemies
     userID: 5
