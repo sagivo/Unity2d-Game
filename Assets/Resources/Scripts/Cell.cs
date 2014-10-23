@@ -29,14 +29,11 @@ public class Cell : BaseObj {
 		Game.cells.Remove(this);
 	}
 
-	public void toggleSelect(){
-		/*
-		foreach(Cell c in Game.cells){
-			if (c == this) sprite.color = ((sprite.color == ColorSelected) ? ColorBase : ColorSelected);
-			else c.sprite.color = ColorBase;
-		}
-		*/
-		sprite.color = ((sprite.color == ColorSelected) ? ColorBase : ColorSelected);
+	public void select(){	
+		sprite.color = ColorSelected;
+		Game.menue.GetComponent<RectTransform>().position = new Vector2(transform.position.x + 2, transform.position.y + 2);
 	}
+
+
 
 }

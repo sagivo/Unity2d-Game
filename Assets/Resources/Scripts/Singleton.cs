@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+public class Singleton<T> : BaseObj where T : MonoBehaviour
 {
 	protected static T instance;
 	public static T Instance

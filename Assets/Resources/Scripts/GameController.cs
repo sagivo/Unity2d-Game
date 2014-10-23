@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class GameController : Singleton<GameController> {
 	public int level;
@@ -14,12 +15,19 @@ public class GameController : Singleton<GameController> {
 	public List<MineralMiner> mineralMiners = new List<MineralMiner>(); //populate this list each time you create a building.
 	public List<Defence> defences = new List<Defence>(); //populate this list each time you create a building.
 	public GameObject spawnerLayer;
+	public Menue menue;
 	Sprite Sprite;
 	//resources
 	public int minerals = 50;
 	public int diamonds = 3;
 
-	void Start(){
-		spawnerLayer = new GameObject("Spawns");		
+	new void Awake(){
+		base.Awake();
+		menue = GameObject.Find("Menue").GetComponent<Menue>();
+	}
+
+	new void Start(){
+		base.Start();
+		spawnerLayer = new GameObject("Spawns");	
 	}
 }
