@@ -85,6 +85,7 @@ GameObject:
   - 212: {fileID: 29185468}
   - 114: {fileID: 29185467}
   - 61: {fileID: 29185470}
+  - 50: {fileID: 29185471}
   m_Layer: 8
   m_Name: Cell
   m_TagString: Untagged
@@ -107,7 +108,6 @@ MonoBehaviour:
   type: 0
   selected: 0
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorOver: {r: 0, g: 1, b: 1, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &29185468
 SpriteRenderer:
@@ -156,6 +156,22 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
+--- !u!50 &29185471
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: ee702e24d29244ed6ae11130e84ad861,
+    type: 2}
+  m_PrefabInternal: {fileID: 1835832454}
+  m_GameObject: {fileID: 29185466}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &42253053
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +247,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1870079255}
+      - m_Target: {fileID: 0}
         m_MethodName: Open
         m_Mode: 1
         m_Arguments:
@@ -561,6 +577,7 @@ GameObject:
   - 212: {fileID: 297121490}
   - 114: {fileID: 297121489}
   - 61: {fileID: 297121492}
+  - 50: {fileID: 297121493}
   m_Layer: 8
   m_Name: Cell
   m_TagString: Untagged
@@ -583,7 +600,6 @@ MonoBehaviour:
   type: 0
   selected: 0
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorOver: {r: 0, g: 1, b: 1, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &297121490
 SpriteRenderer:
@@ -632,6 +648,22 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
+--- !u!50 &297121493
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: ee702e24d29244ed6ae11130e84ad861,
+    type: 2}
+  m_PrefabInternal: {fileID: 149941475}
+  m_GameObject: {fileID: 297121488}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1001 &384943717
 Prefab:
   m_ObjectHideFlags: 0
@@ -874,6 +906,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
   m_RootGameObject: {fileID: 1246404193}
@@ -1004,6 +1048,7 @@ GameObject:
   - 212: {fileID: 688165569}
   - 114: {fileID: 688165568}
   - 61: {fileID: 688165571}
+  - 50: {fileID: 688165572}
   m_Layer: 8
   m_Name: Cell
   m_TagString: Untagged
@@ -1026,7 +1071,6 @@ MonoBehaviour:
   type: 0
   selected: 0
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorOver: {r: 0, g: 1, b: 1, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &688165569
 SpriteRenderer:
@@ -1075,6 +1119,22 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
+--- !u!50 &688165572
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: ee702e24d29244ed6ae11130e84ad861,
+    type: 2}
+  m_PrefabInternal: {fileID: 1305346472}
+  m_GameObject: {fileID: 688165567}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &816778740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1294,7 @@ GameObject:
   - 212: {fileID: 983725198}
   - 114: {fileID: 983725200}
   - 61: {fileID: 983725201}
+  - 50: {fileID: 983725202}
   m_Layer: 8
   m_Name: Cell
   m_TagString: Untagged
@@ -1291,7 +1352,6 @@ MonoBehaviour:
   type: 0
   selected: 0
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorOver: {r: 0, g: 1, b: 1, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!61 &983725201
 BoxCollider2D:
@@ -1305,6 +1365,22 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
+--- !u!50 &983725202
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: ee702e24d29244ed6ae11130e84ad861,
+    type: 2}
+  m_PrefabInternal: {fileID: 473165367}
+  m_GameObject: {fileID: 983725197}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &997018229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,6 +1642,7 @@ GameObject:
   - 212: {fileID: 1246404196}
   - 114: {fileID: 1246404195}
   - 61: {fileID: 1246404194}
+  - 50: {fileID: 1246404198}
   m_Layer: 8
   m_Name: Cell
   m_TagString: Untagged
@@ -1600,7 +1677,6 @@ MonoBehaviour:
   type: 0
   selected: 0
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorOver: {r: 0, g: 1, b: 1, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1246404196
 SpriteRenderer:
@@ -1637,6 +1713,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2004252666}
   m_RootOrder: 2
+--- !u!50 &1246404198
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: ee702e24d29244ed6ae11130e84ad861,
+    type: 2}
+  m_PrefabInternal: {fileID: 536709106}
+  m_GameObject: {fileID: 1246404193}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &1283253712
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,6 +1916,7 @@ GameObject:
   - 212: {fileID: 1376378910}
   - 114: {fileID: 1376378909}
   - 61: {fileID: 1376378912}
+  - 50: {fileID: 1376378913}
   m_Layer: 8
   m_Name: Cell
   m_TagString: Untagged
@@ -1846,7 +1939,6 @@ MonoBehaviour:
   type: 0
   selected: 0
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorOver: {r: 0, g: 1, b: 1, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1376378910
 SpriteRenderer:
@@ -1895,6 +1987,22 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
+--- !u!50 &1376378913
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: ee702e24d29244ed6ae11130e84ad861,
+    type: 2}
+  m_PrefabInternal: {fileID: 1740093936}
+  m_GameObject: {fileID: 1376378908}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1001 &1450917153
 Prefab:
   m_ObjectHideFlags: 0
@@ -1916,19 +2024,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 34a4a7e5a47594b40ac714fd48b61dfb, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: .00839534029
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 34a4a7e5a47594b40ac714fd48b61dfb, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: .008680976
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 34a4a7e5a47594b40ac714fd48b61dfb, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: .00252653915
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 34a4a7e5a47594b40ac714fd48b61dfb, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .999923885
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 34a4a7e5a47594b40ac714fd48b61dfb, type: 2}
       propertyPath: m_RootOrder
@@ -1977,6 +2085,7 @@ GameObject:
   - 212: {fileID: 1634425498}
   - 114: {fileID: 1634425497}
   - 61: {fileID: 1634425500}
+  - 50: {fileID: 1634425501}
   m_Layer: 8
   m_Name: Cell
   m_TagString: Untagged
@@ -1999,7 +2108,6 @@ MonoBehaviour:
   type: 0
   selected: 0
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorOver: {r: 0, g: 1, b: 1, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1634425498
 SpriteRenderer:
@@ -2048,6 +2156,22 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
+--- !u!50 &1634425501
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000000, guid: ee702e24d29244ed6ae11130e84ad861,
+    type: 2}
+  m_PrefabInternal: {fileID: 1664427906}
+  m_GameObject: {fileID: 1634425496}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &1655175123
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,6 +2321,18 @@ Prefab:
     - target: {fileID: 400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
@@ -2351,6 +2487,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1852844287}
   - 114: {fileID: 1852844286}
+  - 114: {fileID: 1852844288}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2389,12 +2526,23 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 34a4a7e5a47594b40ac714fd48b61dfb, type: 2}
   m_PrefabInternal: {fileID: 1450917153}
   m_GameObject: {fileID: 1852844285}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: .00839534029, y: .008680976, z: .00252653915, w: .999923885}
   m_LocalPosition: {x: 1.09025156, y: -.241107136, z: -99.2990723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1852844288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1852844285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d3891d9c2f64afb9fa43de1cccb8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1870079250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,7 +2554,6 @@ GameObject:
   - 223: {fileID: 1870079253}
   - 114: {fileID: 1870079252}
   - 95: {fileID: 1870079254}
-  - 114: {fileID: 1870079255}
   - 225: {fileID: 1870079256}
   m_Layer: 5
   m_Name: Menue
@@ -2483,17 +2630,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1870079255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1870079250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08c33d8435fe647d4b3ffd72acba5553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!225 &1870079256
 CanvasGroup:
   m_ObjectHideFlags: 0
