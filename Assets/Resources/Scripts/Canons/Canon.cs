@@ -25,7 +25,7 @@ public class Canon : Liveable
 		
 		nextShoot += fireRate;
 		OnHit += (o) => {
-			if (o.gameObject.IsSubClassOf<Kamikazi>()){
+			if (o.gameObject.IsSubClassOf<Kamikazi>()){						
 				DecHealth(o.gameObject.GetComponent<Kamikazi>().damage);
 			}
 		};

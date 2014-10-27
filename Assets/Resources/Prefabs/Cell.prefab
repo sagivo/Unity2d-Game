@@ -54,7 +54,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
@@ -71,7 +71,6 @@ MonoBehaviour:
   type: 0
   selected: 0
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorOver: {r: 0, g: 1, b: 1, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200000
 SpriteRenderer:

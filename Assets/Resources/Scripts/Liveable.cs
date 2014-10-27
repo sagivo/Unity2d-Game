@@ -40,7 +40,6 @@ public class Liveable : BaseObj {
 	}
 
 	public void DecHealth(int by){
-
 		health -= by;
 		if (OnHealthChanged!=null) OnHealthChanged(Health); 
 		if (health <= 0 && OnDie!=null) OnDie();

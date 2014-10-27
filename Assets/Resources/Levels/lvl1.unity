@@ -153,7 +153,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 29185466}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
 --- !u!50 &29185471
@@ -651,7 +651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &264853356
 Transform:
   m_ObjectHideFlags: 0
@@ -762,7 +762,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 297121488}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
 --- !u!50 &297121493
@@ -824,7 +824,20 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5800000, guid: f525c99d6878540c6991ff61dfee1eb0, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800000, guid: f525c99d6878540c6991ff61dfee1eb0, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f525c99d6878540c6991ff61dfee1eb0, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400002, guid: f525c99d6878540c6991ff61dfee1eb0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f525c99d6878540c6991ff61dfee1eb0, type: 2}
   m_RootGameObject: {fileID: 1948281137}
   m_IsPrefabParent: 0
@@ -1098,7 +1111,7 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -1300,7 +1313,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 688165567}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
 --- !u!50 &688165572
@@ -1435,7 +1448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &879223414
 Transform:
   m_ObjectHideFlags: 0
@@ -1622,7 +1635,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 983725197}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
 --- !u!50 &983725202
@@ -1866,6 +1879,7 @@ GameObject:
   - 4: {fileID: 1238812270}
   - 212: {fileID: 1238812269}
   - 58: {fileID: 1238812271}
+  - 114: {fileID: 1238812273}
   m_Layer: 0
   m_Name: cannon
   m_TagString: Untagged
@@ -1918,8 +1932,28 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Radius: .449999928
+  m_Radius: .400000006
   m_Center: {x: 0, y: 0}
+--- !u!114 &1238812273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1238812268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393e58ef9f0dc41129cf6ee0cb733896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  status: 0
+  showHealthBar: 1
+  mineralCost: 10
+  diamondCost: 1
+  type: 0
+  bulletSpeed: .00100000005
+  fireRate: 1
+  ammoPrefab: {fileID: 0}
 --- !u!1 &1246404193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,7 +1982,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1246404193}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
 --- !u!114 &1246404195
@@ -2189,6 +2223,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
   m_RootGameObject: {fileID: 688165567}
@@ -2273,7 +2315,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1376378908}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
 --- !u!50 &1376378913
@@ -2442,7 +2484,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1634425496}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Size: {x: 2, y: 4}
   m_Center: {x: 0, y: 0}
 --- !u!50 &1634425501
@@ -2618,7 +2660,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
       propertyPath: m_IsActive
@@ -3266,7 +3308,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1948281138}
   - 114: {fileID: 1948281142}
-  - 114: {fileID: 1948281141}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3287,27 +3328,6 @@ Transform:
   - {fileID: 1238812270}
   m_Father: {fileID: 0}
   m_RootOrder: 9
---- !u!114 &1948281141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: f525c99d6878540c6991ff61dfee1eb0,
-    type: 2}
-  m_PrefabInternal: {fileID: 384943717}
-  m_GameObject: {fileID: 1948281137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393e58ef9f0dc41129cf6ee0cb733896, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 0
-  status: 0
-  showHealthBar: 1
-  mineralCost: 10
-  diamondCost: 1
-  type: 0
-  bulletSpeed: .0419999994
-  fireRate: 1
-  ammoPrefab: {fileID: 100002, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
 --- !u!114 &1948281142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3359,6 +3379,10 @@ Prefab:
     - target: {fileID: 400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
