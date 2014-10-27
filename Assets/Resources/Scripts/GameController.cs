@@ -15,7 +15,7 @@ public class GameController : Singleton<GameController> {
 	public List<MineralMiner> mineralMiners = new List<MineralMiner>(); //populate this list each time you create a building.
 	public List<Defence> defences = new List<Defence>(); //populate this list each time you create a building.
 	public GameObject spawnerLayer;
-	public Menue menue;
+	public CellMenue menue;
 	Sprite Sprite;
 	//resources
 	public int minerals = 50;
@@ -23,7 +23,7 @@ public class GameController : Singleton<GameController> {
 
 	new void Awake(){
 		base.Awake();
-		menue = GameObject.Find("Menue").GetComponent<Menue>();
+		menue = GameObject.Find("CellMenue").GetComponent<CellMenue>();
 	}
 
 	new void Start(){

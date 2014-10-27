@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Menue : BaseObj {
+public class CellMenue : BaseObj {
 	public static float longClickTime = .6f;
 	Animator anim;
 	float openMenueTime = 0;
