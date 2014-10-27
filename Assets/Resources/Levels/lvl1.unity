@@ -677,9 +677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4eedbb0a1af3492fba9aff8ffdb6d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 0
-  Status: 0
-  ShowHealthBar: 1
+  level: 0
+  status: 0
+  showHealthBar: 1
   mineralCost: 10
   diamondCost: 1
   bullet: {fileID: 100002, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
@@ -907,7 +907,7 @@ GameObject:
   - 222: {fileID: 431016281}
   - 114: {fileID: 431016280}
   m_Layer: 5
-  m_Name: Dimonds
+  m_Name: Diamonds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -927,8 +927,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: 79.5, y: 0}
-  m_SizeDelta: {x: -186.199997, y: 18}
+  m_AnchoredPosition: {x: 57.7000008, y: 0}
+  m_SizeDelta: {x: -126.5, y: 18}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &431016280
 MonoBehaviour:
@@ -950,12 +950,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 2
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Dimonds: 0'
+  m_Text: 'Diamonds: 0'
 --- !u!222 &431016281
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1202,9 +1202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4eedbb0a1af3492fba9aff8ffdb6d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 0
-  Status: 0
-  ShowHealthBar: 1
+  level: 0
+  status: 0
+  showHealthBar: 1
   mineralCost: 10
   diamondCost: 1
   bullet: {fileID: 100002, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
@@ -1461,9 +1461,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4eedbb0a1af3492fba9aff8ffdb6d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 0
-  Status: 0
-  ShowHealthBar: 1
+  level: 0
+  status: 0
+  showHealthBar: 1
   mineralCost: 10
   diamondCost: 1
   bullet: {fileID: 100002, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
@@ -1477,6 +1477,7 @@ GameObject:
   - 224: {fileID: 944710810}
   - 222: {fileID: 944710812}
   - 114: {fileID: 944710811}
+  - 114: {fileID: 944710813}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1500,8 +1501,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1, y: -23}
-  m_SizeDelta: {x: 0, y: 47}
+  m_AnchoredPosition: {x: 1.39999998, y: -22.2000008}
+  m_SizeDelta: {x: 2.79999995, y: 44.2000008}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &944710811
 MonoBehaviour:
@@ -1531,6 +1532,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 944710809}
   m_HideIfInvisible: 0
+--- !u!114 &944710813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944710809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab1aa516524348008cf76cdda962d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &983725197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,11 +2489,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8568e5913dcb646838db23eb2dead41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 0
-  Status: 0
-  ShowHealthBar: 1
+  level: 0
+  status: 0
+  showHealthBar: 1
   mineralCost: 10
   diamondCost: 1
+  timeToMineral: 5
 --- !u!212 &1655175125
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2682,8 +2695,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -79.0999832, y: 0}
-  m_SizeDelta: {x: -186.199997, y: 18}
+  m_AnchoredPosition: {x: -51.7000008, y: 0}
+  m_SizeDelta: {x: -131.399994, y: 18}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &1740093936
 Prefab:
@@ -3286,9 +3299,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393e58ef9f0dc41129cf6ee0cb733896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 0
-  Status: 0
-  ShowHealthBar: 1
+  level: 0
+  status: 0
+  showHealthBar: 1
   mineralCost: 10
   diamondCost: 1
   type: 0

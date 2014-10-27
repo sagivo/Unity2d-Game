@@ -4,10 +4,10 @@ using System.Collections;
 public class Liveable : BaseObj {
 
 	public int Health {get{return health;} }
-	public int Level;
+	public int level;
 	public enum StatusType {Live, Destroyed, Upgrading, Repair}
-	public StatusType Status;
-	public bool ShowHealthBar = true;
+	public StatusType status;
+	public bool showHealthBar = true;
 
 	public System.Action<Collider2D> OnHit;
 	public System.Action OnDie;
@@ -25,8 +25,8 @@ public class Liveable : BaseObj {
 
 	protected new void Start(){
 		base.Start();
-		Status = StatusType.Live;
-		if (ShowHealthBar) {
+		status = StatusType.Live;
+		if (showHealthBar) {
 
 			var hb = Instantiate(Resources.Load("Prefabs/HealthBar"),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
 			hb.transform.parent = transform;
