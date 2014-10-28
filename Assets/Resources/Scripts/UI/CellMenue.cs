@@ -33,4 +33,12 @@ public class CellMenue : BaseObj {
 	public void closeMenue(){
 		anim.SetBool("IsOpen", false);
 	}
+
+	public void build(Liveable o){
+		Cell cell = Cell.getSelected();
+		Liveable newObj = GameObject.Instantiate(o, cell.transform.renderer.bounds.center,Quaternion.identity) as Liveable;
+		closeMenue(); cell.unSelect();
+		//Game.minerals -= newObj.mineralCost;
+	}
+	
 }

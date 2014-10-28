@@ -13,6 +13,10 @@ public class BaseObj : MonoBehaviour {
 		Game = GameController.Instance;
 	}
 
+	protected static GameController GetGame(){
+		return GameController.Instance;
+	}
+
 	protected void Start(){}
 	protected void Update(){}
 	

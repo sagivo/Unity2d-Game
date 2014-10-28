@@ -71,7 +71,7 @@ public class Canon : Liveable
 			mousePos.x = mousePos.x - canonWorldPos.x;
 			mousePos.y = mousePos.y - canonWorldPos.y;
 			float angle = Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-			transform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle));
+			transform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle - 90));
 	}
 
 	void OnTriggerEnter2D (Collider2D other)

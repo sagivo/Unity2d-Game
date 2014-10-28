@@ -34,6 +34,20 @@ public class Cell : BaseObj {
 		Game.menue.GetComponent<RectTransform>().position = new Vector2(transform.position.x + 2, transform.position.y + 2);
 	}
 
+	public void unSelect(){	
+		sprite.color = ColorBase;
+	}
+	
+	public bool isSelected(){
+		return sprite.color == ColorSelected;
+	}
+
+	public static Cell getSelected(){
+		foreach (var c in GetGame().cells)
+			if (c.isSelected()) return c;
+		return null;
+	}
+
 
 
 }
