@@ -2,10 +2,10 @@ using UnityEngine;
 using System.Collections;
 
 public class Cell : BaseObj {
-
 	public enum cellType {Empty, Player, Canon, Building};
 	public cellType type;
 	public bool selected;
+	public Liveable liveObj;
 
 	//colors
 	public Color ColorSelected = Color.red;
@@ -47,7 +47,5 @@ public class Cell : BaseObj {
 			if (c.isSelected()) return c;
 		return null;
 	}
-
-
 
 }
