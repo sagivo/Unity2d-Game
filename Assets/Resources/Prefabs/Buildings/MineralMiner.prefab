@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: MineralMiner
   m_TagString: Untagged
@@ -24,7 +25,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 212: {fileID: 21200000}
-  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
+  m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8568e5913dcb646838db23eb2dead41f, type: 3}
@@ -72,7 +72,7 @@ MonoBehaviour:
   status: 0
   showHealthBar: 1
   mineralCost: 10
-  mineralCostRefund: 5
+  mineralCostRefund: 6
   diamondCost: 1
   timeToMineral: 5
 --- !u!212 &21200000
