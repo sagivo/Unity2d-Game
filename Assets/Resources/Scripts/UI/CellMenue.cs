@@ -38,7 +38,7 @@ public class CellMenue : BaseObj {
 		Cell cell = Cell.getSelected();
 		Liveable newObj = GameObject.Instantiate(o, cell.transform.renderer.bounds.center,Quaternion.identity) as Liveable;
 		closeMenue(); cell.unSelect();
-		//Game.minerals -= newObj.mineralCost;
+		Game.minerals -= newObj.mineralCost;
 	}
 	
 }

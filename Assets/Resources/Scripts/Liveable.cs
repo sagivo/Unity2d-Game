@@ -21,6 +21,7 @@ public class Liveable : BaseObj {
 	HealthBarController healthBar;
 
 	public int mineralCost = 10;
+	public int mineralCostRefund = 6;
 	public int diamondCost = 1;
 
 	protected new void Start(){
