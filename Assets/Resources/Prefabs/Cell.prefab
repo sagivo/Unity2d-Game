@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
+  - 60: {fileID: 6000000}
   m_Layer: 8
   m_Name: Cell
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.79999995, y: 2.1500001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -46,8 +47,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &6100000
-BoxCollider2D:
+--- !u!60 &6000000
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,8 +56,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 2, y: 4}
-  m_Center: {x: 0, y: 0}
+  m_Poly:
+    m_Paths:
+    - - {x: -1.23406434, y: 2.10497475}
+      - {x: -2.42607713, y: -.0331690311}
+      - {x: -1.23557639, y: -2.0987277}
+      - {x: 1.21954942, y: -2.132267}
+      - {x: 2.42921543, y: .00993084908}
+      - {x: 1.23000002, y: 2.09875441}
+--- !u!61 &6100000
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 2.33307123, y: 4}
+  m_Center: {x: .0555107594, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,6 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   selected: 0
+  liveObj: {fileID: 0}
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200000

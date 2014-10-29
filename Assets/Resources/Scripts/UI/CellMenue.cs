@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Animator))]
+
 public class CellMenue : BaseObj {
 	public static float longClickTime = .6f;
 	Animator anim;
