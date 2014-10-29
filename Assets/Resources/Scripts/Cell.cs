@@ -10,6 +10,8 @@ public class Cell : BaseObj {
 	//colors
 	public Color ColorSelected = Color.red;
 	public Color ColorBase = Color.white;
+	Vector2[] distanceEdges = new Vector2[] {new Vector2(3.8f,2.5f), new Vector2(3.8f,-2.2f), new Vector2(0,-4.35f), new Vector2(-3.8f,-2.2f), new Vector2(-3.8f,2.15f), new Vector2(0,4.35f)};
+
 
 	SpriteRenderer sprite;
 	//events
@@ -48,4 +50,13 @@ public class Cell : BaseObj {
 		return null;
 	}
 
+	public void expend(){
+		foreach (var v2 in distanceEdges){
+			var hit = Physics2D.Linecast(Camera.main.transform.position, transform.position +  new Vector3(v2.x,v2.y), 1 << LayerMask.NameToLayer("Cells"));
+			//var hit = Physics2D.Raycast(Camera.main.transform.position, transform.position +  new Vector3(v2.x,v2.y,0) ,100 , ( 1 << LayerMask.NameToLayer("Cells") ));
+			if (hit.collider){
+				l ("boom");
+			} else l ("no");
+		}
+	}
 }

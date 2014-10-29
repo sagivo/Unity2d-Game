@@ -11,7 +11,25 @@ public class CellMenue : BaseObj {
 	protected new void Awake () {
 		base.Awake();
 		anim = GetComponent<Animator>();
-		//anim.SetBool("IsOpen", false);
+
+		var h = Physics2D.Linecast(Camera.main.transform.position, new Vector3(0,4.35f), 1 << LayerMask.NameToLayer("Cells"));
+		if (h) l(h.collider.transform.position);
+		Debug.DrawLine(Camera.main.transform.position, new Vector2(0,4.35f), Color.cyan, Mathf.Infinity);
+
+		/*
+		h = Physics2D.Linecast(Camera.main.transform.position, new Vector3(0,4.35f), 1 << LayerMask.NameToLayer("Cells"));
+		if (h) Destroy(h.collider.gameObject);
+		Debug.DrawLine(Camera.main.transform.position, new Vector2(0,4.35f), Color.cyan, Mathf.Infinity);
+
+		Ray ray = new Ray(Camera.main.transform.position, (new Vector3(0,214.35f) - Camera.main.transform.position).normalized);
+		l (ray.origin);l (ray.direction);
+		var hit = Physics2D.Raycast(ray.origin, ray.direction ,Mathf.Infinity , 1 << LayerMask.NameToLayer("Cells") );
+		if (hit.collider){
+			//Destroy(hit.collider.gameObject);
+		} 
+		Debug.DrawRay(ray.origin, ray.direction, Color.yellow, Mathf.Infinity, false);
+*/
+
 	}
 	
 	protected new void Update () {
@@ -48,5 +66,9 @@ public class CellMenue : BaseObj {
 		Game.minerals += cell.liveObj.mineralCostRefund;
 		Destroy(cell.liveObj.gameObject);
 		closeMenue(); cell.unSelect();
+	}
+
+	public void expend(){
+		Cell.getSelected().expend();
 	}
 }

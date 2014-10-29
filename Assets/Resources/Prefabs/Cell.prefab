@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
-  - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
   - 60: {fileID: 6000000}
   m_Layer: 8
@@ -64,17 +63,6 @@ PolygonCollider2D:
       - {x: 1.21954942, y: -2.132267}
       - {x: 2.42921543, y: .00993084908}
       - {x: 1.23000002, y: 2.09875441}
---- !u!61 &6100000
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.33307123, y: 4}
-  m_Center: {x: .0555107594, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
