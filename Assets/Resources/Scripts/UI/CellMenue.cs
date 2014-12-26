@@ -7,29 +7,12 @@ public class CellMenue : BaseObj {
 	public static float longClickTime = .6f;
 	Animator anim;
 	float openMenueTime = 0;
+	CanvasGroup cg;
 
-	protected new void Awake () {
-		base.Awake();
+	protected new void Start () {
+		base.Start();
 		anim = GetComponent<Animator>();
-
-		var h = Physics2D.Linecast(Camera.main.transform.position, new Vector3(0,4.35f), 1 << LayerMask.NameToLayer("Cells"));
-		if (h) l(h.collider.transform.position);
-		Debug.DrawLine(Camera.main.transform.position, new Vector2(0,4.35f), Color.cyan, Mathf.Infinity);
-
-		/*
-		h = Physics2D.Linecast(Camera.main.transform.position, new Vector3(0,4.35f), 1 << LayerMask.NameToLayer("Cells"));
-		if (h) Destroy(h.collider.gameObject);
-		Debug.DrawLine(Camera.main.transform.position, new Vector2(0,4.35f), Color.cyan, Mathf.Infinity);
-
-		Ray ray = new Ray(Camera.main.transform.position, (new Vector3(0,214.35f) - Camera.main.transform.position).normalized);
-		l (ray.origin);l (ray.direction);
-		var hit = Physics2D.Raycast(ray.origin, ray.direction ,Mathf.Infinity , 1 << LayerMask.NameToLayer("Cells") );
-		if (hit.collider){
-			//Destroy(hit.collider.gameObject);
-		} 
-		Debug.DrawRay(ray.origin, ray.direction, Color.yellow, Mathf.Infinity, false);
-*/
-
+		cg = GetComponent<CanvasGroup>();
 	}
 	
 	protected new void Update () {
@@ -40,6 +23,7 @@ public class CellMenue : BaseObj {
 	}
 
 	public void openMenue(){
+		cg.interactable = true;
 		openMenueTime = 0;
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		var hit = Physics2D.Raycast(ray.origin,Vector2.zero ,100 , ( 1 << LayerMask.NameToLayer("Cells") ));
@@ -51,7 +35,9 @@ public class CellMenue : BaseObj {
 	}
 
 	public void closeMenue(){
+		cg.interactable = false;
 		anim.SetBool("IsOpen", false);
+		Game.menue.GetComponent<RectTransform>().position = new Vector2(100,100);
 	}
 
 	public void build(Liveable o){
@@ -69,6 +55,9 @@ public class CellMenue : BaseObj {
 	}
 
 	public void expend(){
-		Cell.getSelected().expend();
+		Cell c = Cell.getSelected();
+		l (c);
+		c.expend();
+		closeMenue(); 
 	}
 }

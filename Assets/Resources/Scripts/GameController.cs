@@ -29,5 +29,6 @@ public class GameController : Singleton<GameController> {
 	new void Start(){
 		base.Start();
 		spawnerLayer = new GameObject("Spawns");	
+		Game.cells[0].expend();
 	}
 }
