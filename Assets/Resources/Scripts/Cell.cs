@@ -63,7 +63,7 @@ public class Cell : BaseObj {
 			if (hit.collider == null){
 				//if ((Vector2)transform.position +  new Vector2(v2.x,v2.y) != Vector2.zero){
 					GameObject.Instantiate(gameObject, transform.position +  new Vector3(v2.x,v2.y,0),transform.rotation);
-					l ("building in " + ((Vector2)transform.position +  v2));
+					//l ("building in " + ((Vector2)transform.position +  v2));
 				//}
 			} else {
 				l ("hit " + ((Vector2)transform.position +  v2)+ " | " + hit.collider.gameObject.name);

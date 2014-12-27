@@ -55,9 +55,7 @@ public class CellMenue : BaseObj {
 	}
 
 	public void expend(){
-		Cell c = Cell.getSelected();
-		l (c);
-		c.expend();
+		Cell.getSelected().expend();
 		closeMenue(); 
 	}
 }
