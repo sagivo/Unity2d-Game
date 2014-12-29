@@ -26,6 +26,10 @@ public class Liveable : BaseObj {
 
 	protected new void Start(){
 		base.Start();
+
+		if (Game.minerals >= mineralCost) Game.minerals-= mineralCost; 
+		else Game.diamonds -= diamondCost;
+
 		status = StatusType.Live;
 		if (showHealthBar) {
 
@@ -47,8 +51,11 @@ public class Liveable : BaseObj {
 		healthBar.health = Health;
 	}
 
-	public bool canBuild(){
-		return (mineralCost <= Game.minerals || diamondCost <= Game.diamonds);
+	public bool enoughResourcesToCreate(){
+		return (Game.minerals >= mineralCost || Game.diamonds >= diamondCost);
 	}
 
+	public void refund(){
+		Game.minerals += mineralCostRefund;
+	}
 }

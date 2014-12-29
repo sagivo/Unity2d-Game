@@ -41,6 +41,7 @@ public class CellMenue : BaseObj {
 	}
 
 	public void build(Liveable o){
+		if (!o.enoughResourcesToCreate()) return;
 		Cell cell = Cell.getSelected();
 		Liveable newObj = GameObject.Instantiate(o, cell.transform.renderer.bounds.center,Quaternion.identity) as Liveable;
 		cell.liveObj = newObj;

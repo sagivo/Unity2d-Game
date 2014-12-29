@@ -34,7 +34,6 @@ public class Cell : BaseObj {
 
 	public void select(){	
 		sprite.color = ColorSelected;
-		//renderer.material.color = ColorSelected;
 		Game.menue.GetComponent<RectTransform>().position = new Vector2(transform.position.x + 2, transform.position.y + 2);
 	}
 
@@ -61,13 +60,9 @@ public class Cell : BaseObj {
 			var hit = Physics2D.Raycast(ray.origin, ray.direction ,Mathf.Infinity , ( 1 << LayerMask.NameToLayer("Cells") ));
 			//var hit = Physics2D.Raycast(Camera.main.transform.position, gameObject.transform.position +  new Vector3(v2.x,v2.y,1) ,101 , ( 1 << LayerMask.NameToLayer("Cells") ));
 			if (hit.collider == null){
-				//if ((Vector2)transform.position +  new Vector2(v2.x,v2.y) != Vector2.zero){
-					GameObject.Instantiate(gameObject, transform.position +  new Vector3(v2.x,v2.y,0),transform.rotation);
-					//l ("building in " + ((Vector2)transform.position +  v2));
-				//}
+				GameObject.Instantiate(gameObject, transform.position +  new Vector3(v2.x,v2.y,0),transform.rotation);
 			} else {
 				l ("hit " + ((Vector2)transform.position +  v2)+ " | " + hit.collider.gameObject.name);
-				//Destroy(hit.collider.gameObject);
 			}
 			Debug.DrawLine(Camera.main.transform.position, gameObject.transform.position +  new Vector3(v2.x,v2.y,1), Color.yellow, Mathf.Infinity);
 		}
