@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class AutoCanon : Defence {
+public class AutoCanon : Building {
 	public GameObject bullet;
 	GameObject target;
 

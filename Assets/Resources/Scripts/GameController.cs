@@ -13,7 +13,7 @@ public class GameController : Singleton<GameController> {
 	public List<Building> buildings = new List<Building>(); //populate this list each time you create a building.
 	public List<Canon> canons = new List<Canon>(); //populate this list each time you create a building.
 	public List<MineralMiner> mineralMiners = new List<MineralMiner>(); //populate this list each time you create a building.
-	public List<Defence> defences = new List<Defence>(); //populate this list each time you create a building.
+	//public List<Defence> defences = new List<Defence>(); //populate this list each time you create a building.
 	public GameObject spawnerLayer;
 	public CellMenue menue;
 	Sprite Sprite;
@@ -29,6 +29,9 @@ public class GameController : Singleton<GameController> {
 	new void Start(){
 		base.Start();
 		spawnerLayer = new GameObject("Spawns");	
-		Game.cells[0].expend();
+	}
+
+	public bool canBuild(Building o){
+		return (Game.minerals >= o.mineralCost || Game.diamonds >= o.diamondCost);
 	}
 }

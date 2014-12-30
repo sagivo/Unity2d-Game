@@ -8,6 +8,7 @@ public class Enemy : Liveable
 	public GameObject target;
 
 	SpriteRenderer spriteRenderer;
+	public int costKill = 1;
 
 	protected new void Start(){
 		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();

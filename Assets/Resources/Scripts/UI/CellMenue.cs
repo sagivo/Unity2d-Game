@@ -40,23 +40,24 @@ public class CellMenue : BaseObj {
 		Game.menue.GetComponent<RectTransform>().position = new Vector2(100,100);
 	}
 
-	public void build(Liveable o){
-		if (!o.enoughResourcesToCreate()) return;
+	public void build(Building o){
+		if (!Game.canBuild(o)) return;
 		Cell cell = Cell.getSelected();
-		Liveable newObj = GameObject.Instantiate(o, cell.transform.renderer.bounds.center,Quaternion.identity) as Liveable;
+		Building newObj = GameObject.Instantiate(o, cell.transform.renderer.bounds.center,Quaternion.identity) as Building;
 		cell.liveObj = newObj;
 		closeMenue(); cell.unSelect();
 	}
 
 	public void destroy(){
 		Cell cell = Cell.getSelected();
-		Game.minerals += cell.liveObj.mineralCostRefund;
-		Destroy(cell.liveObj.gameObject);
+		(cell.liveObj as Building).refund();
 		closeMenue(); cell.unSelect();
 	}
 
 	public void expend(){
-		Cell.getSelected().expend();
+		var c = Cell.getSelected();
+		if (!c.canExpend()) return;
+		c.expend();
 		closeMenue(); 
 	}
 }

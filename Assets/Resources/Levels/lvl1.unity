@@ -108,6 +108,7 @@ MonoBehaviour:
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &29185468
@@ -260,7 +261,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: aaa964a3da0f6467dba2a042459df82d,
             type: 2}
-          m_ObjectArgumentAssemblyTypeName: Liveable, Assembly-CSharp, Version=0.0.0.0,
+          m_ObjectArgumentAssemblyTypeName: Building, Assembly-CSharp, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -675,6 +676,7 @@ MonoBehaviour:
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &297121490
@@ -1108,6 +1110,7 @@ MonoBehaviour:
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &688165569
@@ -1778,9 +1781,6 @@ MonoBehaviour:
   level: 0
   status: 0
   showHealthBar: 1
-  mineralCost: 10
-  mineralCostRefund: 5
-  diamondCost: 1
   type: 0
   bulletSpeed: .00100000005
   fireRate: 1
@@ -1819,6 +1819,7 @@ MonoBehaviour:
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1246404196
@@ -2145,6 +2146,7 @@ MonoBehaviour:
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1342392013
@@ -2204,6 +2206,7 @@ MonoBehaviour:
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1376378910
@@ -2380,6 +2383,7 @@ MonoBehaviour:
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1634425498
@@ -2578,7 +2582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1745475350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2590,7 +2594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad6a6fd279b2a4da8bc49a9c85e7adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnEvery: 4
+  spawnEvery: 5
   enemies:
   - {fileID: 100000, guid: a4079fadde8a44dde8c91afed04d9e10, type: 2}
   spawnPoints:
@@ -2883,7 +2887,6 @@ MonoBehaviour:
   buildings: []
   canons: []
   mineralMiners: []
-  defences: []
   spawnerLayer: {fileID: 0}
   menue: {fileID: 0}
   minerals: 50
@@ -3094,7 +3097,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae,
             type: 2}
-          m_ObjectArgumentAssemblyTypeName: Liveable, Assembly-CSharp, Version=0.0.0.0,
+          m_ObjectArgumentAssemblyTypeName: Building, Assembly-CSharp, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3318,6 +3321,7 @@ GameObject:
   - 224: {fileID: 1985670065}
   - 223: {fileID: 1985670067}
   - 114: {fileID: 1985670066}
+  - 114: {fileID: 1985670068}
   m_Layer: 5
   m_Name: ScoreMenue
   m_TagString: Untagged
@@ -3376,6 +3380,19 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1985670068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1985670064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 0
+  m_AspectRatio: 1.61995757
 --- !u!1 &2004252665
 GameObject:
   m_ObjectHideFlags: 0

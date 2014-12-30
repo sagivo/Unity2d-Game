@@ -74,7 +74,7 @@ MonoBehaviour:
   mineralCost: 10
   mineralCostRefund: 6
   diamondCost: 1
-  timeToMineral: 5
+  timeToMineral: 2
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

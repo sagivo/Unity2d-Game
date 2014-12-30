@@ -6,6 +6,7 @@ public class Cell : BaseObj {
 	public cellType type;
 	public bool selected;
 	public Liveable liveObj;
+	public int costExpend=20;
 
 	//colors
 	public Color ColorSelected = Color.red;
@@ -32,7 +33,9 @@ public class Cell : BaseObj {
 		Game.cells.Remove(this);
 	}
 
-	public void select(){	
+	public void select(){
+		var selected = getSelected();
+		if (selected != null) selected.unSelect();
 		sprite.color = ColorSelected;
 		Game.menue.GetComponent<RectTransform>().position = new Vector2(transform.position.x + 2, transform.position.y + 2);
 	}
@@ -53,6 +56,7 @@ public class Cell : BaseObj {
 	}
 
 	public void expend(){
+		Game.minerals -= costExpend;
 		unSelect();
 		foreach (var v2 in distanceEdges){
 			Ray ray = Camera.main.ScreenPointToRay(new Vector3(200, 200, 0));
@@ -66,5 +70,9 @@ public class Cell : BaseObj {
 			}
 			Debug.DrawLine(Camera.main.transform.position, gameObject.transform.position +  new Vector3(v2.x,v2.y,1), Color.yellow, Mathf.Infinity);
 		}
+	}
+
+	public bool canExpend(){
+		return (Game.minerals >= costExpend);
 	}
 }

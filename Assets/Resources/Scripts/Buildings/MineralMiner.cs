@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MineralMiner : Liveable {
-	public float timeToMineral = 5;
+public class MineralMiner : Building {
+	public float timeToMineral = 2;
 
 	protected new void Start () {
 		base.Start();
