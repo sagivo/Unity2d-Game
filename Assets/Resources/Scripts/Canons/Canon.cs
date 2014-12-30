@@ -4,7 +4,7 @@ using System.Collections;
 public class Canon : Building
 {
 	//canon types
-	public enum CanonType{ Regular, AutoAim}
+	public enum CanonType{Regular, AutoAim}
 
 	public CanonType type;
 	[Range(0.001f, 0.1f)] 
@@ -12,7 +12,8 @@ public class Canon : Building
 	[Range(5, 0.1f)] 
 	public float fireRate = 1f;
 	public Bullet ammoPrefab;
-	public int[] damageExtraPerLevel = new int[]{0, 5, 10, 40, 100};
+	public int[] damageExtraPerLevel = new int[]{0, 10, 10, 10, 10, 40, 100};
+
 
 	//the current target for the auto aim
 	GameObject target;

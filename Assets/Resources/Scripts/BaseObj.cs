@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BaseObj : MonoBehaviour {
-
+		
 	public void l(object o){
 		Debug.Log(o);
 	}

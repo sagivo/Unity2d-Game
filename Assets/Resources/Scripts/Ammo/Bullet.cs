@@ -8,7 +8,6 @@ public class Bullet : BaseObj {
 	protected string[] hitTags = { "Bullet", "Enemy" };
 
 	protected new void Start(){
-		base.Start();
 
 		transform.parent = Game.spawnerLayer.transform;
 		rigidbody2D.AddForce (transform.up * speed);

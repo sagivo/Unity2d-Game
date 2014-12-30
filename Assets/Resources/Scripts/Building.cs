@@ -5,9 +5,8 @@ public class Building : Liveable {
 
 	public int mineralCostBuild = 10;
 	public int mineralCostRefund = 6;
-	public int[] mineralCostUpgrade = new int[]{10,40,100};
 	public int diamondCost = 1;
-
+	public int[] mineralCostUpgrade = new int[]{1,5,10,20,40,80};
 	protected new void Start(){
 		base.Start();
 
@@ -32,7 +31,7 @@ public class Building : Liveable {
 	}
 
 	public bool enoughResourcesToUpgrade(){
-		return (Game.minerals >= mineralCostUpgrade[level] || Game.diamonds >= mineralCostUpgrade[level]);
+		return (Game.minerals >= mineralCostUpgrade[level]);
 	}
 
 }
