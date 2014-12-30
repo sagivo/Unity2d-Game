@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-public class Canon : Building
+public class PlayerCanon : Building
 {
 	//canon types
-	public enum CanonType{Regular, AutoAim}
+	//public enum CanonType{Regular, AutoAim}
 
-	public CanonType type;
+	//public CanonType type;
 	[Range(0.001f, 0.1f)] 
 	public float bulletSpeed = 0.001f;
 	[Range(5, 0.1f)] 
@@ -21,8 +21,7 @@ public class Canon : Building
 
 	protected new void Start(){
 		base.Start();
-		Game.canons.Add (this);
-		
+
 		nextShoot += fireRate;
 		OnHit += (o) => {
 			if (o.gameObject.IsSubClassOf<Kamikazi>()){						
@@ -35,23 +34,11 @@ public class Canon : Building
 		};
 	}
 
-	void OnDestroy (){
-		Game.canons.Remove(this);
-	}
-
 	protected new void Update(){
 		base.Update();
-		if (type == CanonType.Regular) {
-			rotateToPosition (Input.mousePosition, this.transform.position);
-			if (Input.GetMouseButtonDown (0))
-				Fire (Input.mousePosition); //TODO: change to touch
-		} else if (type == CanonType.AutoAim && target) {
-			rotateToPosition (Camera.main.WorldToScreenPoint (target.transform.position), this.transform.position);				
-			if (nextShoot < Time.time) {
-				Fire (Camera.main.WorldToScreenPoint (target.transform.position));
-				nextShoot = Time.time + fireRate;
-			}
-		}
+		rotateToPosition (Input.mousePosition, this.transform.position);
+		if (Input.GetMouseButtonDown (0))
+			Fire (Input.mousePosition); //TODO: change to touch		
 	}
 
 	//fire 
@@ -77,9 +64,6 @@ public class Canon : Building
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (type == CanonType.AutoAim && other.tag == "Enemy" && !target) {
-			target = other.gameObject;
-		}
 		if (OnHit != null) OnHit(other);
 	}
 }

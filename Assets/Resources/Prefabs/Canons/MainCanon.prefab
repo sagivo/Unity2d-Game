@@ -26,7 +26,7 @@ GameObject:
   - 4: {fileID: 400006}
   - 212: {fileID: 21200000}
   - 58: {fileID: 5800000}
-  - 114: {fileID: 11456610}
+  - 114: {fileID: 11462844}
   m_Layer: 0
   m_Name: cannon
   m_TagString: Untagged
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 100002, guid: 5233a296a4149484c8207135c69d4510, type: 2}
---- !u!114 &11456610
+--- !u!114 &11462844
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -90,23 +90,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 100008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393e58ef9f0dc41129cf6ee0cb733896, type: 3}
+  m_Script: {fileID: 11500000, guid: d010fa3286ef54db7a6101d9ed5e5eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
   status: 0
   showHealthBar: 1
-  spritesPerLevel:
-  - {fileID: 21300000, guid: d0ac508fa38b242ae8eb46ea19f2537b, type: 3}
+  spritesPerLevel: []
   mineralCostBuild: 10
   mineralCostRefund: 6
-  mineralCostUpgrade: 0a0000002800000064000000
   diamondCost: 1
-  type: 0
+  mineralCostUpgrade: 01000000050000000a000000140000002800000050000000
   bulletSpeed: .00100000005
   fireRate: 1
   ammoPrefab: {fileID: 11400000, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
-  damageExtraPerLevel: 00000000020000000a0000002800000064000000
+  damageExtraPerLevel: 000000000a0000000a0000000a0000000a0000002800000064000000
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

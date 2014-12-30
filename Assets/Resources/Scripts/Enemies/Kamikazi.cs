@@ -6,7 +6,7 @@ public class Kamikazi : Enemy {
 
 	protected new void Start(){
 		base.Start();
-		findTarget();
+		target = Game.player;
 	}
 	 
 	protected new void Update(){
@@ -19,7 +19,7 @@ public class Kamikazi : Enemy {
 	}
 
 	void findTarget() {
-		target = gameObject.CloestToObject(Game.canons.ToArray());
+		target = Game.player;
 		if (target == null) Invoke("findTarget",1);
 	}
 	

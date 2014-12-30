@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class Player : BaseObj {
 
+	// Use this for initialization
+	new void Start () {
+		base.Start();
+		Game.player = gameObject;
+	}
+	
 }

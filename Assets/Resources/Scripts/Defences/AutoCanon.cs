@@ -8,6 +8,7 @@ public class AutoCanon : Building {
 
 	protected  new void Start () {
 		base.Start();
+		Game.autoCanons.Add(this);
 
 		mineralCostUpgrade = new int[]{5,10,20,40,80};
 		//if (bullet == null) bullet = (Instantiate(Resources.Load("Prefabs/Bullet")) as GameObject);
@@ -25,6 +26,10 @@ public class AutoCanon : Building {
 		if (target != null){
 			transform.LookAt2d(target.transform,90);
 		}
+	}
+
+	void OnDestroy (){
+		Game.autoCanons.Remove(this);
 	}
 
 	void shoot(){

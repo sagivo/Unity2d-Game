@@ -14,13 +14,14 @@ public class CanonDestroyer : Enemy {
 	// Update is called once per frame
 	new void Update () {
 		if (target != null){
-			transform.LookAt2d(target.transform);
+			transform.LookAt2d(target.transform,180);
 			transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
 		} else Invoke("findTarget",1);
 	}
 
 	void findTarget() {
-		target = gameObject.CloestToObject(Game.canons.ToArray());
+		l (Game.autoCanons.ToArray().Length);
+		target = gameObject.CloestToObject(Game.autoCanons.ToArray());
 		if (target == null) Invoke("findTarget",1);
 	}
 }
