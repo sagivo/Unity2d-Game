@@ -52,7 +52,7 @@ public class CellMenue : BaseObj {
 		Cell cell = Cell.getSelected();
 		(cell.liveObj as Building).refund();
 		closeMenue(); cell.unSelect();
-	}
+	} 
 
 	public void expend(){
 		var c = Cell.getSelected();
