@@ -8,6 +8,7 @@ public class Enemy : Liveable
 	public GameObject target;
 
 	public int costKill = 1;
+	protected int[] killBonusMinerals = new int[]{1,5,10};
 
 	protected new void Start(){
 		base.Start();
@@ -24,6 +25,7 @@ public class Enemy : Liveable
 		};
 
 		OnDie += () => {
+			Game.minerals += killBonusMinerals[level];
 			Destroy(gameObject);
 		};
 	}

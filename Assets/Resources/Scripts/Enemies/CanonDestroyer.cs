@@ -6,7 +6,9 @@ public class CanonDestroyer : Enemy {
 	// Use this for initialization
 	new void Start () {
 		base.Start();
-		speed = .7f;
+		speed = .6f;
+		health = 70;
+		killBonusMinerals = new int[]{3,7,12};
 
 		findTarget();
 	}
@@ -20,7 +22,6 @@ public class CanonDestroyer : Enemy {
 	}
 
 	void findTarget() {
-		l (Game.autoCanons.ToArray().Length);
 		target = gameObject.CloestToObject(Game.autoCanons.ToArray());
 		if (target == null) Invoke("findTarget",1);
 	}

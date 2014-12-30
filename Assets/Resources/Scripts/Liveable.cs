@@ -19,7 +19,7 @@ public class Liveable : BaseObj {
 	public System.Action<object> OnUpgraded;
 	public Sprite[] spritesPerLevel; 
 
-	int health = 100;
+	protected int health = 100;
 	HealthBarController healthBar;
 	protected SpriteRenderer spriteRenderer;
 

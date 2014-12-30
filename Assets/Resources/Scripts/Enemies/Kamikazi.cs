@@ -6,6 +6,8 @@ public class Kamikazi : Enemy {
 
 	protected new void Start(){
 		base.Start();
+		speed = 1.1f;
+		health = 40;
 		target = Game.player;
 	}
 	 
