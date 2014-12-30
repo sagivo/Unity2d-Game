@@ -13,7 +13,7 @@ public class Enemy : Liveable
 		base.Start();
 		Game.enemies.Add(this);
 
-		OnHit = (o) => {
+		OnHit += (o) => {
 			//if (System.Array.IndexOf(hitTags, o.gameObject.tag) > -1) Destroy(gameObject);
 			if (o.gameObject.IsSubClassOf<Bullet>()){
 				DecHealth(o.gameObject.GetComponent<Bullet>().damage);

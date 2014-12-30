@@ -71,10 +71,19 @@ MonoBehaviour:
   level: 0
   status: 0
   showHealthBar: 1
-  mineralCost: 10
+  spritesPerLevel:
+  - {fileID: 21300000, guid: af82634b4afa44021bc5af3fc4e00f6c, type: 3}
+  - {fileID: 21300000, guid: 5b3f64e061aac48ceb73378cf718cf7a, type: 3}
+  - {fileID: 21300000, guid: 30b21822311404cdc9555e6cb36d2222, type: 3}
+  mineralCostBuild: 10
   mineralCostRefund: 6
   diamondCost: 1
-  timeToMineral: 2
+  mineralCostUpgrade: 01000000050000000a000000140000002800000050000000
+  timeToMineralPerLevel:
+  - 2
+  - 1
+  - .699999988
+  - .5
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -77,9 +77,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 23b22dff9f2b54de2a8142e0c67d6522, type: 3}
   mineralCostBuild: 10
   mineralCostRefund: 6
-  mineralCostUpgrade: 0a0000002800000064000000
   diamondCost: 1
+  mineralCostUpgrade: 01000000050000000a000000140000002800000050000000
   bullet: {fileID: 100002, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
+  shootSpeedPerLevel:
+  - 1
+  - .699999988
+  - .300000012
+  - .200000003
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

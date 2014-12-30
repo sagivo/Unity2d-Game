@@ -21,7 +21,7 @@ public class Canon : Building
 
 	protected new void Start(){
 		base.Start();
-		Game.canons.Add (this);			
+		Game.canons.Add (this);
 		
 		nextShoot += fireRate;
 		OnHit += (o) => {
