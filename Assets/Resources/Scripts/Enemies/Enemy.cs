@@ -7,11 +7,9 @@ public class Enemy : Liveable
 	public float speed = 1.5f;
 	public GameObject target;
 
-	SpriteRenderer spriteRenderer;
 	public int costKill = 1;
 
 	protected new void Start(){
-		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();
 		base.Start();
 		Game.enemies.Add(this);
 

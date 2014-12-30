@@ -68,10 +68,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4eedbb0a1af3492fba9aff8ffdb6d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 0
-  Status: 0
-  ShowHealthBar: 1
-  mineralCost: 10
+  level: 0
+  status: 0
+  showHealthBar: 1
+  spritesPerLevel:
+  - {fileID: 21300000, guid: e97f528dca91545e8bf40dc9de15441b, type: 3}
+  - {fileID: 21300000, guid: e772c84edbe7b4f2fbdc5dbe255b0b3f, type: 3}
+  mineralCostBuild: 10
+  mineralCostRefund: 6
+  mineralCostUpgrade: 0a0000002800000064000000
   diamondCost: 1
   bullet: {fileID: 100002, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
 --- !u!212 &21200000

@@ -28,7 +28,7 @@ GameObject:
   - 58: {fileID: 5800000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: CanonBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,7 @@ Transform:
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
+  m_RootOrder: 0
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -57,6 +58,7 @@ Transform:
   m_Children:
   - {fileID: 400000}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!50 &5000000
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -94,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: defc64ee72e3e4ee7863c64956f5a4bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 200
-  Damage: 10
+  speed: 200
+  damage: 10
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -114,9 +116,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 2
-  m_SortingOrder: 9
   m_SortingLayerID: 2960056561
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: 10e5f6649794c4eee924c5a21113a19c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000

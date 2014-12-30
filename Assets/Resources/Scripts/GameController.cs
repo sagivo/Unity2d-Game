@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -32,6 +32,6 @@ public class GameController : Singleton<GameController> {
 	}
 
 	public bool canBuild(Building o){
-		return (Game.minerals >= o.mineralCost || Game.diamonds >= o.diamondCost);
+		return (Game.minerals >= o.mineralCostBuild || Game.diamonds >= o.diamondCost);
 	}
 }

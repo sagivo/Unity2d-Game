@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Canon : Liveable
+public class Canon : Building
 {
 	//canon types
 	public enum CanonType{ Regular, AutoAim}
@@ -11,13 +11,12 @@ public class Canon : Liveable
 	public float bulletSpeed = 0.001f;
 	[Range(5, 0.1f)] 
 	public float fireRate = 1f;
-	public GameObject ammoPrefab;				
+	public Bullet ammoPrefab;
+	public int[] damageExtraPerLevel = new int[]{0, 5, 10, 40, 100};
 
 	//the current target for the auto aim
 	GameObject target;
 	float nextShoot;
-
-
 
 	protected new void Start(){
 		base.Start();
@@ -60,9 +59,10 @@ public class Canon : Liveable
 		pos.z = transform.position.z - Camera.main.transform.position.z;
 		pos = Camera.main.ScreenToWorldPoint (pos);
 		Quaternion q = Quaternion.FromToRotation (Vector3.up, pos - transform.position);
-		GameObject go = (GameObject)Instantiate (ammoPrefab, this.transform.position, q);
-		go.transform.parent = Game.spawnerLayer.transform;
-		go.rigidbody2D.AddForce (go.transform.up * bulletSpeed);
+		Bullet b = (Bullet)Instantiate (ammoPrefab, this.transform.position, q);
+		b.damage += damageExtraPerLevel[level];
+		b.transform.parent = Game.spawnerLayer.transform;
+		b.rigidbody2D.AddForce (b.transform.up * bulletSpeed);
 	}
 
 	private void rotateToPosition(Vector3 mousePos, Vector3 originPos)
