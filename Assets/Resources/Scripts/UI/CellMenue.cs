@@ -17,7 +17,7 @@ public class CellMenue : BaseObj {
 	
 	protected new void Update () {
 		base.Update();
-		if (Input.GetMouseButtonDown(0) && (openMenueTime == 0)) openMenueTime = Time.time + longClickTime;
+		if (Input.GetMouseButtonDown(0) && (openMenueTime == 0) && (Input.touchCount <= 1)) openMenueTime = Time.time + longClickTime;
 		else if (Input.GetMouseButtonUp(0)) openMenueTime = 0;
 		if (openMenueTime != 0 && openMenueTime <= Time.time) openMenue();
 	}
