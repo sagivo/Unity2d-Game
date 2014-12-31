@@ -6,6 +6,7 @@ public class Building : Liveable {
 	public int mineralCostBuild = 10;
 	public int mineralCostRefund = 6;
 	public int diamondCost = 1;
+	[UnityEngine.HideInInspector]
 	public int[] mineralCostUpgrade = new int[]{1,5,10,20,40,80};
 	protected new void Start(){
 		base.Start();
