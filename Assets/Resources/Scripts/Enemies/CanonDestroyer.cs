@@ -15,8 +15,12 @@ public class CanonDestroyer : Enemy {
 	
 	// Update is called once per frame
 	new void Update () {
+		base.Update();
 		if (target != null){
-			transform.LookAt2d(target.transform,180);
+			l (transform.position.x);
+			transform.LookAt2d(target.transform,(transform.position.x > target.transform.position.x) ? 180 :  0);//transform.rotation.z > 180 ? 0 : 180
+			//transform.Rotate(Vector3.forward, ((transform.rotation.z > 180) ? 90 : -90) );
+			//transform.Rotate(0,0,90);
 			transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
 		} else Invoke("findTarget",1);
 	}

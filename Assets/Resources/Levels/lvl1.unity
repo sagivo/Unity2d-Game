@@ -3068,6 +3068,7 @@ GameObject:
   - 92: {fileID: 1941263152}
   - 81: {fileID: 1941263151}
   - 114: {fileID: 1941263156}
+  - 114: {fileID: 1941263157}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3148,13 +3149,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1941263150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e517f71fef45448a683ac7eb28c72b60, type: 3}
+  m_Script: {fileID: 11500000, guid: 25480666d9d6f4acbad8f25167e26819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   perspectiveZoomSpeed: .5
   orthoZoomSpeed: .0399999991
   minZoom: 5
   maxZoom: 35
+--- !u!114 &1941263157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1941263150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316969a89f28f47dba1c8d6111b6fe7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: .5
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
 --- !u!1 &1948281137
 GameObject:
   m_ObjectHideFlags: 0
