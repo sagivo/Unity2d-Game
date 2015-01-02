@@ -19,7 +19,7 @@ TagManager:
   Builtin Layer 7: 
   User Layer 8: Cells
   User Layer 9: Liveable
-  User Layer 10: 
+  User Layer 10: Drag
   User Layer 11: 
   User Layer 12: 
   User Layer 13: 
@@ -77,4 +77,8 @@ TagManager:
   - name: UI
     userID: 8
     uniqueID: 785159391
+    locked: 0
+  - name: Drag
+    userID: 9
+    uniqueID: 3772795697
     locked: 0
