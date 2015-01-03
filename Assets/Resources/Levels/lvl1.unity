@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragOnSurfaces: 1
+  buildObj: {fileID: 11400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
 --- !u!114 &61583018
 MonoBehaviour:
   m_ObjectHideFlags: 0

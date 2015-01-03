@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 	public bool dragOnSurfaces = true;
+	public Building buildObj;
 
 	Cell activeCell;
 	Vector2 startPos; 
@@ -25,9 +26,8 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 		gameObject.transform.position = data.position;
 
 		Ray ray = Camera.main.ScreenPointToRay(gameObject.transform.position);
-		Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
-		var hit = Physics2D.Raycast(ray.origin, ray.direction ,Mathf.Infinity , ( 1 << LayerMask.NameToLayer("Cells") ));
-		//var hit = Physics2D.Raycast(Camera.main.transform.position, gameObject.transform.position +  new Vector3(v2.x,v2.y,1) ,101 , ( 1 << LayerMask.NameToLayer("Cells") ));
+		var hit =  Physics2D.Raycast(ray.origin, ray.direction ,Mathf.Infinity , ( 1 << LayerMask.NameToLayer("Cells") ));
+
 		if (hit.collider != null && hit.collider.GetComponent<Cell>() != activeCell){
 			activeCell = hit.collider.GetComponent<Cell>();
 			activeCell.select();
@@ -38,6 +38,13 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 	public void OnEndDrag(PointerEventData eventData)
 	{
 		gameObject.transform.position = startPos;
+
+		if (activeCell){
+			if (!Game.canBuild(buildObj)) return;
+			Building newObj = GameObject.Instantiate(buildObj, activeCell.transform.renderer.bounds.center,Quaternion.identity) as Building;
+			activeCell.liveObj = newObj;
+			activeCell.unSelect();
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
@@ -45,4 +52,5 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 		if (coll.gameObject.tag == "Cell") l ("Cell");
 		
 	}
+
 }
