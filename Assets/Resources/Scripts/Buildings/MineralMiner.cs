@@ -8,9 +8,13 @@ public class MineralMiner : Building {
 		base.Start();
 		Game.mineralMiners.Add (this);
 		InvokeRepeating("getMinerals",0,timeToMineralPerLevel[level]);
-		OnUpgraded += (o) => {
-			CancelInvoke("getMinerals");
-			InvokeRepeating("getMinerals",0,timeToMineralPerLevel[level]);
+		build();
+
+		OnStatusChange += (s) => {
+			if (status == StatusType.Live){
+				CancelInvoke("getMinerals");
+				InvokeRepeating("getMinerals",0,timeToMineralPerLevel[level]);
+			}
 		};
 	}
 	

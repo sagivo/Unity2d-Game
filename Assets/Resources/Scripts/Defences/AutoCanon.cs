@@ -6,16 +6,21 @@ public class AutoCanon : Building {
 	GameObject target;
 	public float[] shootSpeedPerLevel = new float[]{1, .7f, .3f, .2f};
 
+	protected new void Awake(){
+		base.Awake();
+		buildTime = 5f;
+		mineralCostUpgrade = new int[]{5,10,20,40,80};
+	}
+
 	protected  new void Start () {
 		base.Start();
 		Game.autoCanons.Add(this);
 
-		mineralCostUpgrade = new int[]{5,10,20,40,80};
-		//if (bullet == null) bullet = (Instantiate(Resources.Load("Prefabs/Bullet")) as GameObject);
-		InvokeRepeating("shoot",shootSpeedPerLevel[level],shootSpeedPerLevel[level]);
-		OnUpgraded += (o)=>{
-			CancelInvoke("shoot");
-			InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);
+		OnStatusChange += (s)=>{
+			if (status == StatusType.Live){
+				CancelInvoke("shoot");
+				InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);
+			}
 		};
 	}
 	

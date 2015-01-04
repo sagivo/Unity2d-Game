@@ -61,7 +61,7 @@ public class CellMenue : BaseObj {
 		closeMenue(); 
 	}
 
-	public void upgrade(){
+	public void upgrade2(){
 		Cell cell = Cell.getSelected();
 		var building = (cell.liveObj as Building);
 		if (building.enoughResourcesToUpgrade()) {

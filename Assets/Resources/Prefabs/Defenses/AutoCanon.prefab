@@ -72,13 +72,16 @@ MonoBehaviour:
   status: 0
   showHealthBar: 1
   spritesPerLevel:
+  - {fileID: 21300000, guid: b130e7c7f11a34a8397da890c7e50b9f, type: 3}
   - {fileID: 21300000, guid: e97f528dca91545e8bf40dc9de15441b, type: 3}
   - {fileID: 21300000, guid: e772c84edbe7b4f2fbdc5dbe255b0b3f, type: 3}
   - {fileID: 21300000, guid: 23b22dff9f2b54de2a8142e0c67d6522, type: 3}
   mineralCostBuild: 10
   mineralCostRefund: 6
   diamondCost: 1
+  buildSprite: {fileID: 0}
   mineralCostUpgrade: 01000000050000000a000000140000002800000050000000
+  BuildTime: 5
   bullet: {fileID: 100002, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
   shootSpeedPerLevel:
   - 1
