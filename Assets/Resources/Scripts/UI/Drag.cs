@@ -8,6 +8,8 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 	public bool dragOnSurfaces = true;
 	public Building buildObj;
+	public enum DragType {Build, Upgrade};
+	public DragType dragType;
 
 	Cell activeCell;
 	Vector2 startPos; 
@@ -40,17 +42,23 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 		gameObject.transform.position = startPos;
 
 		if (activeCell){
-			if (!Game.canBuild(buildObj)) return;
-			Building newObj = GameObject.Instantiate(buildObj, activeCell.transform.renderer.bounds.center,Quaternion.identity) as Building;
-			activeCell.liveObj = newObj;
-			activeCell.unSelect();
-		}
-	}
+			switch (dragType) {
+			case DragType.Build:
+				if (!Game.canBuild(buildObj)) return;
+				Building newObj = GameObject.Instantiate(buildObj, activeCell.transform.renderer.bounds.center,Quaternion.identity) as Building;
+				activeCell.liveObj = newObj;
+				activeCell.unSelect(); 
+				break;
+			case DragType.Upgrade:
+				if (activeCell.liveObj){
+					activeCell.liveObj.build();
+				}
+				break;
+			default:
+			break;
+			}
 
-	void OnCollisionEnter2D(Collision2D coll) {
-		l ("boom");
-		if (coll.gameObject.tag == "Cell") l ("Cell");
-		
+		}
 	}
 
 }

@@ -8,8 +8,9 @@ public class AutoCanon : Building {
 
 	protected new void Awake(){
 		base.Awake();
-		buildTime = 5f;
+		buildTime = 2f;
 		mineralCostUpgrade = new int[]{5,10,20,40,80};
+		upgradeTimePerLevel = new float[]{2,5,10,20};
 	}
 
 	protected  new void Start () {

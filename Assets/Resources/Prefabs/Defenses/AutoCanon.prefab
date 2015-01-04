@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.90120387, y: 1.98691034, z: 0}
+  m_LocalPosition: {x: 17.6888885, y: -4.87575054, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -53,7 +53,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
@@ -76,12 +76,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e97f528dca91545e8bf40dc9de15441b, type: 3}
   - {fileID: 21300000, guid: e772c84edbe7b4f2fbdc5dbe255b0b3f, type: 3}
   - {fileID: 21300000, guid: 23b22dff9f2b54de2a8142e0c67d6522, type: 3}
+  upgradeTimePerLevel:
+  - 5
+  - 10
+  - 30
+  - 100
+  spritesPerBuild:
+  - {fileID: 21300000, guid: b130e7c7f11a34a8397da890c7e50b9f, type: 3}
+  - {fileID: 21300000, guid: d0c9e61121cc9400aad88a6a6dd6a350, type: 3}
   mineralCostBuild: 10
   mineralCostRefund: 6
   diamondCost: 1
-  buildSprite: {fileID: 0}
+  buildSprites: []
   mineralCostUpgrade: 01000000050000000a000000140000002800000050000000
-  BuildTime: 5
   bullet: {fileID: 100002, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
   shootSpeedPerLevel:
   - 1

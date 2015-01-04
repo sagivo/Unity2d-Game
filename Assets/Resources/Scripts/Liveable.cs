@@ -51,7 +51,7 @@ public class Liveable : BaseObj {
 	}
 
 	public void build(){
-		if (spritesPerBuild.Length >= level) spriteRenderer.sprite = spritesPerLevel[level];
+		if (spritesPerBuild.Length > level) spriteRenderer.sprite = spritesPerBuild[level];
 		Invoke("upgrade", upgradeTimePerLevel[level]);
 		changeStatus(StatusType.Build);
 	}
