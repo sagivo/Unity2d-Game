@@ -3,13 +3,16 @@ using System.Collections;
 
 public class CanonDestroyer : Enemy {
 
-	// Use this for initialization
-	new void Start () {
-		base.Start();
-		speed = .6f;
-		health = 70;
+	new void Awake(){
+		base.Awake();
+		speed = .3f;
+		health = 560;
 		killBonusMinerals = new int[]{3,7,12};
+	}
 
+	// Use this for initialization
+	protected new void Start () {
+		base.Start();
 		findTarget();
 	}
 	

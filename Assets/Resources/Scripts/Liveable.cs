@@ -33,7 +33,6 @@ public class Liveable : BaseObj {
 		if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
 		status = StatusType.Live;
 
-
 		if (showHealthBar) {
 			var hb = Instantiate(Resources.Load("Prefabs/UI/HealthBar"),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
 			hb.transform.parent = transform;

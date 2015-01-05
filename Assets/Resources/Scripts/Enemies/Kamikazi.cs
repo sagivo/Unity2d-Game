@@ -4,10 +4,15 @@ using System.Collections;
 public class Kamikazi : Enemy {
 	public int damage = 20;
 
-	protected new void Start(){
-		base.Start();
+	protected new void Awake(){
+		base.Awake();
 		speed = 1.1f;
 		health = 40;
+	}
+
+	protected new void Start(){
+		base.Start();
+		l ("kami");
 		target = Game.player;
 	}
 	 
