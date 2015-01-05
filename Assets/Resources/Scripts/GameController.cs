@@ -22,7 +22,7 @@ public class GameController : Singleton<GameController> {
 
 	new void Awake(){
 		base.Awake();
-		menue = GameObject.Find("CellMenue").GetComponent<CellMenue>();
+		if (GameObject.Find("CellMenue")) menue = GameObject.Find("CellMenue").GetComponent<CellMenue>();
 	}
 
 	new void Start(){
@@ -36,6 +36,10 @@ public class GameController : Singleton<GameController> {
 
 	public bool canUpgrade(Building o){
 		return (Game.minerals >= o.mineralCostUpgrade[level]);
+	}
+
+	public void setTimeScale(float scale){
+		Time.timeScale = scale;
 	}
 
 }

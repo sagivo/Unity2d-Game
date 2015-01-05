@@ -10,6 +10,7 @@ public class Cell : BaseObj {
 
 	//colors
 	public Color ColorSelected = Color.red;
+	public Color ColorExpended = Color.green;
 	public Color ColorBase = Color.white;
 	Vector2[] distanceEdges = new Vector2[] {new Vector2(3.8f,2.15f), new Vector2(3.8f,-2.2f), new Vector2(0,-4.35f), new Vector2(-3.8f,-2.2f), new Vector2(-3.8f,2.15f), new Vector2(0,4.35f)};
 	//Vector2[] distanceEdges = new Vector2[] {new Vector2(3.8f,2.15f)};
@@ -37,12 +38,17 @@ public class Cell : BaseObj {
 		var selected = getSelected();
 		if (selected != null) selected.unSelect();
 		sprite.color = ColorSelected;
-		Game.menue.GetComponent<RectTransform>().position = new Vector2(transform.position.x + 2, transform.position.y + 2);
+		//Game.menue.GetComponent<RectTransform>().position = new Vector2(transform.position.x + 2, transform.position.y + 2);
 	}
 
 	public void unSelect(){	
 		sprite.color = ColorBase;
 		renderer.material.color = ColorBase;
+	}
+
+	public static void unselectSelected(){
+		var cell = getSelected ();
+		if (cell!=null) cell.unSelect();
 	}
 	
 	public bool isSelected(){
@@ -56,27 +62,27 @@ public class Cell : BaseObj {
 	}
 
 	public void expend(){
+		if (!canExpend()) return;
 		Game.minerals -= costExpend;
 		unSelect();
+		var count = 0;
 		foreach (var v2 in distanceEdges){
-			Ray ray = Camera.main.ScreenPointToRay(new Vector3(200, 200, 0));
-			Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+			//Debug.DrawLine(Camera.main.transform.position, gameObject.transform.position +  new Vector3(v2.x,v2.y,1), Color.yellow, Mathf.Infinity);
+			Ray ray = Camera.main.ViewportPointToRay(Camera.main.WorldToViewportPoint(gameObject.transform.position + new Vector3(v2.x,v2.y )));
 			var hit = Physics2D.Raycast(ray.origin, ray.direction ,Mathf.Infinity , ( 1 << LayerMask.NameToLayer("Cells") ));
-			//var hit = Physics2D.Raycast(Camera.main.transform.position, gameObject.transform.position +  new Vector3(v2.x,v2.y,1) ,101 , ( 1 << LayerMask.NameToLayer("Cells") ));
 			if (hit.collider == null){
-				GameObject.Instantiate(gameObject, transform.position +  new Vector3(v2.x,v2.y,0),transform.rotation);
-			} else {
-				l ("hit " + ((Vector2)transform.position +  v2)+ " | " + hit.collider.gameObject.name);
-			}
-			Debug.DrawLine(Camera.main.transform.position, gameObject.transform.position +  new Vector3(v2.x,v2.y,1), Color.yellow, Mathf.Infinity);
+				(GameObject.Instantiate(gameObject, transform.position +  new Vector3(v2.x,v2.y,0),transform.rotation) as GameObject).transform.parent = transform.parent;
+				count++;
+			} 
 		}
 	}
 
 	public bool canExpend(){
-		return (Game.minerals >= costExpend);
+		return (!liveObj && Game.minerals >= costExpend);
 	}
 
 	public void HandleSelect(Drag.DragType dragType, Building building){
+		unselectSelected();
 		switch (dragType) {
 		case Drag.DragType.Build:				
 			if (!liveObj && Game.canBuild(building)) select();
@@ -88,7 +94,7 @@ public class Cell : BaseObj {
 			if (liveObj) select();
 			break;
 		case Drag.DragType.Expand:
-			if (canExpend()) select();
+			if (!liveObj && canExpend()) select();
 			break;
 			default: break;
 		}

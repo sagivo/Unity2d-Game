@@ -28,12 +28,12 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 		gameObject.transform.position = data.position;
 
 		Ray ray = Camera.main.ScreenPointToRay(gameObject.transform.position);
+		//Debug.DrawLine(Camera.main.transform.position, gameObject.transform.position, Color.yellow, Mathf.Infinity);
+		//Debug.DrawLine(ray.direction, ray.origin, Color.yellow, Mathf.Infinity);
 		var hit =  Physics2D.Raycast(ray.origin, ray.direction ,Mathf.Infinity , ( 1 << LayerMask.NameToLayer("Cells") ));
-
 		if (hit.collider != null && hit.collider.GetComponent<Cell>() != activeCell){
 			activeCell = hit.collider.GetComponent<Cell>();
 			activeCell.HandleSelect(dragType,buildObj);
-			//activeCell.select();
 		} else if (!hit.collider && activeCell!=null) activeCell.unSelect();
 
 	}
@@ -60,7 +60,7 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 				}
 				break;
 			case DragType.Expand:
-				activeCell.expend();
+				if (activeCell.canExpend()) activeCell.expend();
 				break;
 			default:
 			break;
