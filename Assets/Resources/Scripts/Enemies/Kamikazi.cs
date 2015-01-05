@@ -12,7 +12,6 @@ public class Kamikazi : Enemy {
 
 	protected new void Start(){
 		base.Start();
-		l ("kami");
 		target = Game.player;
 	}
 	 
