@@ -1,7 +1,8 @@
 using UnityEngine;
+using UnityEditor;
 using System.Collections;
 
-public class Cell : BaseObj {
+public class Cell : Liveable {
 	public enum cellType {Empty, Player, Canon, Building};
 	public cellType type;
 	public bool selected;
@@ -10,7 +11,7 @@ public class Cell : BaseObj {
 
 	//colors
 	public Color ColorSelected = Color.red;
-	public Color ColorExpended = Color.green;
+	public Color ColorInactive = Color.green;
 	public Color ColorBase = Color.white;
 	Vector2[] distanceEdges = new Vector2[] {new Vector2(3.8f,2.15f), new Vector2(3.8f,-2.2f), new Vector2(0,-4.35f), new Vector2(-3.8f,-2.2f), new Vector2(-3.8f,2.15f), new Vector2(0,4.35f)};
 	//Vector2[] distanceEdges = new Vector2[] {new Vector2(3.8f,2.15f)};
@@ -18,12 +19,19 @@ public class Cell : BaseObj {
 
 	SpriteRenderer sprite;
 	//events
-	public delegate void HitEvent(object sender, object args); public HitEvent OnHit;
+	protected new void Awake(){
+		base.Awake();
+		showHealthBar = false;
+	}
 
 	protected new void Start(){
 		base.Start();
 		sprite = GetComponent<SpriteRenderer>();
 		Game.cells.Add(this);
+
+		OnStatusChange += (s) => {
+			if (status == StatusType.InActive) sprite.color = ColorInactive;
+		};
 	}
 
 	protected new void Update(){
@@ -35,6 +43,7 @@ public class Cell : BaseObj {
 	}
 
 	public void select(){
+		if (status != StatusType.Live) return;
 		var selected = getSelected();
 		if (selected != null) selected.unSelect();
 		sprite.color = ColorSelected;
@@ -42,6 +51,7 @@ public class Cell : BaseObj {
 	}
 
 	public void unSelect(){	
+		if (status != StatusType.Live) return;
 		sprite.color = ColorBase;
 		renderer.material.color = ColorBase;
 	}
@@ -65,16 +75,19 @@ public class Cell : BaseObj {
 		if (!canExpend()) return;
 		Game.minerals -= costExpend;
 		unSelect();
+		sprite.color = ColorInactive;
 		var count = 0;
 		foreach (var v2 in distanceEdges){
 			//Debug.DrawLine(Camera.main.transform.position, gameObject.transform.position +  new Vector3(v2.x,v2.y,1), Color.yellow, Mathf.Infinity);
 			Ray ray = Camera.main.ViewportPointToRay(Camera.main.WorldToViewportPoint(gameObject.transform.position + new Vector3(v2.x,v2.y )));
 			var hit = Physics2D.Raycast(ray.origin, ray.direction ,Mathf.Infinity , ( 1 << LayerMask.NameToLayer("Cells") ));
 			if (hit.collider == null){
-				(GameObject.Instantiate(gameObject, transform.position +  new Vector3(v2.x,v2.y,0),transform.rotation) as GameObject).transform.parent = transform.parent;
+				var go = (GameObject)Resources.Load(Vars.PrefabPaths.cell);
+				(GameObject.Instantiate(go, transform.position +  new Vector3(v2.x,v2.y,0),transform.rotation) as GameObject).transform.parent = transform.parent;
 				count++;
 			} 
 		}
+		setInactive();
 	}
 
 	public bool canExpend(){

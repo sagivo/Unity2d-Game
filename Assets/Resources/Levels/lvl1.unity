@@ -105,12 +105,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
+  status: 0
+  showHealthBar: 1
+  healthBarYMargin: 2
+  spritesPerLevel: []
+  upgradeTimePerLevel:
+  - 5
+  - 10
+  - 30
+  - 100
+  spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorExpended: {r: 0, g: 1, b: 0, a: 1}
+  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &29185468
 SpriteRenderer:
@@ -819,12 +830,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
+  status: 0
+  showHealthBar: 1
+  healthBarYMargin: 2
+  spritesPerLevel: []
+  upgradeTimePerLevel:
+  - 5
+  - 10
+  - 30
+  - 100
+  spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorExpended: {r: 0, g: 1, b: 0, a: 1}
+  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &297121490
 SpriteRenderer:
@@ -1429,12 +1451,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
+  status: 0
+  showHealthBar: 1
+  healthBarYMargin: 2
+  spritesPerLevel: []
+  upgradeTimePerLevel:
+  - 5
+  - 10
+  - 30
+  - 100
+  spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorExpended: {r: 0, g: 1, b: 0, a: 1}
+  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &688165569
 SpriteRenderer:
@@ -2446,12 +2479,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
+  status: 0
+  showHealthBar: 1
+  healthBarYMargin: 2
+  spritesPerLevel: []
+  upgradeTimePerLevel:
+  - 5
+  - 10
+  - 30
+  - 100
+  spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorExpended: {r: 0, g: 1, b: 0, a: 1}
+  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1246404196
 SpriteRenderer:
@@ -2670,12 +2714,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
+  status: 0
+  showHealthBar: 1
+  healthBarYMargin: 2
+  spritesPerLevel: []
+  upgradeTimePerLevel:
+  - 5
+  - 10
+  - 30
+  - 100
+  spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorExpended: {r: 0, g: 1, b: 0, a: 1}
+  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1342392013
 SpriteRenderer:
@@ -2731,12 +2786,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
+  status: 0
+  showHealthBar: 1
+  healthBarYMargin: 2
+  spritesPerLevel: []
+  upgradeTimePerLevel:
+  - 5
+  - 10
+  - 30
+  - 100
+  spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorExpended: {r: 0, g: 1, b: 0, a: 1}
+  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1376378910
 SpriteRenderer:
@@ -3029,12 +3095,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
+  status: 0
+  showHealthBar: 1
+  healthBarYMargin: 2
+  spritesPerLevel: []
+  upgradeTimePerLevel:
+  - 5
+  - 10
+  - 30
+  - 100
+  spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
   ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorExpended: {r: 0, g: 1, b: 0, a: 1}
+  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
   ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1634425498
 SpriteRenderer:
@@ -4179,7 +4256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1.3319149
+  m_AspectRatio: 1.33412886
 --- !u!1 &2004252665
 GameObject:
   m_ObjectHideFlags: 0

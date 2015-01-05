@@ -5,9 +5,9 @@ public class Liveable : BaseObj {
 
 	public int Health {get{return health;} }
 	public int level = 0;
-	public enum StatusType {Live, Destroyed, Build, Repair}
+	public enum StatusType {Live, Destroyed, Build, InActive, Repair}
 	public StatusType status;
-	public bool showHealthBar = true;
+	public bool showHealthBar = false;
 	public float healthBarYMargin = 2;
 
 	public System.Action<Collider2D> OnHit;
@@ -34,7 +34,7 @@ public class Liveable : BaseObj {
 		status = StatusType.Live;
 
 		if (showHealthBar) {
-			var hb = Instantiate(Resources.Load("Prefabs/UI/HealthBar"),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
+			var hb = Instantiate(Resources.Load(Vars.PrefabPaths.uiHealthbar),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
 			hb.transform.parent = transform;
 			healthBar = hb.GetComponent<HealthBarController>();
 			healthBar.setHealth(health);
@@ -64,6 +64,10 @@ public class Liveable : BaseObj {
 		level++;
 		if (spritesPerLevel != null && spritesPerLevel.Length >= level) spriteRenderer.sprite = spritesPerLevel[level];
 		changeStatus(StatusType.Live);
+	}
+
+	public void setInactive(){
+		changeStatus(StatusType.InActive);
 	}
 
 	void changeStatus(StatusType newStatus){
