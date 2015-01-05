@@ -40,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.125229359, y: -4.67668247, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
   m_Father: {fileID: 0}
@@ -75,9 +75,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: af82634b4afa44021bc5af3fc4e00f6c, type: 3}
   - {fileID: 21300000, guid: 5b3f64e061aac48ceb73378cf718cf7a, type: 3}
   - {fileID: 21300000, guid: 30b21822311404cdc9555e6cb36d2222, type: 3}
+  upgradeTimePerLevel:
+  - 5
+  - 10
+  - 30
+  - 100
+  spritesPerBuild:
+  - {fileID: 21300000, guid: b24352730542e4ed9853af170a0bd2a6, type: 3}
+  - {fileID: 21300000, guid: b24352730542e4ed9853af170a0bd2a6, type: 3}
+  - {fileID: 21300000, guid: b24352730542e4ed9853af170a0bd2a6, type: 3}
   mineralCostBuild: 10
   mineralCostRefund: 6
   diamondCost: 1
+  buildSprites: []
   mineralCostUpgrade: 01000000050000000a000000140000002800000050000000
   timeToMineralPerLevel:
   - 2

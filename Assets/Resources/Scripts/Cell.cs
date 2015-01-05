@@ -75,4 +75,22 @@ public class Cell : BaseObj {
 	public bool canExpend(){
 		return (Game.minerals >= costExpend);
 	}
+
+	public void HandleSelect(Drag.DragType dragType, Building building){
+		switch (dragType) {
+		case Drag.DragType.Build:				
+			if (!liveObj && Game.canBuild(building)) select();
+			break;
+		case Drag.DragType.Upgrade:
+			if (liveObj && Game.canUpgrade(building)) select();
+			break;
+		case Drag.DragType.Refund:
+			if (liveObj) select();
+			break;
+		case Drag.DragType.Expand:
+			if (canExpend()) select();
+			break;
+			default: break;
+		}
+	}
 }

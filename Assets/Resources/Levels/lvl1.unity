@@ -712,7 +712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: d0c9e61121cc9400aad88a6a6dd6a350, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d697bc4f4918a4d1a9a4638101a4f548, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1105,6 +1105,7 @@ RectTransform:
   - {fileID: 1230965719}
   - {fileID: 793325257}
   - {fileID: 233839108}
+  - {fileID: 1717564705}
   m_Father: {fileID: 1985670065}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
@@ -1462,8 +1463,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 625301827}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: .585673988}
-  m_AnchorMax: {x: 1, y: .692000031}
+  m_AnchorMin: {x: 0, y: .485347986}
+  m_AnchorMax: {x: 1, y: .583831549}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
@@ -1480,7 +1481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragOnSurfaces: 1
   buildObj: {fileID: 11400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
-  dragType: 2
+  dragType: 3
 --- !u!114 &793325259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1904,7 +1905,7 @@ GameObject:
   - 114: {fileID: 1230965721}
   - 114: {fileID: 1230965720}
   m_Layer: 5
-  m_Name: UpgradeMenu
+  m_Name: Expand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1940,7 +1941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragOnSurfaces: 1
   buildObj: {fileID: 11400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
-  dragType: 1
+  dragType: 2
 --- !u!114 &1230965721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1954,7 +1955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 9d4edc92eea7f4ae696a0c4ab53160c8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7671ba1ff57ed40ffbf3252b505d3ed0, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2860,6 +2861,82 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1694042566}
+--- !u!1 &1717564704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1717564705}
+  - 222: {fileID: 1717564708}
+  - 114: {fileID: 1717564707}
+  - 114: {fileID: 1717564706}
+  m_Layer: 5
+  m_Name: UpgradeMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1717564705
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1717564704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 625301827}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0, y: .596673965}
+  m_AnchorMax: {x: 1, y: .692000031}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1717564706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1717564704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75de16f2ec40b4fc1803eec1fe6739c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragOnSurfaces: 1
+  buildObj: {fileID: 11400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
+  dragType: 1
+--- !u!114 &1717564707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1717564704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9d4edc92eea7f4ae696a0c4ab53160c8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1717564708
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1717564704}
 --- !u!1 &1745475349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2875,7 +2952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1745475350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2887,7 +2964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad6a6fd279b2a4da8bc49a9c85e7adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnEvery: 5
+  spawnEvery: 3
   enemies:
   - {fileID: 100000, guid: a4079fadde8a44dde8c91afed04d9e10, type: 2}
   - {fileID: 140454, guid: f90c5357b849e4241a09a4c92202dd34, type: 2}

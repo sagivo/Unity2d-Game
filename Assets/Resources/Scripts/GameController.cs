@@ -33,4 +33,9 @@ public class GameController : Singleton<GameController> {
 	public bool canBuild(Building o){
 		return (Game.minerals >= o.mineralCostBuild || Game.diamonds >= o.diamondCost);
 	}
+
+	public bool canUpgrade(Building o){
+		return (Game.minerals >= o.mineralCostUpgrade[level]);
+	}
+
 }

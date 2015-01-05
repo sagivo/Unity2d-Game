@@ -8,7 +8,7 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 	public bool dragOnSurfaces = true;
 	public Building buildObj;
-	public enum DragType {Build, Upgrade, Refund};
+	public enum DragType {Build, Upgrade, Expand, Refund};
 	public DragType dragType;
 
 	Cell activeCell;
@@ -32,7 +32,8 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 
 		if (hit.collider != null && hit.collider.GetComponent<Cell>() != activeCell){
 			activeCell = hit.collider.GetComponent<Cell>();
-			activeCell.select();
+			activeCell.HandleSelect(dragType,buildObj);
+			//activeCell.select();
 		} else if (!hit.collider && activeCell!=null) activeCell.unSelect();
 
 	}
@@ -41,7 +42,7 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 	{
 		gameObject.transform.position = startPos;
 
-		if (activeCell){
+		if (activeCell && activeCell.isSelected()){
 			switch (dragType) {
 			case DragType.Build:
 				if (!Game.canBuild(buildObj)) return;
@@ -57,6 +58,9 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 				if (activeCell.liveObj) {
 					(activeCell.liveObj as Building).refund();
 				}
+				break;
+			case DragType.Expand:
+				activeCell.expend();
 				break;
 			default:
 			break;
