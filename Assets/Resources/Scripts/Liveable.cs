@@ -8,6 +8,7 @@ public class Liveable : BaseObj {
 	public enum StatusType {Live, Destroyed, Build, Repair}
 	public StatusType status;
 	public bool showHealthBar = true;
+	public float healthBarYMargin = 2;
 
 	public System.Action<Collider2D> OnHit;
 	public System.Action OnDie;
@@ -31,10 +32,14 @@ public class Liveable : BaseObj {
 		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();
 		if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
 		status = StatusType.Live;
+
+
 		if (showHealthBar) {
-			var hb = Instantiate(Resources.Load("Prefabs/HealthBar"),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
+			var hb = Instantiate(Resources.Load("Prefabs/UI/HealthBar"),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
 			hb.transform.parent = transform;
-			healthBar = hb.AddComponent<HealthBarController>(); healthBar.health = Health;
+			healthBar = hb.GetComponent<HealthBarController>();
+			healthBar.setHealth(health);
+			healthBar.yMargin = healthBarYMargin;
 		}
 	}
 
@@ -47,7 +52,7 @@ public class Liveable : BaseObj {
 		health -= by;
 		if (OnHealthChanged!=null) OnHealthChanged(Health); 
 		if (health <= 0 && OnDie!=null) OnDie();
-		healthBar.health = Health;
+		healthBar.setHealth(Health);
 	}
 
 	public void build(){
