@@ -2,7 +2,14 @@
 using System.Collections;
 
 public class MineralMiner : Building {
-	public float[] timeToMineralPerLevel = new float[]{2, 1, .7f, .5f};
+	public float[] timeToMineralPerLevel = Vars.Balance.Player.MineralMiner.timeToMineralPerLevel;
+
+	protected new void Awake(){
+		base.Awake();
+		mineralCostUpgrade = Vars.Balance.Player.MineralMiner.mineralCostUpgrade;
+		upgradeTimePerLevel = Vars.Balance.Player.MineralMiner.upgradeTimePerLevel;
+	}
+
 
 	protected new void Start () {
 		base.Start();

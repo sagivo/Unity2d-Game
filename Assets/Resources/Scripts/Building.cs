@@ -10,7 +10,6 @@ public class Building : Liveable {
 	[UnityEngine.HideInInspector]
 	public int[] mineralCostUpgrade = new int[]{1,5,10,20,40,80};
 	[UnityEngine.HideInInspector]
-	protected float buildTime = 1f;
 
 	protected new void Start(){
 		base.Start();

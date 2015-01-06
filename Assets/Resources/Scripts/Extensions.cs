@@ -58,4 +58,8 @@ public static class Extensions {
 		}
 		return comp;
 	}
+
+	public static float to_f(this int v){
+		return (float)v;
+	}
 }

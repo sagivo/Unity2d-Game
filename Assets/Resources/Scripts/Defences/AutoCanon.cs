@@ -4,13 +4,12 @@ using System.Collections;
 public class AutoCanon : Building {
 	public GameObject bullet;
 	GameObject target;
-	public float[] shootSpeedPerLevel = new float[]{1, .7f, .3f, .2f};
+	public float[] shootSpeedPerLevel = Vars.Balance.Player.AutoCanon.shootSpeedPerLevel;
 
 	protected new void Awake(){
 		base.Awake();
-		buildTime = 2f;
-		mineralCostUpgrade = new int[]{5,10,20,40,80};
-		upgradeTimePerLevel = new float[]{2,5,10,20};
+		mineralCostUpgrade = Vars.Balance.Player.AutoCanon.mineralCostUpgrade;
+		upgradeTimePerLevel = Vars.Balance.Player.AutoCanon.upgradeTimePerLevel;
 	}
 
 	protected  new void Start () {
