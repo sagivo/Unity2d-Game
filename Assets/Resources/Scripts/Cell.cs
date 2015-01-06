@@ -10,9 +10,9 @@ public class Cell : Liveable {
 	public int costExpend=20;
 
 	//colors
-	public Color ColorSelected = Color.red;
-	public Color ColorInactive = Color.green;
-	public Color ColorBase = Color.white;
+	Color ColorSelected = Color.red;
+	Color ColorInactive = Color.gray;
+	Color ColorBase = Color.white;
 	Vector2[] distanceEdges = new Vector2[] {new Vector2(3.8f,2.15f), new Vector2(3.8f,-2.2f), new Vector2(0,-4.35f), new Vector2(-3.8f,-2.2f), new Vector2(-3.8f,2.15f), new Vector2(0,4.35f)};
 	//Vector2[] distanceEdges = new Vector2[] {new Vector2(3.8f,2.15f)};
 

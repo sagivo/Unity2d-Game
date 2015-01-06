@@ -7,7 +7,7 @@ public class Liveable : BaseObj {
 	public int level = 0;
 	public enum StatusType {Live, Destroyed, Build, InActive, Repair}
 	public StatusType status;
-	public bool showHealthBar = false;
+	public bool showHealthBar = true;
 	public float healthBarYMargin = 2;
 
 	public System.Action<Collider2D> OnHit;
@@ -19,7 +19,7 @@ public class Liveable : BaseObj {
 	public System.Action<object> OnRepairEnd;
 	public System.Action<object> OnHealthChanged;
 	public Sprite[] spritesPerLevel;
-	public float[] upgradeTimePerLevel = new float[]{5,10,30,100};
+	protected float[] upgradeTimePerLevel = new float[]{0,10,30,100};
 	public Sprite[] spritesPerBuild;
 
 	protected int health = 100;
@@ -30,7 +30,7 @@ public class Liveable : BaseObj {
 		base.Start();	
 
 		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();
-		if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
+		//if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
 		status = StatusType.Live;
 
 		if (showHealthBar) {
@@ -55,15 +55,17 @@ public class Liveable : BaseObj {
 	}
 
 	public void build(){
-		if (spritesPerBuild.Length > level) spriteRenderer.sprite = spritesPerBuild[level];
+		if (spritesPerBuild != null && spritesPerBuild.Length > level) spriteRenderer.sprite = spritesPerBuild[level];
 		Invoke("upgrade", upgradeTimePerLevel[level]);
 		changeStatus(StatusType.Build);
+		if (showHealthBar) healthBar.gameObject.SetActive(false);
 	}
 
 	public void upgrade(){
 		level++;
 		if (spritesPerLevel != null && spritesPerLevel.Length >= level) spriteRenderer.sprite = spritesPerLevel[level];
 		changeStatus(StatusType.Live);
+		if (showHealthBar) healthBar.gameObject.SetActive(true);
 	}
 
 	public void setInactive(){

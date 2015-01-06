@@ -73,17 +73,13 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: .5
   spritesPerLevel:
-  - {fileID: 21300000, guid: b130e7c7f11a34a8397da890c7e50b9f, type: 3}
+  - {fileID: 21300000, guid: e97f528dca91545e8bf40dc9de15441b, type: 3}
   - {fileID: 21300000, guid: e97f528dca91545e8bf40dc9de15441b, type: 3}
   - {fileID: 21300000, guid: e772c84edbe7b4f2fbdc5dbe255b0b3f, type: 3}
   - {fileID: 21300000, guid: 23b22dff9f2b54de2a8142e0c67d6522, type: 3}
-  upgradeTimePerLevel:
-  - 5
-  - 10
-  - 30
-  - 100
   spritesPerBuild:
   - {fileID: 21300000, guid: b130e7c7f11a34a8397da890c7e50b9f, type: 3}
+  - {fileID: 21300000, guid: d0c9e61121cc9400aad88a6a6dd6a350, type: 3}
   - {fileID: 21300000, guid: d0c9e61121cc9400aad88a6a6dd6a350, type: 3}
   mineralCostBuild: 10
   mineralCostRefund: 6

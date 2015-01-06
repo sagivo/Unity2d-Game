@@ -110,19 +110,11 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
-  upgradeTimePerLevel:
-  - 5
-  - 10
-  - 30
-  - 100
   spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
-  ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
-  ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &29185468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -835,19 +827,11 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
-  upgradeTimePerLevel:
-  - 5
-  - 10
-  - 30
-  - 100
   spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
-  ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
-  ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &297121490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1456,19 +1440,11 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
-  upgradeTimePerLevel:
-  - 5
-  - 10
-  - 30
-  - 100
   spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
-  ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
-  ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &688165569
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2433,11 +2409,6 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
-  upgradeTimePerLevel:
-  - 5
-  - 10
-  - 30
-  - 100
   spritesPerBuild: []
   mineralCostBuild: 10
   mineralCostRefund: 6
@@ -2484,19 +2455,11 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
-  upgradeTimePerLevel:
-  - 5
-  - 10
-  - 30
-  - 100
   spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
-  ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
-  ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1246404196
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2719,19 +2682,11 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
-  upgradeTimePerLevel:
-  - 5
-  - 10
-  - 30
-  - 100
   spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
-  ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
-  ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1342392013
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2791,19 +2746,11 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
-  upgradeTimePerLevel:
-  - 5
-  - 10
-  - 30
-  - 100
   spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
-  ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
-  ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1376378910
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3100,19 +3047,11 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
-  upgradeTimePerLevel:
-  - 5
-  - 10
-  - 30
-  - 100
   spritesPerBuild: []
   type: 0
   selected: 0
   liveObj: {fileID: 0}
   costExpend: 20
-  ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorInactive: {r: 0, g: 1, b: 0, a: 1}
-  ColorBase: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1634425498
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3383,7 +3322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1745475350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4256,7 +4195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1.33412886
+  m_AspectRatio: 1.33333337
 --- !u!1 &2004252665
 GameObject:
   m_ObjectHideFlags: 0

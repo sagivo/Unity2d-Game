@@ -28,9 +28,11 @@ public class AutoCanon : Building {
 	protected new void Update () {
 		base.Update();
 
-		target = gameObject.CloestToObject(Game.enemies.ToArray());
-		if (target != null){
-			transform.LookAt2d(target.transform,90);
+		if (status == StatusType.Live){
+			target = gameObject.CloestToObject(Game.enemies.ToArray());
+			if (target != null){
+				transform.LookAt2d(target.transform,90);
+			}
 		}
 	}
 

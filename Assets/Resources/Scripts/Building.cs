@@ -19,8 +19,8 @@ public class Building : Liveable {
 		else Game.diamonds -= diamondCost;
 
 		Game.buildings.Add(this);
-		if (spritesPerLevel.Length > level) spriteRenderer.sprite = spritesPerLevel[level];
-		Invoke("upgrade", buildTime);
+
+		if (upgradeTimePerLevel[level] > 0) build();
 	}
 	
 	void OnDestroy(){
