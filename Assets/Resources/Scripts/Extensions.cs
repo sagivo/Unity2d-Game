@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 public static class Extensions {
 
@@ -61,5 +62,9 @@ public static class Extensions {
 
 	public static float to_f(this int v){
 		return (float)v;
+	}
+
+	public static List<Transform> childrenOnly(this Transform transform){
+		return transform.Cast<Transform>().ToList();
 	}
 }
