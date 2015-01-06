@@ -7,7 +7,7 @@ public class Cell : Liveable {
 	public cellType type;
 	public bool selected;
 	public Liveable liveObj;
-	public int costExpend=20;
+	int[] expendCostPerLevel = Vars.Balance.Player.Cell.expendCostPerLevel;
 
 	//colors
 	Color ColorSelected = Color.red;
@@ -73,7 +73,7 @@ public class Cell : Liveable {
 
 	public void expend(){
 		if (!canExpend()) return;
-		Game.minerals -= costExpend;
+		Game.minerals -= expendCostPerLevel[level];
 		unSelect();
 		sprite.color = ColorInactive;
 		var count = 0;
@@ -91,7 +91,7 @@ public class Cell : Liveable {
 	}
 
 	public bool canExpend(){
-		return (!liveObj && Game.minerals >= costExpend);
+		return (!liveObj && Game.minerals >= expendCostPerLevel[level]);
 	}
 
 	public void HandleSelect(Drag.DragType dragType, Building building){
