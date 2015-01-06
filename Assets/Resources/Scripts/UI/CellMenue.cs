@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(Animator))]
@@ -65,7 +65,7 @@ public class CellMenue : BaseObj {
 		Cell cell = Cell.getSelected();
 		var building = (cell.liveObj as Building);
 		if (building.enoughResourcesToUpgrade()) {
-			Game.minerals -= building.mineralCostUpgrade[building.level];
+			Game.minerals -= building.buildCostPerLevel[building.level];
 			building.upgrade();
 		}
 		closeMenue(); 

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class MineralMiner : Building {
@@ -6,8 +6,9 @@ public class MineralMiner : Building {
 
 	protected new void Awake(){
 		base.Awake();
-		mineralCostUpgrade = Vars.Balance.Player.MineralMiner.mineralCostUpgrade;
-		upgradeTimePerLevel = Vars.Balance.Player.MineralMiner.upgradeTimePerLevel;
+		buildCostPerLevel = Vars.Balance.Player.MineralMiner.buildCostPerLevel;
+		buildTimePerLevel = Vars.Balance.Player.MineralMiner.upgradeTimePerLevel;
+		refundPerLevel = Vars.Balance.Player.MineralMiner.refundPerLevel;
 	}
 
 

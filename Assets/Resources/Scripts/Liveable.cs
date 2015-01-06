@@ -19,7 +19,7 @@ public class Liveable : BaseObj {
 	public System.Action<object> OnRepairEnd;
 	public System.Action<object> OnHealthChanged;
 	public Sprite[] spritesPerLevel;
-	protected float[] upgradeTimePerLevel = new float[]{0,10,30,100};
+	protected float[] buildTimePerLevel = new float[]{0,10,30,100};
 	public Sprite[] spritesPerBuild;
 
 	protected int health = 100;
@@ -56,7 +56,7 @@ public class Liveable : BaseObj {
 
 	public void build(){
 		if (spritesPerBuild != null && spritesPerBuild.Length > level) spriteRenderer.sprite = spritesPerBuild[level];
-		Invoke("upgrade", upgradeTimePerLevel[level]);
+		Invoke("upgrade", buildTimePerLevel[level]);
 		changeStatus(StatusType.Build);
 		if (showHealthBar) healthBar.gameObject.SetActive(false);
 	}

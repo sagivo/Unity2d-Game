@@ -2619,11 +2619,10 @@ MonoBehaviour:
   healthBarYMargin: 2
   spritesPerLevel: []
   spritesPerBuild: []
-  mineralCostBuild: 10
-  mineralCostRefund: 6
   diamondCost: 1
   buildSprites: []
-  mineralCostUpgrade: 01000000050000000a000000140000002800000050000000
+  buildCostPerLevel: 01000000050000000a000000140000002800000050000000
+  refundPerLevel: 01000000050000000a000000140000002800000050000000
   bulletSpeed: .00100000005
   fireRate: 1
   ammoPrefab: {fileID: 11400000, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
@@ -2815,7 +2814,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 233839108}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 11475866, guid: 5d7c4bdf263f24b1989df5c6967282db, type: 2}
+      propertyPath: clockType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d7c4bdf263f24b1989df5c6967282db, type: 2}
   m_RootGameObject: {fileID: 1770882056}
@@ -3785,7 +3788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219fd4b011e8642a9824acd45fb60295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clockType: 0
+  clockType: 1
 --- !u!114 &1770882059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4020,7 +4023,6 @@ MonoBehaviour:
   mineralMiners: []
   spawnerLayer: {fileID: 0}
   menue: {fileID: 0}
-  minerals: 20
   diamonds: 3
 --- !u!4 &1852844287
 Transform:

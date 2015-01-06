@@ -8,8 +8,9 @@ public class AutoCanon : Building {
 
 	protected new void Awake(){
 		base.Awake();
-		mineralCostUpgrade = Vars.Balance.Player.AutoCanon.mineralCostUpgrade;
-		upgradeTimePerLevel = Vars.Balance.Player.AutoCanon.upgradeTimePerLevel;
+		buildCostPerLevel = Vars.Balance.Player.AutoCanon.buildCostPerLevel;
+		buildTimePerLevel = Vars.Balance.Player.AutoCanon.upgradeTimePerLevel;
+		refundPerLevel = Vars.Balance.Player.AutoCanon.refundPerLevel;
 	}
 
 	protected  new void Start () {

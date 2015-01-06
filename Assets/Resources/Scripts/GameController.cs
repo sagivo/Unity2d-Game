@@ -18,11 +18,10 @@ public class GameController : Singleton<GameController> {
 	public System.Action OnMineralChange;
 	Sprite Sprite;
 	//resources
-	int _minerals;
+	int _minerals = 10;
 	public int minerals {
 		get{return _minerals;}
-		set
-		{_minerals = value;if (OnMineralChange!=null) OnMineralChange();}
+		set{_minerals = value; if (OnMineralChange!=null) OnMineralChange();}
 	}
 	public int diamonds = 3;
 
@@ -37,11 +36,11 @@ public class GameController : Singleton<GameController> {
 	}
 
 	public bool canBuild(Building o){
-		return (Game.minerals >= o.mineralCostBuild || Game.diamonds >= o.diamondCost);
+		return (Game.minerals >= o.buildCostPerLevel[level]);
 	}
 
 	public bool canUpgrade(Building o){
-		return (Game.minerals >= o.mineralCostUpgrade[level]);
+		return (Game.minerals >= o.buildCostPerLevel[level]);
 	}
 
 	public void setTimeScale(float scale){
