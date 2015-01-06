@@ -15,9 +15,15 @@ public class GameController : Singleton<GameController> {
 	public List<MineralMiner> mineralMiners = new List<MineralMiner>(); //populate this list each time you create a building.
 	public GameObject spawnerLayer;
 	public CellMenue menue;
+	public System.Action OnMineralChange;
 	Sprite Sprite;
 	//resources
-	public int minerals = 50;
+	int _minerals;
+	public int minerals {
+		get{return _minerals;}
+		set
+		{_minerals = value;if (OnMineralChange!=null) OnMineralChange();}
+	}
 	public int diamonds = 3;
 
 	new void Awake(){
@@ -41,5 +47,4 @@ public class GameController : Singleton<GameController> {
 	public void setTimeScale(float scale){
 		Time.timeScale = scale;
 	}
-
 }

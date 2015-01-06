@@ -18,6 +18,8 @@ public class DragClock : BaseObj {
 		base.Start();
 		img = GetComponent<Image>();
 		childImg = transform.childrenOnly()[0].GetComponent<Image>();
+		Game.OnMineralChange += ()=>{
+		};
 	}
 	
 	// Update is called once per frame
@@ -33,9 +35,10 @@ public class DragClock : BaseObj {
 			break;
 		case ClockType.Expend:
 			break;
-			default: break;
+		default: break;
 		}
 		var newVal = (Game.minerals > val) ? 0 : (1f -  Game.minerals.to_f() / val);
+		if (newVal == img.fillAmount) return;
 		float speedFill = (newVal < img.fillAmount) ? speed * Time.deltaTime : 1;
 		img.fillAmount = Mathf.MoveTowards(img.fillAmount, newVal, speedFill);
 		childImg.fillAmount = (img.fillAmount == 0) ? 0 : (1-img.fillAmount);
