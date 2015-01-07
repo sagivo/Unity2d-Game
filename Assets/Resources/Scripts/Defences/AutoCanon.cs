@@ -4,11 +4,12 @@ using System.Collections;
 public class AutoCanon : Building {
 	public GameObject bullet;
 	GameObject target;
+	[System.NonSerialized]
 	public float[] shootSpeedPerLevel = Vars.Balance.Player.AutoCanon.shootSpeedPerLevel;
+	public override int[] buildCostPerLevel {get{return Vars.Balance.Player.AutoCanon.buildCostPerLevel;}}
 
 	protected new void Awake(){
 		base.Awake();
-		buildCostPerLevel = Vars.Balance.Player.AutoCanon.buildCostPerLevel;
 		buildTimePerLevel = Vars.Balance.Player.AutoCanon.upgradeTimePerLevel;
 		refundPerLevel = Vars.Balance.Player.AutoCanon.refundPerLevel;
 	}
@@ -42,6 +43,11 @@ public class AutoCanon : Building {
 
 	void shoot(){
 		if (target != null) Instantiate (bullet, transform.position, transform.rotation);
+	}
+
+	public override bool canBuild(){
+		if (!Game) Game = GameController.Instance;
+		return (Game.minerals >= buildCostPerLevel[level]);
 	}
 
 }

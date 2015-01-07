@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerCanon : Building
+public class PlayerCanon : Liveable
 {
 	//canon types
 	//public enum CanonType{Regular, AutoAim}

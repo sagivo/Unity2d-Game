@@ -30,7 +30,6 @@ public class CellMenue : BaseObj {
 		if (hit.collider){
 			var c = hit.collider.GetComponent<Cell>();
 			if (c) c.select();
-			anim.SetBool("IsOpen", true);
 		}
 	}
 
@@ -41,7 +40,7 @@ public class CellMenue : BaseObj {
 	}
 
 	public void build(Building o){
-		if (!Game.canBuild(o)) return;
+		if (!o.canBuild()) return;
 		Cell cell = Cell.getSelected();
 		Building newObj = GameObject.Instantiate(o, cell.transform.renderer.bounds.center,Quaternion.identity) as Building;
 		cell.liveObj = newObj;

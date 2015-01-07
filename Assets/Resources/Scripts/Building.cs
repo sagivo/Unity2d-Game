@@ -1,12 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
-public class Building : Liveable {
-
-	public int diamondCost = 1;
-	public Sprite[] buildSprites; 
-	[UnityEngine.HideInInspector]
-	public int[] buildCostPerLevel;
+abstract public class Building : Liveable {
+	
+	abstract public int[] buildCostPerLevel {get;}
+	[System.NonSerialized]
 	public int[] refundPerLevel;
 	[UnityEngine.HideInInspector]
 
@@ -38,4 +36,7 @@ public class Building : Liveable {
 		base.build();
 		Game.minerals -= buildCostPerLevel[level];
 	}
+
+	public abstract bool canBuild();
+
 }

@@ -4,12 +4,11 @@ using System.Collections;
 public class Liveable : BaseObj {
 
 	public int Health {get{return health;} }
-	public int level = 0;
+	public int level;
 	public enum StatusType {Live, Destroyed, Build, InActive, Repair}
 	public StatusType status;
 	public bool showHealthBar = true;
 	public float healthBarYMargin = 2;
-
 	public System.Action<Collider2D> OnHit;
 	public System.Action OnDie;
 	public System.Action<StatusType> OnStatusChange;
@@ -18,10 +17,10 @@ public class Liveable : BaseObj {
 	public System.Action<object> OnRepairStart;
 	public System.Action<object> OnRepairEnd;
 	public System.Action<object> OnHealthChanged;
-	public Sprite[] spritesPerLevel;
-	protected float[] buildTimePerLevel = new float[]{0,10,30,100};
+	public Sprite[] spritesPerLevel; 
+	[System.NonSerialized]	
+	protected float[] buildTimePerLevel = new float[]{0,10,30,100};	
 	public Sprite[] spritesPerBuild;
-
 	protected int health = 100;
 	HealthBarController healthBar;
 	protected SpriteRenderer spriteRenderer;

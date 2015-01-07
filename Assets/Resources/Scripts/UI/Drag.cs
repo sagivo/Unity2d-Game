@@ -45,7 +45,7 @@ public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
 		if (activeCell && activeCell.isSelected()){
 			switch (dragType) {
 			case DragType.Build:
-				if (!Game.canBuild(buildObj)) return;
+				if (!buildObj.canBuild()) return;
 				Building newObj = GameObject.Instantiate(buildObj, activeCell.transform.renderer.bounds.center,Quaternion.identity) as Building;
 				activeCell.liveObj = newObj;
 				break;

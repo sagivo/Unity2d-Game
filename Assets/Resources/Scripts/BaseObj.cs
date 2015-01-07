@@ -6,8 +6,8 @@ public class BaseObj : MonoBehaviour {
 	public void l(object o){
 		Debug.Log(o);
 	}
-
-	protected GameController Game;
+	GameController _game;
+	public GameController Game;// { get{if (_game == null && GameController.Instance) Game = GameController.Instance; return _game;} set { _game = value;} }
 	
 	protected void Awake () {
 		Game = GameController.Instance;
@@ -19,5 +19,5 @@ public class BaseObj : MonoBehaviour {
 
 	protected void Start(){}
 	protected void Update(){}
-	
+		
 }

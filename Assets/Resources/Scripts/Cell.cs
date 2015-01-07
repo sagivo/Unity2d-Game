@@ -98,7 +98,7 @@ public class Cell : Liveable {
 		unselectSelected();
 		switch (dragType) {
 		case Drag.DragType.Build:				
-			if (!liveObj && Game.canBuild(building)) select();
+			if (!liveObj && building.canBuild()) select();
 			break;
 		case Drag.DragType.Upgrade:
 			if (liveObj && Game.canUpgrade(building)) select();
