@@ -9,7 +9,8 @@ public class DragClock : BaseObj {
 	public enum ClockType {Canon, Mineral, Expend, Upgrade, Refund}
 	public ClockType clockType;
 
-	float speed = .6f;
+	float speedUp = .3f;
+	float speedDown = .8f;
 	Image img;
 	Image childImg;
 	float fillVal;
@@ -27,7 +28,7 @@ public class DragClock : BaseObj {
 	new void Update () {
 		base.Update();
 
-		float speedFill = (fillVal < img.fillAmount) ? speed * Time.deltaTime : .9f;
+		float speedFill = (fillVal < img.fillAmount) ? speedUp * Time.deltaTime : speedDown * Time.deltaTime;
 		img.fillAmount = Mathf.MoveTowards(img.fillAmount, fillVal, speedFill);
 		childImg.fillAmount = (img.fillAmount == 0) ? 0f : (1-img.fillAmount);
 	}
