@@ -8,7 +8,8 @@ public class BaseObj : MonoBehaviour {
 	}
 	GameController _game;
 	[System.NonSerialized]
-	public GameController Game;// { get{if (_game == null && GameController.Instance) Game = GameController.Instance; return _game;} set { _game = value;} }
+	public GameController Game;
+	public static Config.RootObject Vars = Config.GetConfig();
 	
 	protected void Awake () {
 		Game = GameController.Instance;

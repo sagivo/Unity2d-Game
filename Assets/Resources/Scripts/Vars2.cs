@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-[HideInInspector]
-public class Vars {
+public abstract class Vars2 {
 	public struct PrefabPaths{
 		[System.NonSerialized]
 		public static string cell = "Prefabs/Cell";
@@ -58,7 +58,8 @@ public class Vars {
 				public static int[] healthPerLevel = new int[]{5000,800, 1200};
 				[System.NonSerialized]
 				public static float[] shootRangePerLevel = new float[]{10,30};
-				public static float[] shootSpeedPerLevel {get{return new float[]{2, 1.7f, 1.5f, 1f};}}
+				[System.NonSerialized]
+				public static float[] shootSpeedPerLevel = new float[]{112, 1.7f, 1.5f, 1f};
 
 			}
 			public struct kamikazi{
