@@ -4,6 +4,7 @@ using System.Collections;
 public class MineralMiner : Building {
 	public float[] timeToMineralPerLevel = Vars.Balance.Player.MineralMiner.timeToMineralPerLevel;
 	public override int[] buildCostPerLevel {get{return Vars.Balance.Player.MineralMiner.buildCostPerLevel;}}
+	protected override int[] healthPerLevel{get{return Vars.Balance.Player.MineralMiner.healthPerLevel;}}
 
 	protected new void Awake(){
 		base.Awake();

@@ -942,6 +942,10 @@ Prefab:
       propertyPath: clockType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11475868, guid: 5d7c4bdf263f24b1989df5c6967282db, type: 2}
+      propertyPath: m_FillAmount
+      value: .319999993
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d7c4bdf263f24b1989df5c6967282db, type: 2}
   m_RootGameObject: {fileID: 2057409534}
@@ -5145,7 +5149,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0
+  m_FillAmount: .319999993
   m_FillClockwise: 0
   m_FillOrigin: 2
 --- !u!222 &2057409538

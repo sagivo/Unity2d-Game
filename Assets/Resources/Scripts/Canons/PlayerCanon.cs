@@ -13,7 +13,7 @@ public class PlayerCanon : Liveable
 	public float fireRate = 1f;
 	public Bullet ammoPrefab;
 	public int[] damageExtraPerLevel = new int[]{0, 10, 10, 10, 10, 40, 100};
-
+	protected override int[] healthPerLevel{get{return Vars.Balance.Player.PlayerCanon.healthPerLevel;}}
 
 	//the current target for the auto aim
 	GameObject target;
@@ -25,7 +25,7 @@ public class PlayerCanon : Liveable
 		nextShoot += fireRate;
 		OnHit += (o) => {
 			if (o.gameObject.IsSubClassOf<Kamikazi>()){						
-				DecHealth(o.gameObject.GetComponent<Kamikazi>().damage);
+				decHealth(o.gameObject.GetComponent<Kamikazi>().damage);
 			}
 		};
 

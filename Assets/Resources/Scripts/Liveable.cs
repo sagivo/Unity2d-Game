@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Liveable : BaseObj {
-
-	public int Health {get{return health;} }
+public abstract class Liveable : BaseObj {
+	int _health;
+	public int health {get{return _health;} set{ _health = value; }}
 	public int level;
 	public enum StatusType {Live, Destroyed, Build, InActive, Repair}
 	public StatusType status;
@@ -21,7 +21,7 @@ public class Liveable : BaseObj {
 	[System.NonSerialized]	
 	protected float[] buildTimePerLevel = new float[]{0,10,30,100};	
 	public Sprite[] spritesPerBuild;
-	protected int health = 100;
+	protected abstract int[] healthPerLevel {get;}
 	HealthBarController healthBar;
 	protected SpriteRenderer spriteRenderer;
 
@@ -31,6 +31,7 @@ public class Liveable : BaseObj {
 		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();
 		//if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
 		status = StatusType.Live;
+		health = healthPerLevel[level];
 
 		if (showHealthBar) {
 			var hb = Instantiate(Resources.Load(Vars.PrefabPaths.uiHealthbar),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
@@ -46,11 +47,11 @@ public class Liveable : BaseObj {
 		if (OnHit != null) OnHit(other);
 	}
 
-	public void DecHealth(int by){
-		health -= by;
-		if (OnHealthChanged!=null) OnHealthChanged(Health); 
+	public void decHealth(int by){
+		_health -= by;
+		if (OnHealthChanged!=null) OnHealthChanged(health); 
 		if (health <= 0 && OnDie!=null) OnDie();
-		healthBar.setHealth(Health);
+		healthBar.setHealth(health);
 	}
 
 	public void build(){

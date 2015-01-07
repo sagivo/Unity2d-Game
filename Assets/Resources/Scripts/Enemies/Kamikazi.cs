@@ -3,11 +3,11 @@ using System.Collections;
 
 public class Kamikazi : Enemy {
 	public int damage = 20;
+	protected override int[] healthPerLevel{get{return Vars.Balance.Enemy.kamikazi.healthPerLevel;}}
 
 	protected new void Awake(){
 		base.Awake();
 		speed = 1.1f;
-		health = 40;
 	}
 
 	protected new void Start(){

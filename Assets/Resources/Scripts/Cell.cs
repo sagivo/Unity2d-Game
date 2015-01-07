@@ -8,6 +8,7 @@ public class Cell : Liveable {
 	public bool selected;
 	public Liveable liveObj;
 	int[] expendCostPerLevel = Vars.Balance.Player.Cell.expendCostPerLevel;
+	protected override int[] healthPerLevel{get{return Vars.Balance.Enemy.kamikazi.healthPerLevel;}}
 
 	//colors
 	Color ColorSelected = Color.red;

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Enemy : Liveable 
+public abstract class Enemy : Liveable 
 {
 	public float speed = 1.5f;
 	public GameObject target;
@@ -16,7 +16,7 @@ public class Enemy : Liveable
 		OnHit += (o) => {
 			//if (System.Array.IndexOf(hitTags, o.gameObject.tag) > -1) Destroy(gameObject);
 			if (o.gameObject.IsSubClassOf<Bullet>()){
-				DecHealth(o.gameObject.GetComponent<Bullet>().damage);
+				decHealth(o.gameObject.GetComponent<Bullet>().damage);
 				spriteRenderer.color = Color.red;
 				CancelInvoke("switchBackToOriginalColor");
 				Invoke("switchBackToOriginalColor", .2f);

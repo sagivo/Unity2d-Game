@@ -2,12 +2,11 @@
 using System.Collections;
 
 public class CanonDestroyer : Enemy {
+	protected override int[] healthPerLevel{get{return Vars.Balance.Enemy.canonDestroyer.healthPerLevel;}}
 
 	new void Awake(){
 		base.Awake();
 		speed = .3f;
-		health = 560;
-		killBonusMinerals = new int[]{3,7,12};
 	}
 
 	// Use this for initialization
