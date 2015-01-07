@@ -16,12 +16,8 @@ public class Bullet : BaseObj {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (hits==null) return;
-		//if (hits!=null && System.Array.IndexOf(hits, other.gameObject.tag) > -1) {
-		//		l("b");Destroy(gameObject); 
-		//}
 		foreach (System.Type t in hits) 
-			if (other.GetComponent(t) != null)
-				Destroy(gameObject);
+			if (other.GetComponent(t) != null) {Destroy(gameObject);break;}
 	}
 	
 }

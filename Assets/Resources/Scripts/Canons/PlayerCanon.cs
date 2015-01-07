@@ -11,7 +11,7 @@ public class PlayerCanon : Liveable
 	public float bulletSpeed = 0.001f;
 	[Range(5, 0.1f)] 
 	public float fireRate = 1f;
-	public Bullet ammoPrefab;
+	public Bullet bullet;
 	public int[] damageExtraPerLevel = new int[]{0, 10, 10, 10, 10, 40, 100};
 	protected override int[] healthPerLevel{get{return Vars.Balance.Player.PlayerCanon.healthPerLevel;}}
 
@@ -46,11 +46,13 @@ public class PlayerCanon : Liveable
 	{
 		pos.z = transform.position.z - Camera.main.transform.position.z;
 		pos = Camera.main.ScreenToWorldPoint (pos);
-		Quaternion q = Quaternion.FromToRotation (Vector3.up, pos - transform.position);
-		Bullet b = (Bullet)Instantiate (ammoPrefab, this.transform.position, q);
+		//Quaternion q = Quaternion.FromToRotation (Vector3.up, pos - transform.position);
+
+		//l ((Instantiate (bullet, transform.position, transform.rotation) as Bullet));
+		var b = (Instantiate (bullet, transform.position, transform.rotation) as Bullet);
+		b.hits = new System.Type[]{ typeof(Kamikazi), typeof(CanonDestroyer)};
+
 		b.damage += damageExtraPerLevel[level];
-		b.transform.parent = Game.spawnerLayer.transform;
-		b.rigidbody2D.AddForce (b.transform.up * bulletSpeed);
 	}
 
 	private void rotateToPosition(Vector3 mousePos, Vector3 originPos)
