@@ -37,6 +37,9 @@ abstract public class Building : Liveable {
 		Game.minerals -= buildCostPerLevel[level];
 	}
 
-	public abstract bool canBuild();
+	public bool canBuild(){
+		if (!Game) Game = GameController.Instance;
+		return (Game.minerals >= buildCostPerLevel[level]);
+	}
 
 }

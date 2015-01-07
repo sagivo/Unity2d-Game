@@ -27,10 +27,6 @@ public class MineralMiner : Building {
 		};
 	}
 
-	public override bool canBuild(){
-		return (Game.minerals >= buildCostPerLevel[level]);
-	}
-	
 	protected new void Update () {
 		base.Update();
 	}

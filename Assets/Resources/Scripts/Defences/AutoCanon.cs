@@ -44,10 +44,5 @@ public class AutoCanon : Building {
 	void shoot(){
 		if (target != null) Instantiate (bullet, transform.position, transform.rotation);
 	}
-
-	public override bool canBuild(){
-		if (!Game) Game = GameController.Instance;
-		return (Game.minerals >= buildCostPerLevel[level]);
-	}
-
+	
 }
