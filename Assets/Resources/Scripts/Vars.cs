@@ -58,8 +58,7 @@ public class Vars {
 				public static int[] healthPerLevel = new int[]{5000,800, 1200};
 				[System.NonSerialized]
 				public static float[] shootRangePerLevel = new float[]{10,30};
-				[System.NonSerialized]
-				public static float[] shootSpeedPerLevel = new float[]{3, 2f, 1.5f, 1f};
+				public static float[] shootSpeedPerLevel {get{return new float[]{2, 1.7f, 1.5f, 1f};}}
 
 			}
 			public struct kamikazi{

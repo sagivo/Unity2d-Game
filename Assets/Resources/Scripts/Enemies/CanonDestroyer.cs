@@ -6,6 +6,7 @@ public class CanonDestroyer : Enemy {
 	protected override int[] healthPerLevel{get{return Vars.Balance.Enemy.canonDestroyer.healthPerLevel;}}
 	float[] rangeShootPerLevel = Vars.Balance.Enemy.canonDestroyer.shootRangePerLevel;
 	float[] shootSpeedPerLevel = Vars.Balance.Enemy.canonDestroyer.shootSpeedPerLevel;
+	bool shooting;
 
 	new void Awake(){
 		base.Awake();
@@ -26,12 +27,13 @@ public class CanonDestroyer : Enemy {
 				transform.LookAt2d(target.transform,(transform.position.x > target.transform.position.x) ? 180 :  0);
 				transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
 			} else{ //shoot
-				InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);
+				if (!shooting) {shooting = true; InvokeRepeating("shoot",0, shootSpeedPerLevel[level]);}
 			}
-		} else Invoke("findTarget",1);
+		} else findTarget();
 	}
 
 	void findTarget() {
+		CancelInvoke("findTarget"); shooting = false;
 		target = gameObject.CloestToObject(Game.autoCanons.ToArray());
 		if (target == null) Invoke("findTarget",1);
 	}
