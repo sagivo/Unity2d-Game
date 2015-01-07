@@ -5,7 +5,7 @@ public class AutoCanon : Building {
 	public GameObject bullet;
 	GameObject target;
 	[System.NonSerialized]
-	public float[] shootSpeedPerLevel = Vars.Balance.Player.AutoCanon.shootSpeedPerLevel;
+	float[] shootSpeedPerLevel = Vars.Balance.Player.AutoCanon.shootSpeedPerLevel;
 	public override int[] buildCostPerLevel {get{return Vars.Balance.Player.AutoCanon.buildCostPerLevel;}}
 	protected override int[] healthPerLevel{get{return Vars.Balance.Player.AutoCanon.healthPerLevel;}}
 

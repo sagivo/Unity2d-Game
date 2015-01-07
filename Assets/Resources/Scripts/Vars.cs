@@ -53,9 +53,16 @@ public class Vars {
 
 		public struct Enemy{
 			public struct canonDestroyer{
+				[System.NonSerialized]
 				public static int[] healthPerLevel = new int[]{500,800, 1200};
+				[System.NonSerialized]
+				public static float[] rangeShootPerLevel = new float[]{5,10,30};
+				[System.NonSerialized]
+				public static float[] shootSpeedPerLevel = new float[]{3, 2f, 1.5f, 1f};
+
 			}
 			public struct kamikazi{
+				[System.NonSerialized]
 				public static int[] healthPerLevel = new int[]{40,80,100};
 			}
 		}
