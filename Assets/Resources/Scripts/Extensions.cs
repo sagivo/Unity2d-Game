@@ -64,7 +64,7 @@ public static class Extensions {
 		return (float)v;
 	}
 
-	public static List<Transform> childrenOnly(this Transform transform){
-		return transform.Cast<Transform>().ToList();
+	public static List<Transform> childrenOnly(this GameObject go){
+		return go.transform.Cast<Transform>().ToList();
 	}
 }

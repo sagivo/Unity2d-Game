@@ -16,7 +16,6 @@ public class MineralMiner : Building {
 	protected new void Start () {
 		base.Start();
 		Game.mineralMiners.Add (this);
-		InvokeRepeating("getMinerals",0,timeToMineralPerLevel[level]);
 		build();
 
 		OnStatusChange += (s) => {

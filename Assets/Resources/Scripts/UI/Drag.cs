@@ -3,28 +3,28 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
 [RequireComponent(typeof(Image))]
-public class Drag : BaseObj, IBeginDragHandler, IDragHandler, IEndDragHandler
-{
+public class Drag : BaseObj, IDragHandler, IEndDragHandler {
 	public bool dragOnSurfaces = true;
 	public Building buildObj;
 	public enum DragType {Build, Upgrade, Expand, Refund};
 	public DragType dragType;
+	DragClock clock;
 
 	Cell activeCell;
 	Vector2 startPos; 
 
 	new void Start(){
 		base.Start();
+		if (gameObject.childrenOnly().Count > 0) clock = gameObject.childrenOnly()[0].GetComponent<DragClock>();
 		startPos = gameObject.transform.position;
 	}
 
-	public void OnBeginDrag(PointerEventData eventData)
-	{
-	}
 
 	public void OnDrag(PointerEventData data)
 	{
+		if (clock && clock.hasFill) return;
 		gameObject.transform.position = data.position;
 
 		Ray ray = Camera.main.ScreenPointToRay(gameObject.transform.position);

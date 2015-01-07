@@ -8,9 +8,10 @@ using System.Linq;
 public class DragClock : BaseObj {
 	public enum ClockType {Canon, Mineral, Expend, Upgrade, Refund}
 	public ClockType clockType;
+	public bool hasFill {get {return img.fillAmount > 0;}}
 
-	float speedUp = .3f;
-	float speedDown = .8f;
+	float speedUp = .8f;
+	float speedDown = 2f;
 	Image img;
 	Image childImg;
 	float fillVal;
@@ -19,7 +20,7 @@ public class DragClock : BaseObj {
 	new void Start () {
 		base.Start();
 		img = GetComponent<Image>();
-		childImg = transform.childrenOnly()[0].GetComponent<Image>();
+		childImg = gameObject.childrenOnly()[0].GetComponent<Image>();
 		Game.OnMineralChange += updateVals;
 		updateVals();
 	}
