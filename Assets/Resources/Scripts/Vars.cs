@@ -36,6 +36,9 @@ public class Vars {
 				[System.NonSerialized]
 				public static int[] expendCostPerLevel = new int[]{25,30,50,1};
 			}
+
+			public struct Building{
+			}
 		}
 	}
 }

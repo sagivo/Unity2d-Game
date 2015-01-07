@@ -46,6 +46,8 @@ public class DragClock : BaseObj {
 		case ClockType.Expend:
 			val = Vars.Balance.Player.Cell.expendCostPerLevel[0];
 			break;
+		case ClockType.Upgrade:
+			break;
 		default: break;
 		}
 		fillVal = (Game.minerals > val) ? 0 : (1f -  Game.minerals.to_f() / val);

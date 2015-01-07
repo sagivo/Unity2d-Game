@@ -20,6 +20,7 @@ public class GameController : Singleton<GameController> {
 	//resources
 	[System.NonSerialized]
 	int _minerals = 10;
+
 	public int minerals {
 		get{return _minerals;}
 		set{_minerals = value; if (OnMineralChange!=null) OnMineralChange();}
@@ -35,7 +36,12 @@ public class GameController : Singleton<GameController> {
 		base.Start();
 		spawnerLayer = new GameObject("Spawns");	
 	}
+
 	
+	new void Update(){
+		base.Update();
+	}
+
 	public bool canUpgrade(Building o){
 		return (Game.minerals >= o.buildCostPerLevel[level]);
 	}

@@ -6,7 +6,6 @@ abstract public class Building : Liveable {
 	abstract public int[] buildCostPerLevel {get;}
 	[System.NonSerialized]
 	public int[] refundPerLevel;
-	[UnityEngine.HideInInspector]
 
 	protected new void Start(){
 		base.Start();
@@ -14,7 +13,7 @@ abstract public class Building : Liveable {
 		Game.buildings.Add(this);
 		if (buildTimePerLevel[level] > 0) build();
 	}
-	
+
 	void OnDestroy(){
 		Game.buildings.Remove(this);
 	}
