@@ -43,7 +43,10 @@ public class AutoCanon : Building {
 	}
 
 	void shoot(){
-		if (target != null) Instantiate (bullet, transform.position, transform.rotation);
+		if (target != null) {
+			var b = Instantiate (bullet, transform.position, transform.rotation) as GameObject;
+			b.GetComponent<Bullet>().hits = new System.Type[]{ typeof(Kamikazi), typeof(CanonDestroyer)};
+		}
 	}
 	
 }

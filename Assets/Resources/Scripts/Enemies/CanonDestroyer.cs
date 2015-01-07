@@ -4,7 +4,7 @@ using System.Collections;
 public class CanonDestroyer : Enemy {
 	public GameObject bullet;
 	protected override int[] healthPerLevel{get{return Vars.Balance.Enemy.canonDestroyer.healthPerLevel;}}
-	float[] rangeShootPerLevel = Vars.Balance.Enemy.canonDestroyer.rangeShootPerLevel;
+	float[] rangeShootPerLevel = Vars.Balance.Enemy.canonDestroyer.shootRangePerLevel;
 	float[] shootSpeedPerLevel = Vars.Balance.Enemy.canonDestroyer.shootSpeedPerLevel;
 
 	new void Awake(){
@@ -37,6 +37,9 @@ public class CanonDestroyer : Enemy {
 	}
 
 	void shoot(){
-		if (target != null) Instantiate (bullet, transform.position, transform.rotation);
+		if (target != null ) {
+			var b = Instantiate (bullet, transform.position, transform.rotation) as GameObject;
+			b.GetComponent<Bullet>().hits = new System.Type[]{ typeof(AutoCanon)};
+		}
 	}
 }

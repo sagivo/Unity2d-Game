@@ -7,6 +7,7 @@ public class BaseObj : MonoBehaviour {
 		Debug.Log(o);
 	}
 	GameController _game;
+	[System.NonSerialized]
 	public GameController Game;// { get{if (_game == null && GameController.Instance) Game = GameController.Instance; return _game;} set { _game = value;} }
 	
 	protected void Awake () {

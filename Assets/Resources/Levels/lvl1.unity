@@ -105,7 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   level: 0
   status: 0
   showHealthBar: 1
@@ -348,7 +347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75de16f2ec40b4fc1803eec1fe6739c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   dragOnSurfaces: 1
   buildObj: {fileID: 11400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
   dragType: 0
@@ -767,7 +765,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75de16f2ec40b4fc1803eec1fe6739c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   dragOnSurfaces: 1
   buildObj: {fileID: 11400000, guid: aaa964a3da0f6467dba2a042459df82d, type: 2}
   dragType: 0
@@ -982,7 +979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   level: 0
   status: 0
   showHealthBar: 1
@@ -1633,7 +1629,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219fd4b011e8642a9824acd45fb60295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   clockType: 0
 --- !u!114 &553140920
 MonoBehaviour:
@@ -1827,7 +1822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   level: 0
   status: 0
   showHealthBar: 1
@@ -2134,7 +2128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75de16f2ec40b4fc1803eec1fe6739c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   dragOnSurfaces: 1
   buildObj: {fileID: 11400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
   dragType: 3
@@ -2502,7 +2495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dab1aa516524348008cf76cdda962d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
 --- !u!1 &948908108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,7 +2812,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75de16f2ec40b4fc1803eec1fe6739c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   dragOnSurfaces: 1
   buildObj: {fileID: 11400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
   dragType: 2
@@ -2928,7 +2919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d010fa3286ef54db7a6101d9ed5e5eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   level: 0
   status: 0
   showHealthBar: 1
@@ -2970,7 +2960,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   level: 0
   status: 0
   showHealthBar: 1
@@ -3213,7 +3202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   level: 0
   status: 0
   showHealthBar: 1
@@ -3277,7 +3265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   level: 0
   status: 0
   showHealthBar: 1
@@ -3573,7 +3560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219fd4b011e8642a9824acd45fb60295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   clockType: 2
 --- !u!114 &1585908622
 MonoBehaviour:
@@ -3662,7 +3648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   level: 0
   status: 0
   showHealthBar: 1
@@ -3898,7 +3883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75de16f2ec40b4fc1803eec1fe6739c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   dragOnSurfaces: 1
   buildObj: {fileID: 11400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
   dragType: 1
@@ -3956,7 +3940,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad6a6fd279b2a4da8bc49a9c85e7adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   spawnEvery: 6
   enemies:
   - {fileID: 100000, guid: a4079fadde8a44dde8c91afed04d9e10, type: 2}
@@ -4191,7 +4174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219fd4b011e8642a9824acd45fb60295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   clockType: 1
 --- !u!114 &1770882059
 MonoBehaviour:
@@ -4416,7 +4398,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70574530e75c4ff6955ecfbd85403d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   level: 0
   player: {fileID: 0}
   score: 0
@@ -4543,7 +4524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d3891d9c2f64afb9fa43de1cccb8c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
 --- !u!225 &1870079256
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4784,7 +4764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 316969a89f28f47dba1c8d6111b6fe7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   speed: 1
   minX: 0
   maxX: 0
@@ -4831,7 +4810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d69c3eb173a4c138e8583b1038298e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
 --- !u!114 &1948281140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4993,7 +4971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1.33333337
+  m_AspectRatio: 1.33268857
 --- !u!1 &2004252665
 GameObject:
   m_ObjectHideFlags: 0
@@ -5128,7 +5106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219fd4b011e8642a9824acd45fb60295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 0}
   clockType: 3
 --- !u!114 &2057409537
 MonoBehaviour:

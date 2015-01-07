@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public abstract class Enemy : Liveable 
 {
 	public float speed = 1.5f;
-	public GameObject target;
+	protected GameObject target;
 	public int costKill = 1;
 	protected int[] killBonusMinerals = new int[]{1,5,10};
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[HideInInspector]
 public class Vars {
 	public struct PrefabPaths{
 		[System.NonSerialized]
@@ -54,9 +55,9 @@ public class Vars {
 		public struct Enemy{
 			public struct canonDestroyer{
 				[System.NonSerialized]
-				public static int[] healthPerLevel = new int[]{500,800, 1200};
+				public static int[] healthPerLevel = new int[]{5000,800, 1200};
 				[System.NonSerialized]
-				public static float[] rangeShootPerLevel = new float[]{5,10,30};
+				public static float[] shootRangePerLevel = new float[]{10,30};
 				[System.NonSerialized]
 				public static float[] shootSpeedPerLevel = new float[]{3, 2f, 1.5f, 1f};
 
