@@ -27,6 +27,7 @@ public class CanonDestroyer : Enemy {
 				transform.LookAt2d(target.transform,(transform.position.x > target.transform.position.x) ? 180 :  0);
 				transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
 			} else{ //shoot
+				transform.LookAt2d(target.transform,(transform.position.x > target.transform.position.x) ? 180 :  0);
 				if (!shooting) {shooting = true; InvokeRepeating("shoot",0, shootSpeedPerLevel[level]);}
 			}
 		} else findTarget();

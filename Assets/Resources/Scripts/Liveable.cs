@@ -42,7 +42,6 @@ public abstract class Liveable : BaseObj {
 
 		OnHit += (o) => {
 			if (o.gameObject.IsSubClassOf<Bullet>() && System.Array.IndexOf(o.gameObject.GetComponent<Bullet>().hits, this.GetType()) > -1 ){
-				l ("reduce " + o.gameObject.GetComponent<Bullet>().damage + " to " + this); 
 				decHealth(o.gameObject.GetComponent<Bullet>().damage);
 				spriteRenderer.color = Color.red;
 				CancelInvoke("switchBackToOriginalColor");
