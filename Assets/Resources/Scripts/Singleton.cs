@@ -22,4 +22,10 @@ public class Singleton<T> : BaseObj where T : MonoBehaviour
 			return instance;
 		}
 	}
+
+	new void Awake(){
+		base.Awake();
+		if(instance == null) { instance = this as T;  }
+		else { if(this != instance) Destroy(this.gameObject);}
+	}
 }

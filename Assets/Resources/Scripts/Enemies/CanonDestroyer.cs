@@ -3,9 +3,8 @@ using System.Collections;
 
 public class CanonDestroyer : Enemy {
 	public GameObject bullet;
-	protected override int[] healthPerLevel{get{return Vars.Balance.Enemy.canonDestroyer.healthPerLevel;}}
-	float[] rangeShootPerLevel = Vars.Balance.Enemy.canonDestroyer.shootRangePerLevel;
-	float[] shootSpeedPerLevel = Vars.Balance.Enemy.canonDestroyer.shootSpeedPerLevel;
+	float[] rangeShootPerLevel;
+	float[] shootSpeedPerLevel;
 	bool shooting;
 
 	new void Awake(){
@@ -16,6 +15,10 @@ public class CanonDestroyer : Enemy {
 	// Use this for initialization
 	protected new void Start () {
 		base.Start();
+		healthPerLevel = Vars.Balance.Enemy.canonDestroyer.healthPerLevel;
+		rangeShootPerLevel = Vars.Balance.Enemy.canonDestroyer.shootRangePerLevel;
+		shootSpeedPerLevel = Vars.Balance.Enemy.canonDestroyer.shootSpeedPerLevel;
+
 		findTarget();
 	}
 	

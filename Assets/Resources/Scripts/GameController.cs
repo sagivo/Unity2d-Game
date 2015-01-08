@@ -30,11 +30,12 @@ public class GameController : Singleton<GameController> {
 	new void Awake(){
 		base.Awake();
 		if (GameObject.Find("CellMenue")) menue = GameObject.Find("CellMenue").GetComponent<CellMenue>();
+		spawnerLayer = new GameObject("Spawns");
+		spawnerLayer.transform.parent = transform;
 	}
 
 	new void Start(){
 		base.Start();
-		spawnerLayer = new GameObject("Spawns");	
 	}
 
 	
@@ -49,4 +50,6 @@ public class GameController : Singleton<GameController> {
 	public void setTimeScale(float scale){
 		Time.timeScale = scale;
 	}
+
+
 }

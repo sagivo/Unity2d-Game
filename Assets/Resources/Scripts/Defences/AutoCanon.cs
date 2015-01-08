@@ -5,18 +5,21 @@ public class AutoCanon : Building {
 	public GameObject bullet;
 	GameObject target;
 	[System.NonSerialized]
-	float[] shootSpeedPerLevel = Vars.Balance.Player.AutoCanon.shootSpeedPerLevel;
-	public override int[] buildCostPerLevel {get{return Vars.Balance.Player.AutoCanon.buildCostPerLevel;}}
-	protected override int[] healthPerLevel{get{return Vars.Balance.Player.AutoCanon.healthPerLevel;}}
+	float[] shootSpeedPerLevel;
+
 
 	protected new void Awake(){
 		base.Awake();
-		buildTimePerLevel = Vars.Balance.Player.AutoCanon.upgradeTimePerLevel;
-		refundPerLevel = Vars.Balance.Player.AutoCanon.refundPerLevel;
 	}
 
 	protected  new void Start () {
 		base.Start();
+		healthPerLevel = Vars.Balance.Player.AutoCanon.healthPerLevel;
+		buildTimePerLevel = Vars.Balance.Player.AutoCanon.upgradeTimePerLevel;
+		refundPerLevel = Vars.Balance.Player.AutoCanon.refundPerLevel;
+		shootSpeedPerLevel = Vars.Balance.Player.AutoCanon.shootSpeedPerLevel;
+		buildCostPerLevel =  Vars.Balance.Player.AutoCanon.buildCostPerLevel;
+
 		Game.autoCanons.Add(this);
 
 		OnStatusChange += (s)=>{

@@ -13,7 +13,7 @@ public class PlayerCanon : Liveable
 	public float fireRate = 1f;
 	public Bullet bullet;
 	public int[] damageExtraPerLevel = new int[]{0, 10, 10, 10, 10, 40, 100};
-	protected override int[] healthPerLevel{get{return Vars.Balance.Player.PlayerCanon.healthPerLevel;}}
+
 
 	//the current target for the auto aim
 	GameObject target;
@@ -21,6 +21,8 @@ public class PlayerCanon : Liveable
 
 	protected new void Start(){
 		base.Start();
+
+		healthPerLevel = Vars.Balance.Player.PlayerCanon.healthPerLevel;
 
 		nextShoot += fireRate;
 		OnHit += (o) => {

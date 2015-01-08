@@ -20,7 +20,8 @@ public abstract class Liveable : BaseObj {
 	[System.NonSerialized]	
 	protected float[] buildTimePerLevel = new float[]{0,10,30,100};	
 	public Sprite[] spritesPerBuild;
-	protected abstract int[] healthPerLevel {get;}
+	int[] _healthPerLevel;
+	protected int[] healthPerLevel {get { return _healthPerLevel; } set{ _healthPerLevel = value; health = healthPerLevel[level]; if (showHealthBar) healthBar.divider = health; }}
 	HealthBarController healthBar;
 	protected SpriteRenderer spriteRenderer;
 
@@ -30,7 +31,7 @@ public abstract class Liveable : BaseObj {
 		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();
 		//if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
 		status = StatusType.Live;
-		health = healthPerLevel[level];
+		//health = healthPerLevel[level];
 
 		if (showHealthBar) {
 			var hb = Instantiate(Resources.Load(Vars.PrefabPaths.uiHealthbar),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;

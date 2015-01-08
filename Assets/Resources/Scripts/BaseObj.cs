@@ -6,13 +6,14 @@ public class BaseObj : MonoBehaviour {
 	public void l(object o){
 		Debug.Log(o);
 	}
-	GameController _game;
-	[System.NonSerialized]
-	public GameController Game;
-	public static Config.RootObject Vars = Config.GetConfig();
+	public static GameController Game;
+	protected static Config.RootObject Vars;
 	
 	protected void Awake () {
-		Game = GameController.Instance;
+		if (Game == null) {
+			Game = GameController.Instance;		
+			Vars = Config.GetConfig();
+		}
 	}
 
 	protected static GameController GetGame(){

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEditor;
 using System.Collections;
 
 public class Cell : Liveable {
@@ -7,8 +6,6 @@ public class Cell : Liveable {
 	public cellType type;
 	public bool selected;
 	public Liveable liveObj;
-	int[] expendCostPerLevel = Vars.Balance.Player.Cell.expendCostPerLevel;
-	protected override int[] healthPerLevel{get{return Vars.Balance.Enemy.kamikazi.healthPerLevel;}}
 
 	//colors
 	Color ColorSelected = Color.red;
@@ -16,7 +13,7 @@ public class Cell : Liveable {
 	Color ColorBase = Color.white;
 	Vector2[] distanceEdges = new Vector2[] {new Vector2(3.8f,2.15f), new Vector2(3.8f,-2.2f), new Vector2(0,-4.35f), new Vector2(-3.8f,-2.2f), new Vector2(-3.8f,2.15f), new Vector2(0,4.35f)};
 	//Vector2[] distanceEdges = new Vector2[] {new Vector2(3.8f,2.15f)};
-
+	int[] expendCostPerLevel;
 
 	SpriteRenderer sprite;
 	//events
@@ -27,6 +24,9 @@ public class Cell : Liveable {
 
 	protected new void Start(){
 		base.Start();
+		expendCostPerLevel = Vars.Balance.Player.Cell.expendCostPerLevel;
+		healthPerLevel = Vars.Balance.Player.AutoCanon.healthPerLevel;
+		
 		sprite = GetComponent<SpriteRenderer>();
 		Game.cells.Add(this);
 

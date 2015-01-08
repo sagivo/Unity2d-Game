@@ -1,4 +1,3 @@
-//http://json2csharp.com
 {
   PrefabPaths: {
     cell: "Prefabs/Cell",

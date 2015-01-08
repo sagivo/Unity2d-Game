@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Kamikazi : Enemy {
 	public int damage = 20;
-	protected override int[] healthPerLevel{get{return Vars.Balance.Enemy.kamikazi.healthPerLevel;}}
 
 	protected new void Awake(){
 		base.Awake();
@@ -13,6 +12,7 @@ public class Kamikazi : Enemy {
 	protected new void Start(){
 		base.Start();
 		target = Game.player;
+		healthPerLevel = Vars.Balance.Enemy.kamikazi.healthPerLevel;
 	}
 	 
 	protected new void Update(){

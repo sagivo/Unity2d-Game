@@ -3,7 +3,7 @@ using System.Collections;
 
 abstract public class Building : Liveable {
 	
-	abstract public int[] buildCostPerLevel {get;}
+	public int[] buildCostPerLevel;
 	[System.NonSerialized]
 	public int[] refundPerLevel;
 
