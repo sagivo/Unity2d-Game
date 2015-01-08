@@ -2,8 +2,7 @@
 using System.Collections;
 
 public abstract class Liveable : BaseObj {
-	int _health;
-	public int health {get{return _health;} set{ _health = value; }}
+	public int health;
 	public int level;
 	public enum StatusType {Live, Destroyed, Build, InActive, Repair}
 	public StatusType status;
@@ -40,6 +39,20 @@ public abstract class Liveable : BaseObj {
 			healthBar.setHealth(health);
 			healthBar.yMargin = healthBarYMargin;
 		}
+
+		OnHit += (o) => {
+			if (o.gameObject.IsSubClassOf<Bullet>() && System.Array.IndexOf(o.gameObject.GetComponent<Bullet>().hits, this.GetType()) > -1 ){
+				l ("reduce " + o.gameObject.GetComponent<Bullet>().damage + " to " + this); 
+				decHealth(o.gameObject.GetComponent<Bullet>().damage);
+				spriteRenderer.color = Color.red;
+				CancelInvoke("switchBackToOriginalColor");
+				Invoke("switchBackToOriginalColor", .2f);
+			}
+		};
+
+		OnDie += () => {
+			Destroy(gameObject);
+		};
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -48,7 +61,7 @@ public abstract class Liveable : BaseObj {
 	}
 
 	public void decHealth(int by){
-		_health -= by;
+		health -= by;
 		if (OnHealthChanged!=null) OnHealthChanged(health); 
 		if (health <= 0 && OnDie!=null) OnDie();
 		healthBar.setHealth(health);

@@ -13,19 +13,8 @@ public abstract class Enemy : Liveable
 		base.Start();
 		Game.enemies.Add(this);
 
-		OnHit += (o) => {
-			//if (System.Array.IndexOf(hitTags, o.gameObject.tag) > -1) Destroy(gameObject);
-			if (o.gameObject.IsSubClassOf<Bullet>()){
-				decHealth(o.gameObject.GetComponent<Bullet>().damage);
-				spriteRenderer.color = Color.red;
-				CancelInvoke("switchBackToOriginalColor");
-				Invoke("switchBackToOriginalColor", .2f);
-			}
-		};
-
 		OnDie += () => {
 			Game.minerals += killBonusMinerals[level];
-			Destroy(gameObject);
 		};
 	}
 

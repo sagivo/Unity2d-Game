@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
+  - 61: {fileID: 6178050}
   m_Layer: 0
   m_Name: AutoCanon
   m_TagString: Untagged
@@ -57,6 +58,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
+--- !u!61 &6178050
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,6 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4eedbb0a1af3492fba9aff8ffdb6d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   level: 0
   status: 0
   showHealthBar: 1

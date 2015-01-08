@@ -41,7 +41,8 @@ public class CanonDestroyer : Enemy {
 	void shoot(){
 		if (target != null ) {
 			var b = Instantiate (bullet, transform.position, transform.rotation) as GameObject;
-			b.GetComponent<Bullet>().hits = new System.Type[]{ typeof(AutoCanon)};
+			b.transform.Rotate(0,0,90);
+			b.GetComponent<Bullet>().hits = new System.Type[]{ typeof(AutoCanon) };
 		}
 	}
 }

@@ -43,7 +43,7 @@ public class Config {
 	public class Cell
 	{
 		public int[] expendCostPerLevel { get; set; }
-		public int[] upgradeTimePerLevel { get; set; }
+		public float[] upgradeTimePerLevel { get; set; }
 	}
 	
 	public class Building
