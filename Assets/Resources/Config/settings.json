@@ -1,46 +1,46 @@
 {
-  PrefabPaths: {
-    cell: "Prefabs/Cell",
-    uiHealthbar: "Prefabs/UI/HealthBar"
+  "PrefabPaths": {
+    "cell": "Prefabs/Cell",
+    "uiHealthbar": "Prefabs/UI/HealthBar"
   },
 
-  Balance: {
-    Player: {
-      PlayerCanon: {        
-        healthPerLevel: [200,500,10000,20000]
+  "Balance": {
+    "Player": {
+      "PlayerCanon": {        
+        "healthPerLevel": [200,500,10000,20000]
       },
-      AutoCanon: {        
-        buildCostPerLevel: [5,10,20,40,80],      
-        refundPerLevel: [5,10,20,40,80],
-        shootSpeedPerLevel: [1, .7, .3, .2],
-        upgradeTimePerLevel: [.5,5,10,20],       
-        healthPerLevel: [80,15,110,120]
-      },
-
-      MineralMiner: {        
-        buildCostPerLevel: [10,20,40,80],        
-        refundPerLevel: [5,10,20,40,80],        
-        upgradeTimePerLevel: [2.0,5,10,20],        
-        timeToMineralPerLevel: [2, 1, .7, .5],
-        healthPerLevel: [2,5,10,20]
-      },
-      Cell: {        
-        expendCostPerLevel: [25,30,50,1],
-        upgradeTimePerLevel: [2.0,5,10,20]
+      "AutoCanon": {        
+        "buildCostPerLevel": [5,10,20,40,80],      
+        "refundPerLevel": [5,10,20,40,80],
+        "shootSpeedPerLevel": [1.0, 0.7, 0.3, 0.2],
+        "upgradeTimePerLevel": [0.5,5,10,20],       
+        "healthPerLevel": [80,15,110,120]
       },
 
-      Building: {
+      "MineralMiner": {        
+        "buildCostPerLevel": [10,20,40,80],        
+        "refundPerLevel": [5,10,20,40,80],        
+        "upgradeTimePerLevel": [2.0,5,10,20],        
+        "timeToMineralPerLevel": [2.0, 1.0, 0.7, 0.5],
+        "healthPerLevel": [2,5,10,20]
+      },
+      "Cell": {        
+        "expendCostPerLevel": [25,30,50,1],
+        "upgradeTimePerLevel": [2.0,5,10,20]
+      },
+
+      "Building": {
       }
     },
 
-    Enemy: {
-      canonDestroyer: {        
-        healthPerLevel: [300,800, 1200],
-        shootRangePerLevel: [10,30],   
-        shootSpeedPerLevel: [1, 1.9, 1.5, 1]
+    "Enemy": {
+      "canonDestroyer": {        
+        "healthPerLevel": [300,800, 1200],
+        "shootRangePerLevel": [10,30],   
+        "shootSpeedPerLevel": [1.0, 1.9, 1.5, 1.0]
       },
-      kamikazi: {        
-        healthPerLevel: [40,80,100]
+      "kamikazi": {        
+        "healthPerLevel": [40,80,100]
       }
     }
   }
