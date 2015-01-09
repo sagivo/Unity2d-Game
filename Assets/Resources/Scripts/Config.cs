@@ -7,20 +7,21 @@ using System.Xml.Serialization;
 
 public class Config {
 	#region dont change
-	static string path = "Assets/Resources/Config/xml.xml";
+	static string path = "Config/xml";
 	
 	public static void SetConfigs(){
 		var serializer = new XmlSerializer(typeof(Config));
-		var stream = new FileStream(path, FileMode.Create);
-		serializer.Serialize(stream, new Config());
-		stream.Close();
+		TextAsset t = Resources.Load(path) as TextAsset;
+		Stream s = new MemoryStream(t.bytes);
+		serializer.Serialize(s, new Config());
 	}
 	
 	public static Config GetConfigs(){
 		var serializer = new XmlSerializer(typeof(Config));
-		var stream = new FileStream(path, FileMode.Open);
-		var container = serializer.Deserialize(stream) as Config;
-		stream.Close();
+		TextAsset t = Resources.Load(path) as TextAsset;
+		Stream s = new MemoryStream(t.bytes);
+		var container = serializer.Deserialize(s) as Config;
+		s.Close();
 		return container;
 	}
 
