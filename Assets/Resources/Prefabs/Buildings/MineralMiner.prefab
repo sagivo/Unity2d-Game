@@ -78,8 +78,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5b3f64e061aac48ceb73378cf718cf7a, type: 3}
   - {fileID: 21300000, guid: 30b21822311404cdc9555e6cb36d2222, type: 3}
   buildTimePerLevel:
+  - 2
   - 10
-  - 20
   - 25
   - 40
   spritesPerBuild:

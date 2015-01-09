@@ -5,7 +5,7 @@ public class AutoCanon : Building {
 	public GameObject bullet;
 	GameObject target;
 	[System.NonSerialized]
-	float[] shootSpeedPerLevel;
+	float[] shootSpeedPerLevel = new float[]{1,.5f,.2f};
 
 
 	protected new void Awake(){
@@ -23,10 +23,8 @@ public class AutoCanon : Building {
 		Game.autoCanons.Add(this);
 
 		OnStatusChange += (s)=>{
-			if (status == StatusType.Live){
-				CancelInvoke("shoot");
-				InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);
-			}
+			CancelInvoke("shoot");
+			if (status == StatusType.Live) InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);
 		};
 	}
 	
