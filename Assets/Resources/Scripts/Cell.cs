@@ -26,7 +26,7 @@ public class Cell : Liveable {
 		base.Start();
 		expendCostPerLevel = Vars.Balance.Player.Cell.expendCostPerLevel;
 		healthPerLevel = Vars.Balance.Player.AutoCanon.healthPerLevel;
-		
+
 		sprite = GetComponent<SpriteRenderer>();
 		Game.cells.Add(this);
 

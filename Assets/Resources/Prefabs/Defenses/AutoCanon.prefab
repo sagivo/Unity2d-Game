@@ -94,6 +94,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b130e7c7f11a34a8397da890c7e50b9f, type: 3}
   - {fileID: 21300000, guid: d0c9e61121cc9400aad88a6a6dd6a350, type: 3}
   - {fileID: 21300000, guid: d0c9e61121cc9400aad88a6a6dd6a350, type: 3}
+  buildCostPerLevel: 
   bullet: {fileID: 100002, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
