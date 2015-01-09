@@ -111,10 +111,17 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
+  buildTimePerLevel:
+  - 0
+  - 10
+  - 30
+  - 100
   spritesPerBuild: []
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  expendCostPerLevel: 190000003200000064000000
 --- !u!212 &29185468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -986,10 +993,17 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
+  buildTimePerLevel:
+  - 0
+  - 10
+  - 30
+  - 100
   spritesPerBuild: []
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  expendCostPerLevel: 190000003200000064000000
 --- !u!212 &297121490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1632,6 +1646,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockType: 0
+  autoCanon: {fileID: 100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
+  mineralMiner: {fileID: 100000, guid: aaa964a3da0f6467dba2a042459df82d, type: 2}
+  cell: {fileID: 100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
 --- !u!114 &553140920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1830,10 +1847,17 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
+  buildTimePerLevel:
+  - 0
+  - 10
+  - 30
+  - 100
   spritesPerBuild: []
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  expendCostPerLevel: 190000003200000064000000
 --- !u!212 &688165569
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1940,7 +1964,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f525c99d6878540c6991ff61dfee1eb0, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f525c99d6878540c6991ff61dfee1eb0, type: 2}
       propertyPath: m_Name
@@ -2933,7 +2957,13 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
+  buildTimePerLevel:
+  - 0
+  - 10
+  - 30
+  - 100
   spritesPerBuild: []
+  healthPerLevel: 140000003200000064000000c8000000
   bulletSpeed: .00100000005
   fireRate: 1
   bullet: {fileID: 11400000, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
@@ -2975,10 +3005,17 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
+  buildTimePerLevel:
+  - 0
+  - 10
+  - 30
+  - 100
   spritesPerBuild: []
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  expendCostPerLevel: 190000003200000064000000
 --- !u!212 &1246404196
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3218,10 +3255,17 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
+  buildTimePerLevel:
+  - 0
+  - 10
+  - 30
+  - 100
   spritesPerBuild: []
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  expendCostPerLevel: 190000003200000064000000
 --- !u!212 &1342392013
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3282,10 +3326,17 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
+  buildTimePerLevel:
+  - 0
+  - 10
+  - 30
+  - 100
   spritesPerBuild: []
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  expendCostPerLevel: 190000003200000064000000
 --- !u!212 &1376378910
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3573,6 +3624,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockType: 2
+  autoCanon: {fileID: 100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
+  mineralMiner: {fileID: 100000, guid: aaa964a3da0f6467dba2a042459df82d, type: 2}
+  cell: {fileID: 100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
 --- !u!114 &1585908622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3666,10 +3720,17 @@ MonoBehaviour:
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
+  buildTimePerLevel:
+  - 0
+  - 10
+  - 30
+  - 100
   spritesPerBuild: []
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
+  expendCostPerLevel: 190000003200000064000000
 --- !u!212 &1634425498
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4188,6 +4249,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockType: 1
+  autoCanon: {fileID: 100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
+  mineralMiner: {fileID: 100000, guid: aaa964a3da0f6467dba2a042459df82d, type: 2}
+  cell: {fileID: 100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
 --- !u!114 &1770882059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4392,6 +4456,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1852844287}
   - 114: {fileID: 1852844286}
+  - 114: {fileID: 1852844288}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -4435,6 +4500,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1852844288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1852844285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7b61f0f111c44ea990b4a19bfe7a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1870079250
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,6 +5196,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockType: 3
+  autoCanon: {fileID: 100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
+  mineralMiner: {fileID: 100000, guid: aaa964a3da0f6467dba2a042459df82d, type: 2}
+  cell: {fileID: 100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
 --- !u!114 &2057409537
 MonoBehaviour:
   m_ObjectHideFlags: 0

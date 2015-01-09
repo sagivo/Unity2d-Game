@@ -3,9 +3,6 @@ using System.Collections;
 using System.Xml;
 using System.Xml.Serialization;
 
-using System.IO;
-using System.Xml.Serialization;
-
 public class Temp {
 
 	public MyClass cllll = new MyClass();

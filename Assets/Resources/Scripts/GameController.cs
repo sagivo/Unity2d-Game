@@ -3,9 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-using System.IO;
-using System.Xml.Serialization;
-
 public class GameController : Singleton<GameController> {
 	public int level;
 	public GameObject player;
@@ -36,12 +33,7 @@ public class GameController : Singleton<GameController> {
 		spawnerLayer = new GameObject("Spawns");
 		spawnerLayer.transform.parent = transform;
 
-
-		var serializer = new XmlSerializer(typeof(Vars2));
-		var stream = new FileStream("Assets/Resources/Config/xml.xml", FileMode.Create);
-		serializer.Serialize(stream, new Vars2());
-		stream.Close();
-
+		Config.SetConfigs();
 	}
 
 	new void Start(){

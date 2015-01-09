@@ -68,6 +68,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clockType: 0
+  autoCanon: {fileID: 100000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
+  mineralMiner: {fileID: 100000, guid: aaa964a3da0f6467dba2a042459df82d, type: 2}
+  cell: {fileID: 100000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
 --- !u!114 &11475868
 MonoBehaviour:
   m_ObjectHideFlags: 1

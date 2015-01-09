@@ -12,7 +12,7 @@ public class Kamikazi : Enemy {
 	protected new void Start(){
 		base.Start();
 		target = Game.player;
-		healthPerLevel = Vars.Balance.Enemy.kamikazi.healthPerLevel;
+		//healthPerLevel = Vars.Balance.Enemy.kamikazi.healthPerLevel;
 	}
 	 
 	protected new void Update(){

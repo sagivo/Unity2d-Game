@@ -14,15 +14,13 @@ public class PlayerCanon : Liveable
 	public Bullet bullet;
 	public int[] damageExtraPerLevel = new int[]{0, 10, 10, 10, 10, 40, 100};
 
-
 	//the current target for the auto aim
 	GameObject target;
 	float nextShoot;
 
 	protected new void Start(){
 		base.Start();
-
-		healthPerLevel = Vars.Balance.Player.PlayerCanon.healthPerLevel;
+		//healthPerLevel = Vars.Balance.Player.PlayerCanon.healthPerLevel;
 
 		nextShoot += fireRate;
 		OnHit += (o) => {

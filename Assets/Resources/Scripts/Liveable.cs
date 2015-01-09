@@ -17,27 +17,29 @@ public abstract class Liveable : BaseObj {
 	public System.Action<object> OnRepairEnd;
 	public System.Action<object> OnHealthChanged;
 	public Sprite[] spritesPerLevel; 
-	[System.NonSerialized]	
-	protected float[] buildTimePerLevel = new float[]{0,10,30,100};	
+	public float[] buildTimePerLevel = new float[]{0,10,30,100};	
 	public Sprite[] spritesPerBuild;
-	int[] _healthPerLevel;
-	protected int[] healthPerLevel {get { return _healthPerLevel; } set{ _healthPerLevel = value; health = healthPerLevel[level]; if (showHealthBar) healthBar.divider = health; }}
 	HealthBarController healthBar;
 	protected SpriteRenderer spriteRenderer;
+
+	//inspecor
+	public int[] healthPerLevel; // {get { return _healthPerLevel; } set{ _healthPerLevel = value; health = healthPerLevel[level]; if (showHealthBar) healthBar.divider = health; }}
 
 	protected new void Start(){
 		base.Start();	
 
 		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();
-		//if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
+		if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
 		status = StatusType.Live;
-		//health = healthPerLevel[level];
+		if (healthPerLevel.Length == 0) l (this);
+		health = healthPerLevel[level];  
 
 		if (showHealthBar) {
-			var hb = Instantiate(Resources.Load(Vars.PrefabPaths.uiHealthbar),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
+			var hb = Instantiate(Resources.Load(configs.prefabPaths.uiHealthbar),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
 			hb.transform.parent = transform;
 			healthBar = hb.GetComponent<HealthBarController>();
 			healthBar.setHealth(health);
+			healthBar.divider = health;
 			healthBar.yMargin = healthBarYMargin;
 		}
 

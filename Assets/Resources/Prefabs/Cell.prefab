@@ -74,24 +74,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe883315f90b0462da8d7d4a2d8f74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   level: 0
   status: 0
   showHealthBar: 1
   healthBarYMargin: 2
   spritesPerLevel: []
-  upgradeTimePerLevel:
-  - 5
-  - 10
-  - 30
-  - 100
   spritesPerBuild: []
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
-  costExpend: 20
-  ColorSelected: {r: 1, g: 0, b: 0, a: 1}
-  ColorInactive: {r: 0, g: 0, b: 0, a: 1}
-  ColorBase: {r: 1, g: 1, b: 1, a: 1}
+  expendCostPerLevel: 190000003200000064000000
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -93,17 +93,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d010fa3286ef54db7a6101d9ed5e5eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   level: 0
   status: 0
   showHealthBar: 1
+  healthBarYMargin: 2
   spritesPerLevel: []
-  mineralCostBuild: 10
-  mineralCostRefund: 6
-  diamondCost: 1
-  mineralCostUpgrade: 01000000050000000a000000140000002800000050000000
+  spritesPerBuild: []
+  healthPerLevel: 140000003200000064000000c8000000
   bulletSpeed: .00100000005
   fireRate: 1
-  ammoPrefab: {fileID: 11400000, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
+  bullet: {fileID: 0}
   damageExtraPerLevel: 000000000a0000000a0000000a0000000a0000002800000064000000
 --- !u!212 &21200000
 SpriteRenderer:

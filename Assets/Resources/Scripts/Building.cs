@@ -3,7 +3,7 @@ using System.Collections;
 
 abstract public class Building : Liveable {
 	
-	public int[] buildCostPerLevel;
+	public int[] buildCostPerLevel = new int[]{10,20,40,80};
 	[System.NonSerialized]
 	public int[] refundPerLevel;
 
@@ -38,7 +38,6 @@ abstract public class Building : Liveable {
 
 	public bool canBuild(){
 		//if (!Game) Game = GameController.Instance;
-		l(buildCostPerLevel.Length);
 		return (Game.minerals >= buildCostPerLevel[level]);
 	}
 

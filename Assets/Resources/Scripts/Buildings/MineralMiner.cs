@@ -3,21 +3,20 @@ using System.Collections;
 
 public class MineralMiner : Building {
 	public float[] timeToMineralPerLevel;
-
+	//
 
 	protected new void Awake(){
 		base.Awake();
 	}
 
-
 	protected new void Start () {
 		base.Start();
 
-		buildCostPerLevel = Vars.Balance.Player.MineralMiner.buildCostPerLevel;
-		healthPerLevel = Vars.Balance.Player.MineralMiner.healthPerLevel;
-		buildTimePerLevel = Vars.Balance.Player.MineralMiner.upgradeTimePerLevel;
-		refundPerLevel = Vars.Balance.Player.MineralMiner.refundPerLevel;
-		timeToMineralPerLevel = Vars.Balance.Player.MineralMiner.timeToMineralPerLevel;
+		//buildCostPerLevel = Vars.Balance.Player.MineralMiner.buildCostPerLevel;
+		//healthPerLevel = Vars.Balance.Player.MineralMiner.healthPerLevel;
+		//buildTimePerLevel = Vars.Balance.Player.MineralMiner.upgradeTimePerLevel;
+		//refundPerLevel = Vars.Balance.Player.MineralMiner.refundPerLevel;
+		//timeToMineralPerLevel = Vars.Balance.Player.MineralMiner.timeToMineralPerLevel;
 
 		Game.mineralMiners.Add (this);
 		build();

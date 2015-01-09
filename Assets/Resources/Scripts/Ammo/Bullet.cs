@@ -4,7 +4,7 @@ using System.Collections;
 public class Bullet : BaseObj {
 	public float speed = 200;
 	public int damage = 10;
-
+	[ExecuteInEditMode]
 	[System.NonSerialized]
 	public System.Type[] hits;
 

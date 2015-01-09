@@ -14,11 +14,11 @@ public class AutoCanon : Building {
 
 	protected  new void Start () {
 		base.Start();
-		healthPerLevel = Vars.Balance.Player.AutoCanon.healthPerLevel;
-		buildTimePerLevel = Vars.Balance.Player.AutoCanon.upgradeTimePerLevel;
-		refundPerLevel = Vars.Balance.Player.AutoCanon.refundPerLevel;
-		shootSpeedPerLevel = Vars.Balance.Player.AutoCanon.shootSpeedPerLevel;
-		buildCostPerLevel =  Vars.Balance.Player.AutoCanon.buildCostPerLevel;
+		//healthPerLevel = Vars.Balance.Player.AutoCanon.healthPerLevel;
+		//buildTimePerLevel = Vars.Balance.Player.AutoCanon.upgradeTimePerLevel;
+		//refundPerLevel = Vars.Balance.Player.AutoCanon.refundPerLevel;
+		//shootSpeedPerLevel = Vars.Balance.Player.AutoCanon.shootSpeedPerLevel;
+		//buildCostPerLevel =  Vars.Balance.Player.AutoCanon.buildCostPerLevel;
 
 		Game.autoCanons.Add(this);
 

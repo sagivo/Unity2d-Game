@@ -23,7 +23,7 @@ public class Vars2 {
 			}
 			public AutoCanon autoCanon = new AutoCanon();
 			public class AutoCanon{
-				public int[] buildCostPerLevel = new int[]{5,10,20,40,80};
+				public int[] buildCostPerLevel = new int[]{5,10,20,40,80}; //public int [] xxx {get{return  
 				public int[] refundPerLevel = new int[]{5,10,20,40,80};
 				public float[] shootSpeedPerLevel = new float[]{1, .7f, .3f, .2f};
 				public float[] upgradeTimePerLevel = new float[]{2,5,10,20};
@@ -64,4 +64,9 @@ public class Vars2 {
 			}
 		}
 	}
+
+
+
+
+	
 }

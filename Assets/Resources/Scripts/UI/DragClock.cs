@@ -9,6 +9,9 @@ public class DragClock : BaseObj {
 	public enum ClockType {Canon, Mineral, Expend, Upgrade, Refund}
 	public ClockType clockType;
 	public bool hasFill {get {return img.fillAmount > 0;}}
+	public GameObject autoCanon;
+	public GameObject mineralMiner;
+	public GameObject cell;
 
 	float speedUp = .8f;
 	float speedDown = 2f;
@@ -38,13 +41,13 @@ public class DragClock : BaseObj {
 		float val = 0;
 		switch (clockType) {
 		case ClockType.Canon:
-			val = Vars.Balance.Player.AutoCanon.buildCostPerLevel[0];
+			val = autoCanon.GetComponent<AutoCanon>().buildCostPerLevel[0];
 			break;
 		case ClockType.Mineral:
-			val = Vars.Balance.Player.MineralMiner.buildCostPerLevel[0]; 
+			val = mineralMiner.GetComponent<MineralMiner>().buildCostPerLevel[0];
 			break;
 		case ClockType.Expend:
-			val = Vars.Balance.Player.Cell.expendCostPerLevel[0];
+			val = cell.GetComponent<Cell>().expendCostPerLevel[0];
 			break;
 		case ClockType.Upgrade:
 			break;

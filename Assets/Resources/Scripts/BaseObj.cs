@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseObj : MonoBehaviour {
+public abstract class BaseObj : MonoBehaviour {
 		
 	public void l(object o){
 		Debug.Log(o);
 	}
 	public static GameController Game;
-	protected static Config.RootObject Vars;
+	protected static Config configs;
 	
 	protected void Awake () {
 		if (Game == null) {
-			Game = GameController.Instance;		
-			Vars = Config.GetConfig();
+			Game = GameController.Instance;
+			configs = Config.GetConfigs();
 		}
 	}
 
@@ -23,4 +23,5 @@ public class BaseObj : MonoBehaviour {
 	protected void Start(){}
 	protected void Update(){}
 		
+
 }
