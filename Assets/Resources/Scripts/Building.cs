@@ -7,9 +7,8 @@ abstract public class Building : Liveable {
 
 	protected new void Start(){
 		base.Start();
-
 		Game.buildings.Add(this);
-		if (buildTimePerLevel[level] > 0) build();	
+		//if (buildTimePerLevel[level] > 0) build();	
 	}
 
 	void OnDestroy(){

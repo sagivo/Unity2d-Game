@@ -110,7 +110,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 050000000a0000000f00000014000000
+  healthPerLevel: 28000000320000003c00000046000000
   speed: 1.5
   costKill: 1
 --- !u!114 &11426852
