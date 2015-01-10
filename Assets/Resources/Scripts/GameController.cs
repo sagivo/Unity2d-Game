@@ -43,8 +43,8 @@ public class GameController : Singleton<GameController> {
 		base.Update();
 	}
 
-	public bool canUpgrade(Building o){
-		return (Game.minerals >= o.buildCostPerLevel[level]);
+	public bool canUpgrade(Building b){
+		return (Game.minerals >= b.buildCostPerLevel[b.level]);
 	}
 
 	public void setTimeScale(float scale){

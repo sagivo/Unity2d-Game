@@ -99,7 +99,7 @@ public class Cell : Liveable {
 			if (!liveObj && building.canBuild()) select();
 			break;
 		case Drag.DragType.Upgrade:
-			if (liveObj && liveObj.status == StatusType.Live && Game.canUpgrade(building)) select();
+			if (liveObj && liveObj.status == StatusType.Live && Game.canUpgrade(liveObj as Building)) select();
 			break;
 		case Drag.DragType.Refund:
 			if (liveObj) select();
