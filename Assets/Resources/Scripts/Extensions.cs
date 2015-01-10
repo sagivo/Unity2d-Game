@@ -23,7 +23,7 @@ public static class Extensions {
 		List<GameObject> l = new List<GameObject>();
 		for(var i = 0;i<list.Length;i++){
 			var o = list[i];
-			if ((o is BaseObj) && (o as UnityEngine.Object) != null && (liveOnly && (o as Liveable).status == Liveable.StatusType.Live || !liveOnly))
+			if ((o is BaseObj) && (null!=o) && (liveOnly && (o as Liveable).status == Liveable.StatusType.Live || !liveOnly))
 				l.Add( ((BaseObj)o).gameObject);
 		}
 		return obj.CloestToObject(l);

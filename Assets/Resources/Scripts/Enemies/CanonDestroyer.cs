@@ -20,7 +20,7 @@ public class CanonDestroyer : Enemy {
 		//rangeShootPerLevel = Vars.Balance.Enemy.canonDestroyer.shootRangePerLevel;
 		//shootSpeedPerLevel = Vars.Balance.Enemy.canonDestroyer.shootSpeedPerLevel;
 
-		findTarget();
+		InvokeRepeating("findTarget",0,1);
 	}
 	
 	// Update is called once per frame
@@ -38,9 +38,9 @@ public class CanonDestroyer : Enemy {
 	}
 
 	void findTarget() {
-		CancelInvoke("findTarget"); shooting = false;
+		if (null!=target) return;
+		shooting = false;
 		target = gameObject.CloestToObject(Game.autoCanons.ToArray());
-		if (target == null) Invoke("findTarget",1);
 	}
 
 	void shoot(){

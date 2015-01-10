@@ -117,7 +117,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -999,7 +999,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -1853,7 +1853,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -2963,7 +2963,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 
+  healthPerLevel: 140000003200000064000000c8000000
   buildCostPerLevel: 
   refundPerLevel: 
   bulletSpeed: .00100000005
@@ -3012,7 +3012,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -3262,7 +3262,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -3333,7 +3333,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -3727,7 +3727,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 
+  healthPerLevel: 0a00000014000000
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -4015,7 +4015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad6a6fd279b2a4da8bc49a9c85e7adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnEvery: 6
+  spawnEvery: 8
   enemies:
   - {fileID: 100000, guid: a4079fadde8a44dde8c91afed04d9e10, type: 2}
   - {fileID: 140454, guid: f90c5357b849e4241a09a4c92202dd34, type: 2}

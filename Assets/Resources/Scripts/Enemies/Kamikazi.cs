@@ -16,8 +16,7 @@ public class Kamikazi : Enemy {
 
 	protected new void Start(){
 		base.Start();
-		findTarget();
-		//healthPerLevel = Vars.Balance.Enemy.kamikazi.healthPerLevel;
+		InvokeRepeating("findTarget",0,1);
 	}
 	 
 	protected new void Update(){
@@ -26,15 +25,13 @@ public class Kamikazi : Enemy {
 		if (target != null){
 			transform.LookAt2d(target.transform);
 			transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
-		} else Invoke("findTarget",1);
+		}
 	}
 
 	void findTarget() {
-		//target = Game.player;
-
+		if (null!=target) return;
 		object[] targets = Game.mineralMiners.ToArray().Join(Game.player);
 		target = gameObject.CloestToObject(targets);
-		if (target == null) Invoke("findTarget",1);
 	}
 	
 }
