@@ -10,20 +10,21 @@ public class AutoCanon : Building {
 
 	protected new void Awake(){
 		base.Awake();
+
+		OnStatusChange += (s)=>{
+			CancelInvoke("shoot");
+			if (status == StatusType.Live) InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);
+		};
+		
+		OnDie += () => {
+			Game.autoCanons.Remove(this);
+		};
 	}
 
 	protected  new void Start () {
 		base.Start();
 		Game.autoCanons.Add(this);
 
-		OnStatusChange += (s)=>{
-			CancelInvoke("shoot");
-			if (status == StatusType.Live) InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);
-		};
-
-		OnDie += () => {
-			Game.autoCanons.Remove(this);
-		};
 		InvokeRepeating("findTarget",0,1);
 	}
 	

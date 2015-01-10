@@ -6,24 +6,22 @@ public class MineralMiner : Building {
 
 	protected new void Awake(){
 		base.Awake();
-	}
-
-	protected new void Start () {
-		base.Start();
-
-		Game.mineralMiners.Add (this);
-		build();
-
 		OnStatusChange += (s) => {
 			if (status == StatusType.Live){
 				CancelInvoke("getMinerals");
 				InvokeRepeating("getMinerals",0,timeToMineralPerLevel[level]);
 			}
 		};
-
+		
 		OnDie += () => {
 			Game.mineralMiners.Remove(this);
 		};
+	}
+
+	protected new void Start () {
+		base.Start();
+
+		Game.mineralMiners.Add (this);
 	}
 
 	protected new void Update () {

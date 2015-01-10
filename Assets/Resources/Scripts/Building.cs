@@ -5,9 +5,19 @@ abstract public class Building : Liveable {
 	public int[] buildCostPerLevel;
 	public int[] refundPerLevel;
 
+	protected new void Awake(){
+		base.Awake();
+		OnStatusChange += (s) => {
+			if (status == StatusType.Build){
+				if (buildCostPerLevel!=null && buildCostPerLevel.Length >  level) Game.minerals -= buildCostPerLevel[level];
+			}
+		};
+	}
+
 	protected new void Start(){
 		base.Start();
 		Game.buildings.Add(this);
+
 	}
 
 	void OnDestroy(){
@@ -26,12 +36,7 @@ abstract public class Building : Liveable {
 	public bool enoughResourcesToUpgrade(){
 		return (Game.minerals >= buildCostPerLevel[level]);
 	}
-
-	new void build(){
-		base.build();
-		Game.minerals -= buildCostPerLevel[level];
-	}
-
+	
 	public bool canBuild(){
 		//if (!Game) Game = GameController.Instance;
 		return (Game.minerals >= buildCostPerLevel[level]);

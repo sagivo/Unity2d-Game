@@ -104,6 +104,7 @@ MonoBehaviour:
   healthBarYMargin: 2
   spritesPerLevel:
   - {fileID: 21300000, guid: 1306708e4c88c427abb8c4d13ccb2166, type: 3}
+  - {fileID: 21300000, guid: 1306708e4c88c427abb8c4d13ccb2166, type: 3}
   buildTimePerLevel:
   - 0
   - 10

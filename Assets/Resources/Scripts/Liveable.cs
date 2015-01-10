@@ -51,6 +51,7 @@ public abstract class Liveable : BaseObj {
 			}
 		};
 
+		build();
 	}
 
 	void switchBackToOriginalColor(){
@@ -75,16 +76,17 @@ public abstract class Liveable : BaseObj {
 
 	public void build(){
 		if (spritesPerBuild != null && spritesPerBuild.Length > level) spriteRenderer.sprite = spritesPerBuild[level];
-		Invoke("upgrade", buildTimePerLevel[level]);
 		changeStatus(StatusType.Build);
 		if (showHealthBar) healthBar.gameObject.SetActive(false);
+		Invoke("upgradeDone", buildTimePerLevel[level]);
 	}
 
-	public void upgrade(){
+	public virtual void upgradeDone(){
 		level++;
 		health = healthPerLevel[level];
 		if (spritesPerLevel != null && spritesPerLevel.Length >= level) spriteRenderer.sprite = spritesPerLevel[level];
 		changeStatus(StatusType.Live);
+
 		if (showHealthBar) {
 			healthBar.gameObject.SetActive(true);
 			healthBar.setHealth(health);

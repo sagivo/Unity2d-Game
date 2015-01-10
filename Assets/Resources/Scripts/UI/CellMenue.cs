@@ -60,13 +60,5 @@ public class CellMenue : BaseObj {
 		closeMenue(); 
 	}
 
-	public void upgrade2(){
-		Cell cell = Cell.getSelected();
-		var building = (cell.liveObj as Building);
-		if (building.enoughResourcesToUpgrade()) {
-			Game.minerals -= building.buildCostPerLevel[building.level];
-			building.upgrade();
-		}
-		closeMenue(); 
-	}
+
 }

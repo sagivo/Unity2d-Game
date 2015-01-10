@@ -18,6 +18,9 @@ public class Cell : Liveable {
 	protected new void Awake(){
 		base.Awake();
 		showHealthBar = false;
+		OnStatusChange += (s) => {
+			if (status == StatusType.InActive) sprite.color = ColorInactive;
+		};
 	}
 
 	protected new void Start(){
@@ -27,10 +30,6 @@ public class Cell : Liveable {
 
 		sprite = GetComponent<SpriteRenderer>();
 		Game.cells.Add(this);
-
-		OnStatusChange += (s) => {
-			if (status == StatusType.InActive) sprite.color = ColorInactive;
-		};
 	}
 
 	protected new void Update(){
