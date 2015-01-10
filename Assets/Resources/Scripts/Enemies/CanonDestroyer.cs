@@ -3,12 +3,13 @@ using System.Collections;
 
 public class CanonDestroyer : Enemy {
 	public GameObject bullet;
-	float[] rangeShootPerLevel = new float[]{10, 20, 50};
-	float[] shootSpeedPerLevel = new float[]{1, 1.9f, 1.5f, 1};
+	public float[] rangeShootPerLevel = new float[]{10, 20, 50};
+	public float[] shootSpeedPerLevel = new float[]{1, 1.9f, 1.5f, 1};
 	bool shooting;
 
 	new void Awake(){
 		base.Awake();
+		damagePerLevel = new int[]{5,10,30};
 		speed = .3f;
 	}
 
@@ -46,7 +47,9 @@ public class CanonDestroyer : Enemy {
 		if (target != null ) {
 			var b = Instantiate (bullet, transform.position, transform.rotation) as GameObject;
 			b.transform.Rotate(0,0,90);
-			b.GetComponent<Bullet>().hits = new System.Type[]{ typeof(AutoCanon) };
+			var h = b.GetComponent<Hitable>();
+			h.hits = new System.Type[]{ typeof(AutoCanon) };
+			h.damage = damagePerLevel[level];
 		}
 	}
 }

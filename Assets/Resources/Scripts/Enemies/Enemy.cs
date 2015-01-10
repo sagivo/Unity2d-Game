@@ -8,6 +8,8 @@ public abstract class Enemy : Liveable
 	protected GameObject target;
 	public int costKill = 1;
 	protected int[] killBonusMinerals = new int[]{1,5,10};
+	[System.NonSerialized]
+	protected int[] damagePerLevel;
 
 	protected new void Start(){
 		base.Start();
@@ -21,10 +23,6 @@ public abstract class Enemy : Liveable
 	void OnDestroy()
 	{
 		Game.enemies.Remove(this);
-	}
-
-	void switchBackToOriginalColor(){
-		spriteRenderer.color = Color.white;
 	}
 
 }

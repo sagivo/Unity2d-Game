@@ -8,7 +8,7 @@ public abstract class Liveable : BaseObj {
 	public StatusType status;
 	public bool showHealthBar = true;
 	public float healthBarYMargin = 2;
-	public System.Action<Collider2D> OnHit;
+	public System.Action<Hitable> OnHit;
 	public System.Action OnDie;
 	public System.Action<StatusType> OnStatusChange;
 	public System.Action<object> OnBuildStart;
@@ -31,8 +31,7 @@ public abstract class Liveable : BaseObj {
 		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();
 		if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
 		status = StatusType.Live;
-		if (healthPerLevel.Length == 0) l (this);
-		health = healthPerLevel[level];  
+		if (healthPerLevel!=null && healthPerLevel.Length > level) health = healthPerLevel[level];  
 
 		if (showHealthBar) {
 			var hb = Instantiate(Resources.Load(configs.prefabPaths.uiHealthbar),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
@@ -44,29 +43,34 @@ public abstract class Liveable : BaseObj {
 		}
 
 		OnHit += (o) => {
-			if (o.gameObject.IsSubClassOf<Bullet>() && System.Array.IndexOf(o.gameObject.GetComponent<Bullet>().hits, this.GetType()) > -1 ){
-				decHealth(o.gameObject.GetComponent<Bullet>().damage);
+			if (o.hits!=null && System.Array.IndexOf(o.hits, this.GetType()) > -1 ){
+				decHealth(o.damage);
 				spriteRenderer.color = Color.red;
 				CancelInvoke("switchBackToOriginalColor");
 				Invoke("switchBackToOriginalColor", .2f);
 			}
 		};
 
-		OnDie += () => {
-			Destroy(gameObject);
-		};
+	}
+
+	void switchBackToOriginalColor(){
+		spriteRenderer.color = Color.white;
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (OnHit != null) OnHit(other);
+		var hit = other.GetComponent<Hitable>();
+		if (hit && OnHit != null) OnHit(hit);
 	}
 
 	public void decHealth(int by){
 		health -= by;
 		if (OnHealthChanged!=null) OnHealthChanged(health); 
-		if (health <= 0 && OnDie!=null) OnDie();
 		healthBar.setHealth(health);
+		if (health <= 0){ //DIE!!!
+			if (OnDie!=null) OnDie();
+			Destroy(gameObject);
+		}
 	}
 
 	public void build(){
@@ -78,9 +82,14 @@ public abstract class Liveable : BaseObj {
 
 	public void upgrade(){
 		level++;
+		health = healthPerLevel[level];
 		if (spritesPerLevel != null && spritesPerLevel.Length >= level) spriteRenderer.sprite = spritesPerLevel[level];
 		changeStatus(StatusType.Live);
-		if (showHealthBar) healthBar.gameObject.SetActive(true);
+		if (showHealthBar) {
+			healthBar.gameObject.SetActive(true);
+			healthBar.setHealth(health);
+			healthBar.divider = health;
+		}
 	}
 
 	public void setInactive(){

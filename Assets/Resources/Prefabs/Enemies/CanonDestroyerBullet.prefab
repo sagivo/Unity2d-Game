@@ -12,6 +12,7 @@ GameObject:
   - 58: {fileID: 5814890}
   - 114: {fileID: 11414890}
   - 212: {fileID: 21214890}
+  - 114: {fileID: 11463212}
   m_Layer: 0
   m_Name: CanonDestroyerBullet
   m_TagString: Untagged
@@ -70,6 +71,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   damage: 10
+--- !u!114 &11463212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58abdfefaffbd4b7faa3e2b5ccd9e994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21214890
 SpriteRenderer:
   m_ObjectHideFlags: 1

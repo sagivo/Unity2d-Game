@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
+  - 61: {fileID: 6160004}
   m_Layer: 0
   m_Name: MineralMiner
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.125229359, y: -4.67668247, z: 0}
+  m_LocalPosition: {x: 4.12567282, y: -2.51801586, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -57,6 +58,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
+--- !u!61 &6160004
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,8 +98,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b24352730542e4ed9853af170a0bd2a6, type: 3}
   - {fileID: 21300000, guid: b24352730542e4ed9853af170a0bd2a6, type: 3}
   - {fileID: 21300000, guid: b24352730542e4ed9853af170a0bd2a6, type: 3}
-  healthPerLevel: 0a0000000a00000014000000320000001e000000
-  buildCostPerLevel: 0a000000140000002800000050000000
+  healthPerLevel: 140000001e0000002800000032000000
+  buildCostPerLevel: 0a000000140000001e00000028000000
+  refundPerLevel: 050000000a0000000f00000014000000
   timeToMineralPerLevel:
   - 2
   - 1

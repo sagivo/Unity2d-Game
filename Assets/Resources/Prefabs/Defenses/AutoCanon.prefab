@@ -99,9 +99,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b130e7c7f11a34a8397da890c7e50b9f, type: 3}
   - {fileID: 21300000, guid: d0c9e61121cc9400aad88a6a6dd6a350, type: 3}
   - {fileID: 21300000, guid: d0c9e61121cc9400aad88a6a6dd6a350, type: 3}
-  healthPerLevel: 070000000a0000000e0000001400000032000000
-  buildCostPerLevel: 050000000a000000
-  bullet: {fileID: 100002, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
+  healthPerLevel: 1e00000028000000320000003c000000
+  buildCostPerLevel: 050000000a0000000f00000014000000
+  refundPerLevel: 0300000006000000090000000c000000
+  bullet: {fileID: 11400000, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

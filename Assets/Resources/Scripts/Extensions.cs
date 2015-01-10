@@ -14,11 +14,17 @@ public static class Extensions {
 		return false;
 	}
 
-	public static GameObject CloestToObject(this GameObject obj, object[] list){
+	public static bool IsEmptyOrNull(this object[] list){
+		return (list==null || list.Length == 0);
+	}
+
+	public static GameObject CloestToObject(this GameObject obj, object[] list, bool liveOnly=true){
+		if (list.IsEmptyOrNull()) return null;
 		List<GameObject> l = new List<GameObject>();
-		foreach(var o in list){
-			if (o.GetType().IsSubclassOf(typeof(BaseObj))) 
-				l.Add(((BaseObj)o).gameObject);
+		for(var i = 0;i<list.Length;i++){
+			var o = list[i];
+			if ((o is BaseObj) && (o as UnityEngine.Object) != null && (liveOnly && (o as Liveable).status == Liveable.StatusType.Live || !liveOnly))
+				l.Add( ((BaseObj)o).gameObject);
 		}
 		return obj.CloestToObject(l);
 	}
@@ -66,5 +72,19 @@ public static class Extensions {
 
 	public static List<Transform> childrenOnly(this GameObject go){
 		return go.transform.Cast<Transform>().ToList();
+	}
+
+	public static T[] Join2<T>(this T[] a, T[] b) where T : BaseObj{
+		T[] results = new T[a.Length + b.Length];
+		Array.Copy(a,results,a.Length);
+		Array.Copy(b, 0,results, a.Length,b.Length);
+		return results;
+	}
+
+	public static object[] Join(this Array o, params object[] list){
+		object[] results = new object[o.Length + list.Length];
+		Array.Copy(o,results,o.Length);
+		Array.Copy(list,0, results, o.Length,list.Length);
+		return results;
 	}
 }

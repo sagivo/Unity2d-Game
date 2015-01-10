@@ -1,17 +1,15 @@
 using UnityEngine;
 using System.Collections;
 
-abstract public class Building : Liveable {
-	
-	public int[] buildCostPerLevel = new int[]{10,20,40,80};
-	[System.NonSerialized]
+abstract public class Building : Liveable {	
+	public int[] buildCostPerLevel;
 	public int[] refundPerLevel;
 
 	protected new void Start(){
 		base.Start();
 
 		Game.buildings.Add(this);
-		if (buildTimePerLevel[level] > 0) build();
+		if (buildTimePerLevel[level] > 0) build();	
 	}
 
 	void OnDestroy(){

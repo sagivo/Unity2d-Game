@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameController : Singleton<GameController> {
 	public int level;
-	public GameObject player;
+	public PlayerCanon player;
 	public int score;
 	public List<Resource> resources = new List<Resource>();
 	public List<Cell> cells = new List<Cell>();
@@ -18,9 +18,7 @@ public class GameController : Singleton<GameController> {
 	public System.Action OnMineralChange;
 	Sprite Sprite;
 	//resources
-	[System.NonSerialized]
-	int _minerals = 10;
-
+	int _minerals = 300;
 	public int minerals {
 		get{return _minerals;}
 		set{_minerals = value; if (OnMineralChange!=null) OnMineralChange();}

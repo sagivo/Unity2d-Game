@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerCanon : Liveable
+public class PlayerCanon : Building
 {
 	//canon types
 	//public enum CanonType{Regular, AutoAim}
@@ -12,7 +12,7 @@ public class PlayerCanon : Liveable
 	[Range(5, 0.1f)] 
 	public float fireRate = 1f;
 	public Bullet bullet;
-	public int[] damageExtraPerLevel = new int[]{0, 10, 10, 10, 10, 40, 100};
+	int[] damagePerLevel = new int[]{5, 10, 10, 10, 10, 40, 100};
 
 	//the current target for the auto aim
 	GameObject target;
@@ -21,16 +21,12 @@ public class PlayerCanon : Liveable
 	protected new void Start(){
 		base.Start();
 		//healthPerLevel = Vars.Balance.Player.PlayerCanon.healthPerLevel;
+		Game.player = this;
 
 		nextShoot += fireRate;
-		OnHit += (o) => {
-			if (o.gameObject.IsSubClassOf<Kamikazi>()){						
-				decHealth(o.gameObject.GetComponent<Kamikazi>().damage);
-			}
-		};
 
 		OnDie += () => {
-			Destroy(gameObject);
+			Game.player = null;
 		};
 	}
 
@@ -49,10 +45,9 @@ public class PlayerCanon : Liveable
 		//Quaternion q = Quaternion.FromToRotation (Vector3.up, pos - transform.position);
 
 		//l ((Instantiate (bullet, transform.position, transform.rotation) as Bullet));
-		var b = (Instantiate (bullet, transform.position, transform.rotation) as Bullet);
-		b.hits = new System.Type[]{ typeof(Kamikazi), typeof(CanonDestroyer)};
-
-		b.damage += damageExtraPerLevel[level];
+		var h = (Instantiate (bullet, transform.position, transform.rotation) as Bullet).GetComponent<Hitable>();
+		h.hits = new System.Type[]{ typeof(Kamikazi), typeof(CanonDestroyer)};
+		h.damage = damagePerLevel[level];
 	}
 
 	private void rotateToPosition(Vector3 mousePos, Vector3 originPos)
@@ -64,8 +59,4 @@ public class PlayerCanon : Liveable
 			transform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle - 90));
 	}
 
-	void OnTriggerEnter2D (Collider2D other)
-	{
-		if (OnHit != null) OnHit(other);
-	}
 }

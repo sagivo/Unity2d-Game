@@ -12,7 +12,6 @@ public class Cell : Liveable {
 	Color ColorBase = Color.white;
 	Vector2[] distanceEdges = new Vector2[] {new Vector2(3.8f,2.15f), new Vector2(3.8f,-2.2f), new Vector2(0,-4.35f), new Vector2(-3.8f,-2.2f), new Vector2(-3.8f,2.15f), new Vector2(0,4.35f)};
 	public int[] expendCostPerLevel = new int[]{25,30,50,1};
-	//
 
 	SpriteRenderer sprite;
 	//events
@@ -101,7 +100,7 @@ public class Cell : Liveable {
 			if (!liveObj && building.canBuild()) select();
 			break;
 		case Drag.DragType.Upgrade:
-			if (liveObj && Game.canUpgrade(building)) select();
+			if (liveObj && liveObj.status == StatusType.Live && Game.canUpgrade(building)) select();
 			break;
 		case Drag.DragType.Refund:
 			if (liveObj) select();

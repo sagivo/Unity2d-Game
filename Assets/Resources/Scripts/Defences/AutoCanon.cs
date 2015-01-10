@@ -2,11 +2,10 @@ using UnityEngine;
 using System.Collections;
 
 public class AutoCanon : Building {
-	public GameObject bullet;
+	public Bullet bullet;
 	GameObject target;
-	[System.NonSerialized]
 	float[] shootSpeedPerLevel = new float[]{1,.5f,.2f};
-
+	int[] damagePerLevel = new int[]{0, 10, 10, 10, 10, 40, 100};
 
 	protected new void Awake(){
 		base.Awake();
@@ -14,18 +13,17 @@ public class AutoCanon : Building {
 
 	protected  new void Start () {
 		base.Start();
-		//healthPerLevel = Vars.Balance.Player.AutoCanon.healthPerLevel;
-		//buildTimePerLevel = Vars.Balance.Player.AutoCanon.upgradeTimePerLevel;
-		//refundPerLevel = Vars.Balance.Player.AutoCanon.refundPerLevel;
-		//shootSpeedPerLevel = Vars.Balance.Player.AutoCanon.shootSpeedPerLevel;
-		//buildCostPerLevel =  Vars.Balance.Player.AutoCanon.buildCostPerLevel;
-
 		Game.autoCanons.Add(this);
 
 		OnStatusChange += (s)=>{
 			CancelInvoke("shoot");
 			if (status == StatusType.Live) InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);
 		};
+
+		OnDie += () => {
+			Game.autoCanons.Remove(this);
+		};
+
 	}
 	
 	protected new void Update () {
@@ -39,14 +37,11 @@ public class AutoCanon : Building {
 		}
 	}
 
-	void OnDestroy (){
-		Game.autoCanons.Remove(this);
-	}
-
 	void shoot(){
 		if (target != null) {
-			var b = Instantiate (bullet, transform.position, transform.rotation) as GameObject;
-			b.GetComponent<Bullet>().hits = new System.Type[]{ typeof(Kamikazi), typeof(CanonDestroyer)};
+			var h = (Instantiate (bullet, transform.position, transform.rotation) as Bullet).GetComponent<Hitable>();
+			h.hits = new System.Type[]{ typeof(Kamikazi), typeof(CanonDestroyer)};
+			h.damage = damagePerLevel[level];
 		}
 	}
 	

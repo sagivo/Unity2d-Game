@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
+  - 114: {fileID: 11426852}
   m_Layer: 0
   m_Name: Kamikazi
   m_TagString: Enemy
@@ -103,11 +104,26 @@ MonoBehaviour:
   healthBarYMargin: 2
   spritesPerLevel:
   - {fileID: 21300000, guid: 1306708e4c88c427abb8c4d13ccb2166, type: 3}
+  buildTimePerLevel:
+  - 0
+  - 10
+  - 30
+  - 100
   spritesPerBuild: []
-  healthPerLevel: 280000005000000064000000c8000000f4010000
+  healthPerLevel: 050000000a0000000f00000014000000
   speed: 1.5
   costKill: 1
-  damage: 30
+--- !u!114 &11426852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58abdfefaffbd4b7faa3e2b5ccd9e994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

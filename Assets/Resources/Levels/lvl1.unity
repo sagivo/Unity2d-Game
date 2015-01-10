@@ -117,7 +117,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 0a00000014000000
+  healthPerLevel: 
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -474,7 +474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!1 &96876408
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +999,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 0a00000014000000
+  healthPerLevel: 
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -1853,7 +1853,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 0a00000014000000
+  healthPerLevel: 
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -2963,11 +2963,12 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 140000003200000064000000c8000000
+  healthPerLevel: 
+  buildCostPerLevel: 
+  refundPerLevel: 
   bulletSpeed: .00100000005
   fireRate: 1
   bullet: {fileID: 11400000, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
-  damageExtraPerLevel: 000000000a0000000a0000000a0000000a0000002800000064000000
 --- !u!1 &1246404193
 GameObject:
   m_ObjectHideFlags: 0
@@ -3011,7 +3012,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 0a00000014000000
+  healthPerLevel: 
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -3261,7 +3262,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 0a00000014000000
+  healthPerLevel: 
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -3332,7 +3333,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 0a00000014000000
+  healthPerLevel: 
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -3726,7 +3727,7 @@ MonoBehaviour:
   - 30
   - 100
   spritesPerBuild: []
-  healthPerLevel: 0a00000014000000
+  healthPerLevel: 
   type: 0
   selected: 0
   liveObj: {fileID: 0}
@@ -4887,7 +4888,7 @@ Transform:
   m_Children:
   - {fileID: 1238812270}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &1948281139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5060,7 +5061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1.33333337
+  m_AspectRatio: 1.33417082
 --- !u!1 &2004252665
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,7 +5135,7 @@ Transform:
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &2050182726
 MonoBehaviour:
   m_ObjectHideFlags: 0
