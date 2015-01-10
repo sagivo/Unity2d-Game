@@ -10,6 +10,7 @@ abstract public class Building : Liveable {
 		OnStatusChange += (s) => {
 			if (status == StatusType.Build){
 				if (buildCostPerLevel!=null && buildCostPerLevel.Length >  level) Game.minerals -= buildCostPerLevel[level];
+				gameObject.transform.rotation = Quaternion.identity;
 			}
 		};
 	}
