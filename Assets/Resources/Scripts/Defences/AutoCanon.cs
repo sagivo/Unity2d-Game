@@ -31,7 +31,7 @@ public class AutoCanon : Building {
 	protected new void Update () {
 		base.Update();
 		if (status == StatusType.Live && null != target){
-			transform.LookAt2d(target.transform,90);
+			transform.LookAt2d(target.transform, 90);
 			if (!shooting) {shooting = true; InvokeRepeating("shoot",0, shootSpeedPerLevel[level]);}
 		}
 	}
