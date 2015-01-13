@@ -19,7 +19,7 @@ public abstract class Liveable : BaseObj {
 	public GameObject[] gameObjectsPerLevel;
 	public GameObject[] buildGameObjectsPerLevel;
 	public Sprite[] spritesPerLevel; 
-	public Sprite[] spritesPerBuild;
+	//public Sprite[] spritesPerBuild;
 	[Header("Times")]
 	public float[] buildTimePerLevel = new float[]{0,10,30,100};	
 	[Header("Visual")]
@@ -29,6 +29,7 @@ public abstract class Liveable : BaseObj {
 	protected SpriteRenderer spriteRenderer;
 	protected Animator animator;
 	HealthBarController healthBar;
+	string dynamicName = "Dynamic GO";
 
 	//inspecor
 	public int[] healthPerLevel; // {get { return _healthPerLevel; } set{ _healthPerLevel = value; health = healthPerLevel[level]; if (showHealthBar) healthBar.divider = health; }}
@@ -87,7 +88,7 @@ public abstract class Liveable : BaseObj {
 	}
 
 	public void build(){
-		if (spritesPerBuild != null && spritesPerBuild.Length > level && GetComponent<SpriteRenderer>()) spriteRenderer.sprite = spritesPerBuild[level];
+		if (buildGameObjectsPerLevel != null && buildGameObjectsPerLevel.Length > level) loadDynamicGO(buildGameObjectsPerLevel[level]);
 		changeStatus(StatusType.Build);
 		if (showHealthBar) healthBar.gameObject.SetActive(false);
 		Invoke("upgradeDone", buildTimePerLevel[level]);
@@ -96,14 +97,7 @@ public abstract class Liveable : BaseObj {
 	public virtual void upgradeDone(){
 		level++;
 		health = healthPerLevel[level];
-		if (gameObjectsPerLevel!=null && gameObjectsPerLevel.Length > level){
-			if (transform.Find("Dynamic GameObject")) Destroy(transform.Find("Dynamic GameObject").gameObject);
-			var go = Instantiate(gameObjectsPerLevel[level], transform.position, transform.rotation) as GameObject;
-			go.name = "Dynamic GameObject";
-			go.transform.parent = gameObject.transform;
-			spriteRenderer = go.gameObject.GetComponentInChildren<SpriteRenderer>();
-			animator = GetComponentInChildren<Animator>();
-		}
+		if (gameObjectsPerLevel!=null && gameObjectsPerLevel.Length > level) loadDynamicGO(gameObjectsPerLevel[level]);
 		else if (spritesPerLevel != null && spritesPerLevel.Length >= level) spriteRenderer.sprite = spritesPerLevel[level];
 		changeStatus(StatusType.Live);
 
@@ -121,5 +115,15 @@ public abstract class Liveable : BaseObj {
 	void changeStatus(StatusType newStatus){
 		status = newStatus;
 		if (OnStatusChange != null) OnStatusChange(status);
+	}
+
+	void loadDynamicGO(GameObject go){
+		if (!go) return;
+		if (transform.Find(dynamicName)) Destroy(transform.Find(dynamicName).gameObject);
+		go = Instantiate(go, transform.position, transform.rotation) as GameObject;
+		go.name = dynamicName;
+		go.transform.parent = gameObject.transform;
+		spriteRenderer = go.gameObject.GetComponentInChildren<SpriteRenderer>();
+		animator = GetComponentInChildren<Animator>();
 	}
 }
