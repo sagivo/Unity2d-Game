@@ -35,7 +35,6 @@ public abstract class Liveable : BaseObj {
 
 	protected new void Awake(){
 		base.Awake();
-
 		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();//TODO: REMOVE AFTER CLEAN OLD SPRITES
 	}
 
