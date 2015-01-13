@@ -40,7 +40,6 @@ public class AutoCanon : Building {
 		if (target != null) {
 			shooting = true;
 			var angle = Extensions.AngelBetween(transform.position, target.transform.position);
-			l (angle);
 
 			var h = (Instantiate (bullet, transform.position, Quaternion.Euler(0, 0, angle)) as Bullet).GetComponent<Hitable>();
 			h.hits = new System.Type[]{ typeof(Kamikazi), typeof(CanonDestroyer)};

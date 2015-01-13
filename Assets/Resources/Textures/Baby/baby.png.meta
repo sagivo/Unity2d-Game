@@ -1,0 +1,454 @@
+fileFormatVersion: 2
+guid: f42247c5e4d504f2d9974cc73301b13f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: baby_0
+    21300002: baby_1
+    21300004: baby_2
+    21300006: baby_3
+    21300008: baby_4
+    21300010: baby_5
+    21300012: baby_6
+    21300014: baby_7
+    21300016: baby_8
+    21300018: baby_9
+    21300020: baby_10
+    21300022: baby_11
+    21300024: baby_12
+    21300026: baby_13
+    21300028: baby_14
+    21300030: baby_15
+    21300032: baby_16
+    21300034: baby_17
+    21300036: baby_18
+    21300038: baby_19
+    21300040: baby_20
+    21300042: baby_21
+    21300044: baby_22
+    21300046: baby_23
+    21300048: baby_24
+    21300050: baby_25
+    21300052: baby_26
+    21300054: baby_27
+    21300056: baby_28
+    21300058: baby_29
+    21300060: baby_30
+    21300062: baby_31
+    21300064: baby_32
+    21300066: baby_33
+    21300068: baby_34
+    21300070: baby_35
+    21300072: baby_36
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 160
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: baby_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 2801
+        width: 423
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_1
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 2801
+        width: 433
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_2
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 2801
+        width: 486
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_3
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 2801
+        width: 422
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_4
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 2811
+        width: 428
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_5
+      rect:
+        serializedVersion: 2
+        x: 3118
+        y: 2809
+        width: 438
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_6
+      rect:
+        serializedVersion: 2
+        x: 3615
+        y: 2811
+        width: 428
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_7
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1941
+        width: 448
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_8
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 2481
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_9
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 2472
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_10
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 1940
+        width: 486
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_11
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 1940
+        width: 482
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_12
+      rect:
+        serializedVersion: 2
+        x: 3856
+        y: 1941
+        width: 507
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_13
+      rect:
+        serializedVersion: 2
+        x: 4540
+        y: 1940
+        width: 446
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_14
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 2457
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_15
+      rect:
+        serializedVersion: 2
+        x: 3661
+        y: 2453
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_16
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1311
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_17
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1318
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_18
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1316
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_19
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 855
+        width: 487
+        height: 548
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_20
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 1318
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_21
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 855
+        width: 487
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_22
+      rect:
+        serializedVersion: 2
+        x: 3608
+        y: 1318
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_23
+      rect:
+        serializedVersion: 2
+        x: 3699
+        y: 858
+        width: 521
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_24
+      rect:
+        serializedVersion: 2
+        x: 4787
+        y: 1316
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_25
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1292
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_26
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 1291
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_27
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 0
+        width: 489
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_28
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 0
+        width: 521
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_29
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 0
+        width: 488
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_30
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 0
+        width: 488
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_31
+      rect:
+        serializedVersion: 2
+        x: 2601
+        y: 0
+        width: 487
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_32
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 0
+        width: 487
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_33
+      rect:
+        serializedVersion: 2
+        x: 3655
+        y: 0
+        width: 521
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_34
+      rect:
+        serializedVersion: 2
+        x: 4211
+        y: 0
+        width: 487
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_35
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 855
+        width: 514
+        height: 548
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_36
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 855
+        width: 496
+        height: 548
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
