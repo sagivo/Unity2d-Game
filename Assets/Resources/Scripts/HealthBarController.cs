@@ -8,7 +8,7 @@ public class HealthBarController : BaseObj
 	public float divider;
 
 	GameObject hbProgress;
-	public float yMargin = 2;
+	public float yMargin = -2;
 
 	protected new void Start (){
 		base.Start();
@@ -20,7 +20,7 @@ public class HealthBarController : BaseObj
 	{
 		transform.rotation = Quaternion.identity;
 		if (transform.parent) 
-			transform.position = new Vector2( transform.parent.transform.position.x , transform.parent.transform.position.y - yMargin); 
+			transform.position = new Vector2( transform.parent.transform.position.x , transform.parent.transform.position.y + yMargin); 
 	}
 	//int count=0;
 

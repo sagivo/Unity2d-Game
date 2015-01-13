@@ -2,12 +2,7 @@
 using System.Collections;
 
 public abstract class Liveable : BaseObj {
-	public int health;
-	public int level;
 	public enum StatusType {Live, Destroyed, Build, InActive, Repair}
-	public StatusType status;
-	public bool showHealthBar = true;
-	public float healthBarYMargin = 2;
 	public System.Action<Hitable> OnHit;
 	public System.Action OnDie;
 	public System.Action<StatusType> OnStatusChange;
@@ -16,20 +11,38 @@ public abstract class Liveable : BaseObj {
 	public System.Action<object> OnRepairStart;
 	public System.Action<object> OnRepairEnd;
 	public System.Action<object> OnHealthChanged;
+	[Header("Status")]
+	public int health;
+	public int level;
+	public StatusType status;
+	[Header("Sprites")]
+	public GameObject[] gameObjectsPerLevel;
+	public GameObject[] buildGameObjectsPerLevel;
 	public Sprite[] spritesPerLevel; 
-	public float[] buildTimePerLevel = new float[]{0,10,30,100};	
 	public Sprite[] spritesPerBuild;
-	HealthBarController healthBar;
+	[Header("Times")]
+	public float[] buildTimePerLevel = new float[]{0,10,30,100};	
+	[Header("Visual")]
+	public bool showHealthBar = true;
+	public float healthBarYMargin = 2;
+	
 	protected SpriteRenderer spriteRenderer;
+	protected Animator animator;
+	HealthBarController healthBar;
 
 	//inspecor
 	public int[] healthPerLevel; // {get { return _healthPerLevel; } set{ _healthPerLevel = value; health = healthPerLevel[level]; if (showHealthBar) healthBar.divider = health; }}
 
+	protected new void Awake(){
+		base.Awake();
+
+		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();//TODO: REMOVE AFTER CLEAN OLD SPRITES
+	}
+
 	protected new void Start(){
 		base.Start();	
 
-		spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();
-		if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
+		//if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
 		status = StatusType.Live;
 		if (healthPerLevel!=null && healthPerLevel.Length > level) health = healthPerLevel[level];  
 
@@ -75,7 +88,7 @@ public abstract class Liveable : BaseObj {
 	}
 
 	public void build(){
-		if (spritesPerBuild != null && spritesPerBuild.Length > level) spriteRenderer.sprite = spritesPerBuild[level];
+		if (spritesPerBuild != null && spritesPerBuild.Length > level && GetComponent<SpriteRenderer>()) spriteRenderer.sprite = spritesPerBuild[level];
 		changeStatus(StatusType.Build);
 		if (showHealthBar) healthBar.gameObject.SetActive(false);
 		Invoke("upgradeDone", buildTimePerLevel[level]);
@@ -84,7 +97,15 @@ public abstract class Liveable : BaseObj {
 	public virtual void upgradeDone(){
 		level++;
 		health = healthPerLevel[level];
-		if (spritesPerLevel != null && spritesPerLevel.Length >= level) spriteRenderer.sprite = spritesPerLevel[level];
+		if (gameObjectsPerLevel!=null && gameObjectsPerLevel.Length > level){
+			if (transform.Find("Dynamic GameObject")) Destroy(transform.Find("Dynamic GameObject").gameObject);
+			var go = Instantiate(gameObjectsPerLevel[level], transform.position, transform.rotation) as GameObject;
+			go.name = "Dynamic GameObject";
+			go.transform.parent = gameObject.transform;
+			spriteRenderer = go.gameObject.GetComponentInChildren<SpriteRenderer>();
+			animator = GetComponentInChildren<Animator>();
+		}
+		else if (spritesPerLevel != null && spritesPerLevel.Length >= level) spriteRenderer.sprite = spritesPerLevel[level];
 		changeStatus(StatusType.Live);
 
 		if (showHealthBar) {

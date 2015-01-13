@@ -46,7 +46,7 @@ public class CanonDestroyer : Enemy {
 	void shoot(){
 		if (target != null ) {
 			var b = Instantiate (bullet, transform.position, transform.rotation) as GameObject;
-			b.transform.Rotate(0,0,90);
+			//b.transform.Rotate(0,0,90);
 			var h = b.GetComponent<Hitable>();
 			h.hits = new System.Type[]{ typeof(AutoCanon) };
 			h.damage = damagePerLevel[level];

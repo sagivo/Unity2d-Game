@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.2764645, y: -3.74382234, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -239,17 +239,19 @@ MonoBehaviour:
   health: 0
   level: 0
   status: 0
-  showHealthBar: 1
-  healthBarYMargin: 2
+  gameObjectsPerLevel: []
+  buildGameObjectsPerLevel: []
   spritesPerLevel:
   - {fileID: 21300000, guid: 4672ef5de61ab4d1b8f8f433055f63fe, type: 3}
   - {fileID: 21300000, guid: 5ab3dbaac163e4158ba698ca20136602, type: 3}
+  spritesPerBuild: []
   buildTimePerLevel:
   - 0
   - 10
   - 30
   - 100
-  spritesPerBuild: []
+  showHealthBar: 1
+  healthBarYMargin: 2
   healthPerLevel: 2c010000f401000058020000bc020000
   speed: 1.5
   costKill: 1

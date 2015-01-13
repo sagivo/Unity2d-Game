@@ -18,7 +18,7 @@ public class GameController : Singleton<GameController> {
 	public System.Action OnMineralChange;
 	Sprite Sprite;
 	//resources
-	int _minerals = 10;
+	int _minerals = 100;
 	public int minerals {
 		get{return _minerals;}
 		set{_minerals = value; if (OnMineralChange!=null) OnMineralChange();}

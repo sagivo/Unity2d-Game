@@ -87,4 +87,13 @@ public static class Extensions {
 		Array.Copy(list,0, results, o.Length,list.Length);
 		return results;
 	}
+
+	public static float AngelBetween(Vector3 a, Vector3 b){
+		Vector3 canonWorldPos = a; // Camera.main.WorldToScreenPoint (a);
+		b.x = b.x - canonWorldPos.x;
+		b.y = b.y - canonWorldPos.y;
+		var angle = Mathf.Atan2 (b.y, b.x) * Mathf.Rad2Deg;
+		if (angle < 0) angle+=360;
+		return angle;
+	}
 }

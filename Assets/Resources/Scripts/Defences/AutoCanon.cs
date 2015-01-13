@@ -31,7 +31,7 @@ public class AutoCanon : Building {
 	protected new void Update () {
 		base.Update();
 		if (status == StatusType.Live && null != target){
-			transform.LookAt2d(target.transform, 90);
+			//transform.LookAt2d(target.transform, 90);
 			if (!shooting) {shooting = true; InvokeRepeating("shoot",0, shootSpeedPerLevel[level]);}
 		}
 	}
@@ -39,9 +39,14 @@ public class AutoCanon : Building {
 	void shoot(){
 		if (target != null) {
 			shooting = true;
-			var h = (Instantiate (bullet, transform.position, transform.rotation) as Bullet).GetComponent<Hitable>();
+			var angle = Extensions.AngelBetween(transform.position, target.transform.position);
+			l (angle);
+
+			var h = (Instantiate (bullet, transform.position, Quaternion.Euler(0, 0, angle)) as Bullet).GetComponent<Hitable>();
 			h.hits = new System.Type[]{ typeof(Kamikazi), typeof(CanonDestroyer)};
 			h.damage = damagePerLevel[level];
+
+			animator.SetFloat("Direction", angle);
 		}
 	}
 

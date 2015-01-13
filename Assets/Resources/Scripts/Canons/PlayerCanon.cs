@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerCanon : Building
@@ -17,6 +18,10 @@ public class PlayerCanon : Building
 	//the current target for the auto aim
 	GameObject target;
 	float nextShoot;
+
+	protected new void Awake(){
+		base.Awake();
+	}
 
 	protected new void Start(){
 		base.Start();
@@ -52,12 +57,11 @@ public class PlayerCanon : Building
 
 	private void rotateToPosition(Vector3 mousePos, Vector3 originPos)
 	{
-		Vector3 canonWorldPos = Camera.main.WorldToScreenPoint (originPos);
-		mousePos.x = mousePos.x - canonWorldPos.x;
-		mousePos.y = mousePos.y - canonWorldPos.y;
-		float angle = Mathf.Atan2 (mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle - 90));
-		transform.Rotate(new Vector3(0,0,90));
+		var angle = Extensions.AngelBetween(originPos, mousePos);
+		//transform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle - 90));
+		//transform.Rotate(new Vector3(0,0,90));
+		//l (angle);
+		animator.SetFloat("Direction", angle);
 	}
 
 }

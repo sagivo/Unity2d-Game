@@ -7,7 +7,7 @@ public class Bullet : BaseObj {
 
 	protected new void Start(){
 		transform.parent = Game.spawnerLayer.transform;
-		rigidbody2D.AddForce (transform.up * speed);
+		rigidbody2D.AddForce (transform.right * speed);
 		rigidbody2D.velocity = transform.forward * speed;
 	}
 
