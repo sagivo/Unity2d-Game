@@ -27,7 +27,7 @@ public abstract class Liveable : BaseObj {
 	public float healthBarYMargin = 2;
 	
 	protected SpriteRenderer spriteRenderer;
-	Animator animator;
+	protected Animator animator;
 	HealthBarController healthBar;
 	string dynamicName = "Dynamic GO";
 
@@ -44,7 +44,6 @@ public abstract class Liveable : BaseObj {
 
 		//if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
 		status = StatusType.Live;
-		if (healthPerLevel!=null && healthPerLevel.Length > level) health = healthPerLevel[level];  
 
 		if (showHealthBar) {
 			var hb = Instantiate(Resources.Load(configs.prefabPaths.uiHealthbar),new Vector3(transform.position.x, transform.position.y - transform.lossyScale.y),Quaternion.identity) as GameObject;
@@ -96,7 +95,7 @@ public abstract class Liveable : BaseObj {
 
 	public virtual void upgradeDone(){
 		level++;
-		health = healthPerLevel[level];
+		if (healthPerLevel!=null && healthPerLevel.Length > level) health = healthPerLevel[level];  
 		if (gameObjectsPerLevel!=null && gameObjectsPerLevel.Length > level) loadDynamicGO(gameObjectsPerLevel[level]);
 		else if (spritesPerLevel != null && spritesPerLevel.Length >= level) spriteRenderer.sprite = spritesPerLevel[level];
 		changeStatus(StatusType.Live);

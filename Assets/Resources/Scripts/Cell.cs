@@ -21,6 +21,7 @@ public class Cell : Liveable {
 		OnStatusChange += (s) => {
 			if (status == StatusType.InActive) sprite.color = ColorInactive;
 		};
+
 	}
 
 	protected new void Start(){
