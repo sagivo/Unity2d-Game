@@ -6,6 +6,9 @@ public abstract class BaseObj : MonoBehaviour {
 	public void l(object o){
 		Debug.Log(o);
 	}
+	public void e(object o){
+		Debug.LogError(o);
+	}
 	public static GameController Game;
 	protected static Config configs;
 	

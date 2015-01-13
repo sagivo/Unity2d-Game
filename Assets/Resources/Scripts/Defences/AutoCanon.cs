@@ -45,7 +45,7 @@ public class AutoCanon : Building {
 			h.hits = new System.Type[]{ typeof(Kamikazi), typeof(CanonDestroyer)};
 			h.damage = damagePerLevel[level];
 
-			animator.SetFloat("Direction", angle);
+			setValForAnimator("Direction", angle);
 		}
 	}
 

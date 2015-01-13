@@ -21,13 +21,13 @@ public abstract class Liveable : BaseObj {
 	public Sprite[] spritesPerLevel; 
 	//public Sprite[] spritesPerBuild;
 	[Header("Times")]
-	public float[] buildTimePerLevel = new float[]{0,10,30,100};	
+	public float[] buildTimePerLevel = new float[]{0,0,0,0};	
 	[Header("Visual")]
 	public bool showHealthBar = true;
 	public float healthBarYMargin = 2;
 	
 	protected SpriteRenderer spriteRenderer;
-	protected Animator animator;
+	Animator animator;
 	HealthBarController healthBar;
 	string dynamicName = "Dynamic GO";
 
@@ -124,6 +124,11 @@ public abstract class Liveable : BaseObj {
 		go.name = dynamicName;
 		go.transform.parent = gameObject.transform;
 		spriteRenderer = go.gameObject.GetComponentInChildren<SpriteRenderer>();
-		animator = GetComponentInChildren<Animator>();
+		animator = go.GetComponent<Animator>();
+	}
+
+	protected void setValForAnimator(string str, float val){
+		if (animator) animator.SetFloat(str, val);
+		else e ("not found animator!");
 	}
 }

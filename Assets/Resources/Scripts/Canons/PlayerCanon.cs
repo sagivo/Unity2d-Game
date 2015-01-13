@@ -58,10 +58,7 @@ public class PlayerCanon : Building
 	private void rotateToPosition(Vector3 mousePos, Vector3 originPos)
 	{
 		var angle = Extensions.AngelBetween(originPos, mousePos);
-		//transform.rotation = Quaternion.Euler (new Vector3 (0f, 0f, angle - 90));
-		//transform.Rotate(new Vector3(0,0,90));
-		//l (angle);
-		animator.SetFloat("Direction", angle);
+		setValForAnimator("Direction", angle);
 	}
 
 }

@@ -42,17 +42,15 @@ public class CanonDestroyer : Enemy {
 		if (null!=target) return;
 		shooting = false;
 		target = gameObject.CloestToObject(Game.autoCanons.ToArray());
-		l (target);
-		angle = Extensions.AngelBetween(transform.position, target.transform.position);
+		if (target!=null){
+			angle = Extensions.AngelBetween(transform.position, target.transform.position);
+			setValForAnimator("Direction", angle);
+		}
 	}
 
 	void shoot(){
 		if (target != null ) {
-			angle = Extensions.AngelBetween(transform.position, target.transform.position);
-			l (angle);
-			animator.SetFloat("Direction", angle);
 			var b = Instantiate (bullet, transform.position, Quaternion.Euler(0, 0, angle)) as GameObject;
-			//b.transform.Rotate(0,0,90);
 			var h = b.GetComponent<Hitable>();
 			h.hits = new System.Type[]{ typeof(AutoCanon) };
 			h.damage = damagePerLevel[level];
