@@ -89,9 +89,9 @@ MonoBehaviour:
   - {fileID: 146370, guid: 306fcb747910e4eb38b80b524840cd14, type: 2}
   buildGameObjectsPerLevel: []
   spritesPerLevel:
-  - {fileID: 21300000, guid: af82634b4afa44021bc5af3fc4e00f6c, type: 3}
-  - {fileID: 21300000, guid: 5b3f64e061aac48ceb73378cf718cf7a, type: 3}
-  - {fileID: 21300000, guid: 30b21822311404cdc9555e6cb36d2222, type: 3}
+  - {fileID: 21300000, guid: 5287e4e904c5849a38d917fc02d56f15, type: 3}
+  - {fileID: 21300000, guid: 5287e4e904c5849a38d917fc02d56f15, type: 3}
+  - {fileID: 21300000, guid: 5287e4e904c5849a38d917fc02d56f15, type: 3}
   buildTimePerLevel:
   - 2
   - 10
