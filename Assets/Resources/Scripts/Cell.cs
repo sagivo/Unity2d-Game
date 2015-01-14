@@ -12,14 +12,20 @@ public class Cell : Liveable {
 	Color ColorBase = Color.white;
 	Vector2[] distanceEdges = new Vector2[] {new Vector2(3.8f,2.15f), new Vector2(3.8f,-2.2f), new Vector2(0,-4.35f), new Vector2(-3.8f,-2.2f), new Vector2(-3.8f,2.15f), new Vector2(0,4.35f)};
 	public int[] expendCostPerLevel = new int[]{25,30,50,1};
+	ParticleSystem particles;
 
 	SpriteRenderer sprite;
 	//events
 	protected new void Awake(){
 		base.Awake();
 		showHealthBar = false;
+		particles = GetComponentInChildren<ParticleSystem>();
+
 		OnStatusChange += (s) => {
-			if (status == StatusType.InActive) sprite.color = ColorInactive;
+			if (status == StatusType.InActive) {
+				sprite.color = ColorInactive;
+				particles.enableEmission = false;
+			}
 		};
 
 	}
