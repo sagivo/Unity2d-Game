@@ -4,11 +4,10 @@ using System.Collections.Generic;
 
 public abstract class Enemy : Liveable 
 {
-	public float speed = 1.5f;
 	protected GameObject target;
+	[Header("Enemy")]
 	public int costKill = 1;
 	protected int[] killBonusMinerals = new int[]{1,5,10};
-	[System.NonSerialized]
 	protected int[] damagePerLevel;
 
 	protected new void Start(){

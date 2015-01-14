@@ -7,7 +7,6 @@ public class Kamikazi : Enemy {
 
 	protected new void Awake(){
 		base.Awake();
-		speed = 1.1f;
 		damagePerLevel = new int[]{10,15,30};
 
 		hit = GetComponent<Hitable>();

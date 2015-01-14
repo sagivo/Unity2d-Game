@@ -15,6 +15,8 @@ public abstract class Liveable : BaseObj {
 	public int health;
 	public int level;
 	public StatusType status;
+	public float[] speedPerLevel = new float[]{0,2,1.5f,1.3f};
+	protected float speed {get {return speedPerLevel[level];}}
 	[Header("Sprites")]
 	public GameObject[] gameObjectsPerLevel;
 	public GameObject[] buildGameObjectsPerLevel;
@@ -95,10 +97,10 @@ public abstract class Liveable : BaseObj {
 
 	public virtual void upgradeDone(){
 		level++;
+		changeStatus(StatusType.Live);
 		if (healthPerLevel!=null && healthPerLevel.Length > level) health = healthPerLevel[level];  
 		if (gameObjectsPerLevel!=null && gameObjectsPerLevel.Length > level) loadDynamicGO(gameObjectsPerLevel[level]);
 		else if (spritesPerLevel != null && spritesPerLevel.Length >= level) spriteRenderer.sprite = spritesPerLevel[level];
-		changeStatus(StatusType.Live);
 
 		if (showHealthBar) {
 			healthBar.gameObject.SetActive(true);
@@ -120,14 +122,18 @@ public abstract class Liveable : BaseObj {
 		if (!go) return;
 		if (transform.Find(dynamicName)) Destroy(transform.Find(dynamicName).gameObject);
 		go = Instantiate(go, transform.position, transform.rotation) as GameObject;
+		animator = go.GetComponent<Animator>();
 		go.name = dynamicName;
 		go.transform.parent = gameObject.transform;
-		spriteRenderer = go.gameObject.GetComponentInChildren<SpriteRenderer>();
-		animator = go.GetComponent<Animator>();
+		spriteRenderer = go.GetComponent<SpriteRenderer>();
 	}
 
 	protected void setValForAnimator(string str, float val){
-		if (animator) animator.SetFloat(str, val);
-		else e ("not found animator!");
+		if (null!=animator) {
+			animator = GetComponentInChildren<Animator>();
+			animator.SetFloat(str, val);
+		}
+		else transform.Rotate (new Vector3(0,0,180));
 	}
+	
 }

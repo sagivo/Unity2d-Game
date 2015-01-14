@@ -7,14 +7,15 @@ public class AutoCanon : Building {
 	bool shooting;
 	[Header("Canon Confid")]
 	public int[] damagePerLevel = new int[]{0, 10, 10, 10, 10, 40, 100};
-	public float[] shootSpeedPerLevel = new float[]{1,.9f,.2f};
+	public float[] shootSpeedPerLevel;
 
 	protected new void Awake(){
 		base.Awake();
 
+		Game.autoCanons.Add(this);
 		OnStatusChange += (s)=>{
 			CancelInvoke("shoot");
-			if (status == StatusType.Live) InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);
+			if (status == StatusType.Live) InvokeRepeating("shoot", shootSpeedPerLevel[level], shootSpeedPerLevel[level]);
 		};
 		
 		OnDie += () => {
@@ -24,7 +25,6 @@ public class AutoCanon : Building {
 
 	protected  new void Start () {
 		base.Start();
-		Game.autoCanons.Add(this);
 
 		InvokeRepeating("findTarget",0,1);
 	}
@@ -33,13 +33,12 @@ public class AutoCanon : Building {
 		base.Update();
 		if (status == StatusType.Live && null != target){
 			//transform.LookAt2d(target.transform, 90);
-			if (!shooting) {shooting = true; InvokeRepeating("shoot",0, shootSpeedPerLevel[level]);}
+			if (!shooting) {shooting = true; CancelInvoke("shoot"); InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);}
 		}
 	}
 
 	void shoot(){
 		if (target != null) {
-			shooting = true;
 			var angle = Extensions.AngelBetween(transform.position, target.transform.position);
 
 			var h = (Instantiate (bullet, transform.position, Quaternion.Euler(0, 0, angle)) as Bullet).GetComponent<Hitable>();

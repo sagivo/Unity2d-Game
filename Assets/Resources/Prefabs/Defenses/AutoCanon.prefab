@@ -65,7 +65,7 @@ MonoBehaviour:
   - {fileID: 109888, guid: 85f249f3116cd46659964a367b68ba6b, type: 2}
   spritesPerLevel:
   - {fileID: 21300000, guid: e97f528dca91545e8bf40dc9de15441b, type: 3}
-  - {fileID: 21300000, guid: a7099fc85419046b9b13bd901d51efd1, type: 3}
+  - {fileID: 0}
   - {fileID: 21300000, guid: e772c84edbe7b4f2fbdc5dbe255b0b3f, type: 3}
   - {fileID: 21300000, guid: 23b22dff9f2b54de2a8142e0c67d6522, type: 3}
   buildTimePerLevel:
@@ -79,6 +79,11 @@ MonoBehaviour:
   buildCostPerLevel: 050000000a0000000f00000014000000
   refundPerLevel: 0300000006000000090000000c000000
   bullet: {fileID: 11400000, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
+  damagePerLevel: 000000000a0000000a0000000a0000000a0000002800000064000000
+  shootSpeedPerLevel:
+  - 0
+  - 2
+  - 1.5
 --- !u!114 &11404196
 MonoBehaviour:
   m_ObjectHideFlags: 1

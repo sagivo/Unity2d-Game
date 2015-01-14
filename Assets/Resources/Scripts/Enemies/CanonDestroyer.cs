@@ -11,7 +11,6 @@ public class CanonDestroyer : Enemy {
 	new void Awake(){
 		base.Awake();
 		damagePerLevel = new int[]{5,10,30};
-		speed = .3f;
 	}
 
 	// Use this for initialization
@@ -20,8 +19,8 @@ public class CanonDestroyer : Enemy {
 		//healthPerLevel = Vars.Balance.Enemy.canonDestroyer.healthPerLevel;
 		//rangeShootPerLevel = Vars.Balance.Enemy.canonDestroyer.shootRangePerLevel;
 		//shootSpeedPerLevel = Vars.Balance.Enemy.canonDestroyer.shootSpeedPerLevel;
-
-		InvokeRepeating("findTarget",0,1);
+		InvokeRepeating("findTarget",1,1);
+		spriteRenderer.color = Color.magenta;
 	}
 	
 	// Update is called once per frame
@@ -33,16 +32,16 @@ public class CanonDestroyer : Enemy {
 				transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
 			} else{ //shoot
 				//transform.LookAt2d(target.transform,(transform.position.x > target.transform.position.x) ? 180 :  0);
-				if (!shooting) {shooting = true; InvokeRepeating("shoot",0, shootSpeedPerLevel[level]);}
+				if (!shooting) {shooting = true; CancelInvoke("shoot"); InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);}
 			}
-		} else findTarget();
+		} 
 	}
 
 	void findTarget() {
 		if (null!=target) return;
 		shooting = false;
 		target = gameObject.CloestToObject(Game.autoCanons.ToArray());
-		if (target!=null){
+		if (target && animator){
 			angle = Extensions.AngelBetween(transform.position, target.transform.position);
 			setValForAnimator("Direction", angle);
 		}
