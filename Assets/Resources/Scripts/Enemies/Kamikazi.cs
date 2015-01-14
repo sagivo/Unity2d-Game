@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Kamikazi : Enemy {
 	Hitable hit;
+	float angle; 
 
 	protected new void Awake(){
 		base.Awake();
@@ -23,7 +24,9 @@ public class Kamikazi : Enemy {
 		base.Update();
 
 		if (target != null){
-			transform.LookAt2d(target.transform);
+			//transform.LookAt2d(target.transform);
+			angle = Extensions.AngelBetween(transform.position, target.transform.position);
+			setValForAnimator("Direction", angle);
 			transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
 		}
 	}

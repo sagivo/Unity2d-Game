@@ -4,9 +4,10 @@ using System.Collections;
 public class AutoCanon : Building {
 	public Bullet bullet;
 	GameObject target;
-	float[] shootSpeedPerLevel = new float[]{1,.5f,.2f};
-	int[] damagePerLevel = new int[]{0, 10, 10, 10, 10, 40, 100};
 	bool shooting;
+	[Header("Canon Confid")]
+	public int[] damagePerLevel = new int[]{0, 10, 10, 10, 10, 40, 100};
+	public float[] shootSpeedPerLevel = new float[]{1,.9f,.2f};
 
 	protected new void Awake(){
 		base.Awake();
