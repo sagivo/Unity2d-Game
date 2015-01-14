@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 114: {fileID: 11434116}
+  - 60: {fileID: 6040762}
   m_Layer: 8
   m_Name: Cell
   m_TagString: Untagged
@@ -41,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.57999992, y: -10.96, z: 0}
+  m_LocalPosition: {x: 3.60394454, y: -12.6794519, z: -10.6244793}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400432}
@@ -59,6 +60,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
+--- !u!60 &6040762
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Poly:
+    m_Paths:
+    - - {x: 1.24156785, y: -2.08751106}
+      - {x: 2.45696235, y: -.0139942169}
+      - {x: 1.23324943, y: 2.12999821}
+      - {x: -1.20441222, y: 2.15591335}
+      - {x: -2.4819119, y: -.0207805634}
+      - {x: -1.22315168, y: -2.07265186}
 --- !u!114 &11434116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,7 +112,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100432}
-  lengthInSec: 5
+  lengthInSec: 3
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -105,7 +123,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 5
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -138,7 +156,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 5
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
