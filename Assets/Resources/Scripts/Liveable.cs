@@ -11,6 +11,7 @@ public abstract class Liveable : BaseObj {
 	public System.Action<object> OnRepairStart;
 	public System.Action<object> OnRepairEnd;
 	public System.Action<object> OnHealthChanged;
+	public System.Action OnSelected;
 	[Header("Status")]
 	public int health;
 	public int level;
@@ -21,7 +22,6 @@ public abstract class Liveable : BaseObj {
 	public GameObject[] gameObjectsPerLevel;
 	public GameObject[] buildGameObjectsPerLevel;
 	public Sprite[] spritesPerLevel; 
-	//public Sprite[] spritesPerBuild;
 	[Header("Times")]
 	public float[] buildTimePerLevel = new float[]{0,0,0,0};	
 	[Header("Visual")]
@@ -134,6 +134,11 @@ public abstract class Liveable : BaseObj {
 			animator.SetFloat(str, val);
 		}
 		else transform.Rotate (new Vector3(0,0,180));
+	}
+
+	public void Select(){
+		animator.SetTrigger("Selected");
+		if (OnSelected!=null) OnSelected();
 	}
 	
 }

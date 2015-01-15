@@ -12,7 +12,7 @@ GameObject:
   - 61: {fileID: 6178050}
   - 212: {fileID: 21262932}
   - 114: {fileID: 11404196}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AutoCanon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0262246132, y: -.433060884, z: 0}
+  m_LocalPosition: {x: .147310078, y: -4.10198307, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40,7 +40,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.5, y: 3.41000009}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -56,6 +56,11 @@ MonoBehaviour:
   health: 0
   level: 0
   status: 0
+  speedPerLevel:
+  - 0
+  - 2
+  - 1.5
+  - 1.29999995
   gameObjectsPerLevel:
   - {fileID: 146370, guid: 306fcb747910e4eb38b80b524840cd14, type: 2}
   - {fileID: 146370, guid: 306fcb747910e4eb38b80b524840cd14, type: 2}
