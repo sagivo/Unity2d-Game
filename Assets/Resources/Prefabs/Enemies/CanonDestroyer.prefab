@@ -73,8 +73,8 @@ MonoBehaviour:
   - .699999988
   - 1
   gameObjectsPerLevel:
-  - {fileID: 146370, guid: 306fcb747910e4eb38b80b524840cd14, type: 2}
-  - {fileID: 146370, guid: 306fcb747910e4eb38b80b524840cd14, type: 2}
+  - {fileID: 0}
+  - {fileID: 116856, guid: c63104118079e42839ea3cb61473e205, type: 2}
   buildGameObjectsPerLevel: []
   spritesPerLevel:
   - {fileID: 21300000, guid: 4672ef5de61ab4d1b8f8f433055f63fe, type: 3}

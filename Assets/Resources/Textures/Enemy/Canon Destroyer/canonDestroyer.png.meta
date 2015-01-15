@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: 184637a710bea49b28ffe5addd34a886
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: canonDestroyer_0
+    21300002: canonDestroyer_1
+    21300004: canonDestroyer_2
+    21300006: canonDestroyer_3
+    21300008: canonDestroyer_4
+    21300010: canonDestroyer_5
+    21300012: canonDestroyer_6
+    21300014: canonDestroyer_7
+    21300016: canonDestroyer_8
+    21300018: canonDestroyer_9
+    21300020: canonDestroyer_10
+    21300022: canonDestroyer_11
+    21300024: canonDestroyer_12
+    21300026: canonDestroyer_13
+    21300028: canonDestroyer_14
+    21300030: canonDestroyer_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 20
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: canonDestroyer_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 315
+        width: 95
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 313
+        width: 77
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 322
+        width: 93
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_3
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 320
+        width: 82
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_4
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 213
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_5
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 200
+        width: 75
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_6
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 215
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_7
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 211
+        width: 70
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 117
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_9
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 104
+        width: 75
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_10
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 119
+        width: 70
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_11
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 115
+        width: 70
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 95
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 12
+        width: 91
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 16
+        width: 95
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: canonDestroyer_15
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 13
+        width: 79
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
