@@ -69,7 +69,7 @@ MonoBehaviour:
   status: 0
   speedPerLevel:
   - 0
-  - .5
+  - .200000003
   - .699999988
   - 1
   gameObjectsPerLevel:
