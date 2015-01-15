@@ -23,9 +23,6 @@ public class Kamikazi : Enemy {
 		base.Update();
 
 		if (target != null){
-			//transform.LookAt2d(target.transform);
-			angle = Extensions.AngelBetween(transform.position, target.transform.position);
-			setValForAnimator("Direction", angle);
 			transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
 		}
 	}
@@ -34,6 +31,10 @@ public class Kamikazi : Enemy {
 		if (null!=target) return;
 		object[] targets = Game.mineralMiners.ToArray().Join(Game.player);
 		target = gameObject.CloestToObject(targets);
+		if (target && animator){
+			angle = Extensions.AngelBetween(transform.position, target.transform.position);
+			setValForAnimator("Direction", angle);
+		}
 	}
 	
 }

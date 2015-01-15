@@ -13,25 +13,18 @@ public class CanonDestroyer : Enemy {
 		damagePerLevel = new int[]{5,10,30};
 	}
 
-	// Use this for initialization
 	protected new void Start () {
 		base.Start();
-		//healthPerLevel = Vars.Balance.Enemy.canonDestroyer.healthPerLevel;
-		//rangeShootPerLevel = Vars.Balance.Enemy.canonDestroyer.shootRangePerLevel;
-		//shootSpeedPerLevel = Vars.Balance.Enemy.canonDestroyer.shootSpeedPerLevel;
 		InvokeRepeating("findTarget",1,1);
 		spriteRenderer.color = Color.magenta;
 	}
 	
-	// Update is called once per frame
 	new void Update () {
 		base.Update();
 		if (target != null){
 			if (Vector2.Distance(transform.position, target.transform.position) > rangeShootPerLevel[level]){
-				//transform.LookAt2d(target.transform,(transform.position.x > target.transform.position.x) ? 180 :  0);
 				transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
 			} else{ //shoot
-				//transform.LookAt2d(target.transform,(transform.position.x > target.transform.position.x) ? 180 :  0);
 				if (!shooting) {shooting = true; CancelInvoke("shoot"); InvokeRepeating("shoot",shootSpeedPerLevel[level], shootSpeedPerLevel[level]);}
 			}
 		} 

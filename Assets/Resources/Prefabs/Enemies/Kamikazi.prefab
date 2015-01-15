@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.57720995, y: -4.31371689, z: 0}
+  m_LocalPosition: {x: -10.3000002, y: 8.60000038, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 3.43000007}
+  m_Size: {x: 3, y: 3}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -73,23 +73,25 @@ MonoBehaviour:
   health: 0
   level: 0
   status: 0
+  speedPerLevel:
+  - 0
+  - 2
+  - 1.5
+  - 1.29999995
   gameObjectsPerLevel:
   - {fileID: 0}
-  - {fileID: 146370, guid: 306fcb747910e4eb38b80b524840cd14, type: 2}
+  - {fileID: 197462, guid: 120c761ec00d04998882a48a4b33528b, type: 2}
   buildGameObjectsPerLevel: []
-  spritesPerLevel:
-  - {fileID: 21300000, guid: 1306708e4c88c427abb8c4d13ccb2166, type: 3}
-  - {fileID: 21300000, guid: 1306708e4c88c427abb8c4d13ccb2166, type: 3}
+  spritesPerLevel: []
   buildTimePerLevel:
   - 0
   - 10
   - 30
   - 100
   showHealthBar: 1
-  healthBarYMargin: 2
+  healthBarYMargin: -2
   healthPerLevel: 28000000320000003c00000046000000
-  speed: 1.5
-  costKill: 1
+  costKill: 2
 --- !u!114 &11417718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,7 +134,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300064, guid: f42247c5e4d504f2d9974cc73301b13f, type: 3}
+  m_Sprite: {fileID: 21300014, guid: f9e549d2eae5740d7b9777cfcd0129f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

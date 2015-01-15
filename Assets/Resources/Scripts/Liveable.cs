@@ -131,6 +131,7 @@ public abstract class Liveable : BaseObj {
 	protected void setValForAnimator(string str, float val){
 		if (null!=animator) {
 			animator = GetComponentInChildren<Animator>();
+			l(animator);
 			animator.SetFloat(str, val);
 		}
 		else transform.Rotate (new Vector3(0,0,180));

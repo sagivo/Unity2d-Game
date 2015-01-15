@@ -85,6 +85,11 @@ MonoBehaviour:
   health: 0
   level: 0
   status: 0
+  speedPerLevel:
+  - 0
+  - 2
+  - 1.5
+  - 1.29999995
   gameObjectsPerLevel:
   - {fileID: 146370, guid: 306fcb747910e4eb38b80b524840cd14, type: 2}
   buildGameObjectsPerLevel: []
@@ -93,7 +98,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5287e4e904c5849a38d917fc02d56f15, type: 3}
   - {fileID: 21300000, guid: 5287e4e904c5849a38d917fc02d56f15, type: 3}
   buildTimePerLevel:
-  - 2
+  - 1
   - 10
   - 25
   - 40

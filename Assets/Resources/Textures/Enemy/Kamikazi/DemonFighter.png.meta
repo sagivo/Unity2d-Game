@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: f9e549d2eae5740d7b9777cfcd0129f0
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DemonFighter_0
+    21300002: DemonFighter_1
+    21300004: DemonFighter_2
+    21300006: DemonFighter_3
+    21300008: DemonFighter_4
+    21300010: DemonFighter_5
+    21300012: DemonFighter_6
+    21300014: DemonFighter_7
+    21300016: DemonFighter_8
+    21300018: DemonFighter_9
+    21300020: DemonFighter_10
+    21300022: DemonFighter_11
+    21300024: DemonFighter_12
+    21300026: DemonFighter_13
+    21300028: DemonFighter_14
+    21300030: DemonFighter_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 17
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: DemonFighter_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 194
+        width: 107
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 194
+        width: 107
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 194
+        width: 107
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 194
+        width: 107
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 129
+        width: 65
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_5
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 129
+        width: 60
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_6
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 129
+        width: 65
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_7
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 131
+        width: 60
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 67
+        width: 65
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_9
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 67
+        width: 60
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_10
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 67
+        width: 65
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_11
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 69
+        width: 60
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2
+        width: 96
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_13
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1
+        width: 96
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_14
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 2
+        width: 96
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: DemonFighter_15
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1
+        width: 96
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
