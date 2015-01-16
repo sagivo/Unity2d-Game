@@ -1,0 +1,315 @@
+fileFormatVersion: 2
+guid: 7ac6e9b292f137147b3df877cbc2523c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: goblin_L_ear
+    21300002: goblin_R_ear
+    21300004: goblin_head
+    21300006: goblin_L_brow
+    21300008: goblin_R_brow
+    21300010: goblin_L_eye
+    21300012: goblin_R_eye
+    21300014: goblin_L_hand
+    21300016: goblin_body
+    21300018: goblin_L_lowerarm
+    21300020: goblin_R_upperarm
+    21300022: goblin_R_lowerarm
+    21300024: goblin_R_hand
+    21300026: goblin_L_upperarm
+    21300028: goblin_bow
+    21300030: goblin_L_necklace
+    21300032: goblin_R_necklace
+    21300034: goblin_bellybutton
+    21300036: goblin_arrow
+    21300038: goblin_tooth
+    21300040: goblin_L_leg
+    21300042: goblin_R_leg
+    21300044: goblin_L_foot
+    21300046: goblin_R_foot
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: goblin_L_ear
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 890
+        width: 108
+        height: 109
+      alignment: 9
+      pivot: {x: .835203826, y: .0806201622}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_R_ear
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 901
+        width: 49
+        height: 113
+      alignment: 9
+      pivot: {x: .339726657, y: .0883605406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_head
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 681
+        width: 261
+        height: 326
+      alignment: 9
+      pivot: {x: .262219906, y: .436543465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_L_brow
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 821
+        width: 106
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_R_brow
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 820
+        width: 64
+        height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_L_eye
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 715
+        width: 80
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_R_eye
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 717
+        width: 37
+        height: 66
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_L_hand
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 554
+        width: 50
+        height: 63
+      alignment: 9
+      pivot: {x: .719913006, y: .188332215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_body
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 270
+        width: 161
+        height: 368
+      alignment: 9
+      pivot: {x: .371509999, y: .14866066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_L_lowerarm
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 387
+        width: 66
+        height: 124
+      alignment: 9
+      pivot: {x: .797501326, y: .0819625854}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_R_upperarm
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 499
+        width: 93
+        height: 44
+      alignment: 9
+      pivot: {x: .0777397603, y: .749901533}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_R_lowerarm
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 486
+        width: 93
+        height: 42
+      alignment: 9
+      pivot: {x: .0861849189, y: .7618016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_R_hand
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 460
+        width: 50
+        height: 68
+      alignment: 9
+      pivot: {x: .264378667, y: .118848018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_L_upperarm
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 393
+        width: 68
+        height: 104
+      alignment: 9
+      pivot: {x: .858051538, y: .900253892}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_bow
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 54
+        width: 168
+        height: 351
+      alignment: 9
+      pivot: {x: .102622986, y: .479861498}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_L_necklace
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 128
+        width: 53
+        height: 135
+      alignment: 9
+      pivot: {x: .082154043, y: .960579872}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_R_necklace
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 134
+        width: 28
+        height: 119
+      alignment: 9
+      pivot: {x: .616131365, y: .0390308276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_bellybutton
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 238
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_arrow
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 82
+        width: 70
+        height: 235
+      alignment: 9
+      pivot: {x: .553064823, y: .136453211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_tooth
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 80
+        width: 47
+        height: 66
+      alignment: 9
+      pivot: {x: .28276062, y: .82130152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_L_leg
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 116
+        width: 40
+        height: 72
+      alignment: 9
+      pivot: {x: .509854138, y: .917881846}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_R_leg
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 112
+        width: 40
+        height: 72
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_L_foot
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 45
+        width: 53
+        height: 28
+      alignment: 9
+      pivot: {x: .223662749, y: .742851257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: goblin_R_foot
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 54
+        width: 51
+        height: 27
+      alignment: 9
+      pivot: {x: .202570304, y: .713100851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

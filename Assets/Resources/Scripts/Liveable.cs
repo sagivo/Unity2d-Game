@@ -59,7 +59,7 @@ public abstract class Liveable : BaseObj {
 		OnHit += (o) => {
 			if (o.hits!=null && System.Array.IndexOf(o.hits, this.GetType()) > -1 ){
 				decHealth(o.damage);
-				spriteRenderer.color = Color.red;
+				//spriteRenderer.color = Color.red;
 				CancelInvoke("switchBackToOriginalColor");
 				Invoke("switchBackToOriginalColor", .2f);
 			}

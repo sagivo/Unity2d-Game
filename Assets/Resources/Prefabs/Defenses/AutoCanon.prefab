@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .147310078, y: -4.10198307, z: 0}
+  m_LocalPosition: {x: -.0195441246, y: -.120002732, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,7 +83,7 @@ MonoBehaviour:
   healthPerLevel: 1e00000028000000320000003c000000
   buildCostPerLevel: 050000000a0000000f00000014000000
   refundPerLevel: 0300000006000000090000000c000000
-  bullet: {fileID: 11400000, guid: 3a16798285ee0435691febb8a09033a2, type: 2}
+  bullet: {fileID: 11462134, guid: d614c124d74ae4bd299c933eb769272a, type: 2}
   damagePerLevel: 000000000a0000000a0000000a0000000a0000002800000064000000
   shootSpeedPerLevel:
   - 0
