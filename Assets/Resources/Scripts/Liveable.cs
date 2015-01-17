@@ -6,8 +6,7 @@ public abstract class Liveable : BaseObj {
 	public System.Action<Hitable> OnHit;
 	public System.Action OnDie;
 	public System.Action<StatusType> OnStatusChange;
-	public System.Action<object> OnBuildStart;
-	public System.Action<object> OnBuildEnd;
+	public System.Action OnUpgraded;
 	public System.Action<object> OnRepairStart;
 	public System.Action<object> OnRepairEnd;
 	public System.Action<object> OnHealthChanged;
@@ -45,7 +44,6 @@ public abstract class Liveable : BaseObj {
 	protected new void Start(){
 		base.Start();	
 
-		//if (spritesPerLevel != null && spritesPerLevel.Length > 0) spriteRenderer.sprite = spritesPerLevel[level];
 		status = StatusType.Live;
 
 		if (showHealthBar) {
@@ -60,7 +58,7 @@ public abstract class Liveable : BaseObj {
 		OnHit += (o) => {
 			if (o.hits!=null && System.Array.IndexOf(o.hits, this.GetType()) > -1 ){
 				decHealth(o.damage);
-				//spriteRenderer.color = Color.red;
+				spriteRenderer.color = Color.red;
 				CancelInvoke("switchBackToOriginalColor");
 				Invoke("switchBackToOriginalColor", .2f);
 			}
@@ -76,7 +74,7 @@ public abstract class Liveable : BaseObj {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		var hit = other.GetComponent<Hitable>();
-		if (hit && OnHit != null) OnHit(hit);
+		if (hit && hit.enabled && OnHit != null) OnHit(hit);
 	}
 
 	public void decHealth(int by){
@@ -108,6 +106,7 @@ public abstract class Liveable : BaseObj {
 			healthBar.setHealth(health);
 			healthBar.divider = health;
 		}
+		if (OnUpgraded!=null) OnUpgraded();
 	}
 
 	public void setInactive(){

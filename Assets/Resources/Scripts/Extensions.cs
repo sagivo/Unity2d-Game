@@ -96,4 +96,15 @@ public static class Extensions {
 		if (angle < 0) angle+=360;
 		return angle;
 	}
+
+	public static Transform SearchByName(this Transform target, string name)
+	{
+		if (target.name == name) return target;
+		for (int i = 0; i < target.childCount; ++i)
+		{
+			var result = SearchByName(target.GetChild(i), name);
+			if (result != null) return result;
+		}
+		return null;
+	}
 }

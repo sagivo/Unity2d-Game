@@ -6,15 +6,16 @@ public class Orc : Enemy {
 	Hitable hit;
 	float distanceToHit = 3;
 	bool attacking;
-	
+	Transform axe;
+
 	protected new void Awake(){
 		base.Awake();
 		damagePerLevel = new int[]{20,15,30};
-		
-		hit = GetComponent<Hitable>();
-		hit.hits = new System.Type[]{ typeof(PlayerCanon), typeof(MineralMiner), typeof(AutoCanon) };
-		l (hit.hits.Length);
-		hit.damage = damagePerLevel[level];
+
+		OnUpgraded += () => {
+			spriteRenderer = transform.SearchByName("orc_head").GetComponent<SpriteRenderer>();
+			axe = transform.SearchByName("orc_weapon");
+		};
 	}
 	
 	protected new void Start(){
@@ -26,15 +27,14 @@ public class Orc : Enemy {
 		base.Update();
 		
 		if (target != null){
-			if (Vector2.Distance(transform.position, target.transform.position) > distanceToHit){
+			if (Vector2.Distance(axe.position, target.transform.position) > distanceToHit){
 				if (target.transform.position.x > transform.position.x && !lookRight) Flip();
 				else if(target.transform.position.x < transform.position.x && lookRight) Flip();
 				
-				var prevPos = transform.position;
 				transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
-				animator.SetFloat("speed", (transform.position - prevPos).magnitude/Time.deltaTime);
+				animator.SetFloat("speed", speed);
 			} else{ //shoot
-				if (!attacking) {attacking = true; CancelInvoke("attack"); InvokeRepeating("attack",attackSpeedPerLevel[level], attackSpeedPerLevel[level]); animator.SetFloat("speed",0);}
+				if (!attacking) {attacking = true; CancelInvoke("attack"); animator.SetFloat("speed",0); InvokeRepeating("attack",attackSpeedPerLevel[level], attackSpeedPerLevel[level]); }
 			}
 		}
 	}
@@ -47,7 +47,18 @@ public class Orc : Enemy {
 
 	void attack(){
 		if (target != null ) {
+			if (null==hit){
+				hit = GetComponentInChildren<Hitable>();
+				hit.keepAlive = true;
+				hit.hits = new System.Type[]{ typeof(PlayerCanon), typeof(MineralMiner), typeof(AutoCanon) };
+				hit.damage = damagePerLevel[level];
+			}
+			hit.enabled = true;
 			animator.SetTrigger("attack");
+		} else {
+			attacking = false;
+			CancelInvoke("attack");
+			hit.enabled = false;
 		}
 	}
 	
