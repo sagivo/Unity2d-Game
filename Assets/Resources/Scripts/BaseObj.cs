@@ -10,6 +10,7 @@ public abstract class BaseObj : MonoBehaviour {
 		Debug.LogError(o);
 	}
 	public static GameController Game;
+	//protected static GameController GetGame(){ return GameController.Instance;}
 	protected static Config configs;
 	
 	protected void Awake () {
@@ -19,9 +20,6 @@ public abstract class BaseObj : MonoBehaviour {
 		}
 	}
 
-	protected static GameController GetGame(){
-		return GameController.Instance;
-	}
 
 	protected void Start(){}
 	protected void Update(){}

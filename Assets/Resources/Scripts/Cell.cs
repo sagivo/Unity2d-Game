@@ -71,7 +71,7 @@ public class Cell : Liveable {
 	}
 
 	public static Cell getSelected(){
-		foreach (var c in GetGame().cells)
+		foreach (var c in Game.cells)
 			if (c.isSelected()) return c;
 		return null;
 	}

@@ -10,6 +10,6 @@ public class Hitable : BaseObj {
 	void OnTriggerEnter2D(Collider2D other){
 		if (hits==null) return;
 		foreach (System.Type t in hits) 
-		if (other.GetComponent(t) != null) {Destroy(gameObject);break;}
+			if (other.GetComponent(t) != null) {Destroy(gameObject);break;}
 	}
 }
