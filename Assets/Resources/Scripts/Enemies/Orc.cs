@@ -32,9 +32,10 @@ public class Orc : Enemy {
 				else if(target.transform.position.x < transform.position.x && lookRight) Flip();
 				
 				transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed*Time.deltaTime);
-				animator.SetFloat("speed", speed);
+				setValForAnimator("speed", speed);
 			} else{ //shoot
-				if (!attacking) {attacking = true; CancelInvoke("attack"); animator.SetFloat("speed",0); InvokeRepeating("attack",attackSpeedPerLevel[level], attackSpeedPerLevel[level]); }
+				setValForAnimator("speed", 0);
+				if (!attacking) {attacking = true; CancelInvoke("attack"); InvokeRepeating("attack",attackSpeedPerLevel[level], attackSpeedPerLevel[level]); }
 			}
 		}
 	}
