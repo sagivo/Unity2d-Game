@@ -5,16 +5,17 @@ public class Goblin : Enemy {
 	public GameObject bullet;
 	public float[] rangeShootPerLevel = new float[]{10, 20, 50};
 	public float[] attackSpeedPerLevel = new float[]{0, 1.9f, 1.5f, 1};
-	Hitable hit;
 	bool attacking;
 	float angle;
 	
 	protected new void Awake(){
 		base.Awake();
-		damagePerLevel = new int[]{20,15,30};
 		
 		OnUpgraded += () => {
 			spriteRenderer = transform.SearchByName("goblin_head").GetComponent<SpriteRenderer>();
+		};
+		OnHit+= (o) => {
+			l (o);
 		};
 	}
 	

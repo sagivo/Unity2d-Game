@@ -7,8 +7,8 @@ public abstract class Enemy : Liveable
 	protected GameObject target;
 	[Header("Enemy")]
 	public int costKill = 1;
+	public int[] damagePerLevel;
 	protected int[] killBonusMinerals = new int[]{1,5,10};
-	protected int[] damagePerLevel;
 
 	protected new void Start(){
 		base.Start();

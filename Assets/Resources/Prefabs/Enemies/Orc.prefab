@@ -39,7 +39,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 126530}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 3.1400001, y: 3.28999996}
   m_Center: {x: -.959999979, y: .889999986}
 --- !u!114 &11426526
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396f83e9fccee4465aba6531ccdda0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 200
   level: 0
   status: 0
   speedPerLevel:
@@ -75,6 +75,7 @@ MonoBehaviour:
   healthBarYMargin: 3.20000005
   healthPerLevel: 
   costKill: 1
+  damagePerLevel: 
   attackSpeedPerLevel:
   - 0
   - 1.89999998
