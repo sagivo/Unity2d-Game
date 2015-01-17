@@ -30,6 +30,7 @@ public abstract class Liveable : BaseObj {
 	
 	protected SpriteRenderer spriteRenderer;
 	protected Animator animator;
+	protected bool lookRight = true;
 	HealthBarController healthBar;
 	string dynamicName = "Dynamic GO";
 
@@ -140,5 +141,12 @@ public abstract class Liveable : BaseObj {
 		animator.SetTrigger("Selected");
 		if (OnSelected!=null) OnSelected();
 	}
-	
+
+	protected void Flip()
+	{
+		var s = transform.localScale;
+		s.x *= -1;
+		transform.localScale = s;
+		lookRight = !lookRight;
+	}
 }
