@@ -87,8 +87,8 @@ MonoBehaviour:
   damagePerLevel: 000000000a0000000a0000000a0000000a0000002800000064000000
   shootSpeedPerLevel:
   - 0
-  - 2
-  - 1.5
+  - 1
+  - .800000012
 --- !u!114 &11404196
 MonoBehaviour:
   m_ObjectHideFlags: 1
