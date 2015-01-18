@@ -58,7 +58,7 @@ MonoBehaviour:
   status: 0
   speedPerLevel:
   - 0
-  - 2
+  - .899999976
   - 1.5
   - 1.29999995
   gameObjectsPerLevel:
@@ -79,8 +79,8 @@ MonoBehaviour:
   bullet: {fileID: 114890, guid: 960f7127fafd54ea5834a38b8bd82fcd, type: 2}
   rangeShootPerLevel:
   - 0
-  - 6
   - 10
+  - 12
   attackSpeedPerLevel:
   - 0
   - 1.89999998

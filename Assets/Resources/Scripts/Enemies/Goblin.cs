@@ -14,9 +14,6 @@ public class Goblin : Enemy {
 		OnUpgraded += () => {
 			spriteRenderer = transform.SearchByName("goblin_head").GetComponent<SpriteRenderer>();
 		};
-		OnHit+= (o) => {
-			l ("goblin hit");
-		};
 	}
 	
 	protected new void Start(){
