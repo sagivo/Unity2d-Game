@@ -172,7 +172,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 29185466}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Poly:
     m_Paths:
     - - {x: 1.24156785, y: -2.08751106}
@@ -2654,11 +2654,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.52999997
+      value: -.109999999
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.25
+      value: .0599999987
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0fbdf5f177a6745a6a49f9648d5541ae, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7882,7 +7882,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 34a4a7e5a47594b40ac714fd48b61dfb, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 34a4a7e5a47594b40ac714fd48b61dfb, type: 2}
       propertyPath: m_IsActive
@@ -8930,7 +8930,7 @@ MonoBehaviour:
   healthPerLevel: 1e00000028000000320000003c000000
   buildCostPerLevel: 050000000a0000000f00000014000000
   refundPerLevel: 0300000006000000090000000c000000
-  bullet: {fileID: 11462134, guid: d614c124d74ae4bd299c933eb769272a, type: 2}
+  bullet: {fileID: 11417926, guid: 74632055aa27f423f88329ddfb7438b6, type: 2}
   damagePerLevel: 000000000a0000000a0000000a0000000a0000002800000064000000
   shootSpeedPerLevel:
   - 0
@@ -8943,7 +8943,7 @@ Transform:
   m_PrefabInternal: {fileID: 508031886}
   m_GameObject: {fileID: 1803593896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.52999997, y: 2.25, z: 0}
+  m_LocalPosition: {x: -.109999999, y: .0599999987, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8985,6 +8985,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040762, guid: ee702e24d29244ed6ae11130e84ad861, type: 2}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10779,7 +10783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 1.33333337
+  m_AspectRatio: 1.33245385
 --- !u!1 &2004252665
 GameObject:
   m_ObjectHideFlags: 0

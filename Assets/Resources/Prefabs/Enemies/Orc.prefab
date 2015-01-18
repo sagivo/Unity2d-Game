@@ -75,7 +75,7 @@ MonoBehaviour:
   healthBarYMargin: 3.20000005
   healthPerLevel: 
   costKill: 1
-  damagePerLevel: 
+  damagePerLevel: 0000000003000000
   attackSpeedPerLevel:
   - 0
   - 1.89999998

@@ -41,8 +41,11 @@ public class AutoCanon : Building {
 		if (target != null) {
 			var angle = Extensions.AngelBetween(transform.position, target.transform.position);
 
-			var h = (Instantiate (bullet, transform.position, Quaternion.Euler(0, 0, angle)) as Bullet).GetComponent<Hitable>();
+			var b = (Instantiate (bullet, transform.position, Quaternion.Euler(0, 0, angle)) as Bullet);
+			var h = b.GetComponentInChildren<Hitable>();
+			h.destroyOnHit = b.gameObject;
 			h.hits = new System.Type[]{ typeof(Kamikazi), typeof(CanonDestroyer), typeof(Orc), typeof(Goblin)};
+
 			h.damage = damagePerLevel[level];
 
 			setValForAnimator("Direction", angle);
