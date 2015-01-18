@@ -13,7 +13,6 @@ public class Hitable : BaseObj {
 		if (hits==null || keepAlive) return;
 		foreach (System.Type t in hits){
 			if (other.GetComponent(t) != null) {
-				l ("kill");
 				if (destroyOnHit) Destroy(destroyOnHit);
 				else Destroy(gameObject);break;
 			}

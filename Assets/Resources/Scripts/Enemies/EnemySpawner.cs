@@ -18,6 +18,5 @@ public class EnemySpawner : BaseObj {
 
 	void spawn(){
 		Instantiate(enemies[Random.Range(0,2)], spawnPoints[Random.Range(0, spawnPoints.Length)].position ,Quaternion.identity );
-		//Invoke("spawn", Random.Range(0,spawnEvery));
 	}
 }

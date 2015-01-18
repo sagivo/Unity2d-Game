@@ -10,6 +10,7 @@ public class Orc : Enemy {
 
 	protected new void Awake(){
 		base.Awake();
+		damagePerLevel = new int[]{20,15,30};
 
 		OnUpgraded += () => {
 			spriteRenderer = transform.SearchByName("orc_head").GetComponent<SpriteRenderer>();

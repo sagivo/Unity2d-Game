@@ -78,9 +78,9 @@ MonoBehaviour:
   damagePerLevel: 0000000001000000
   bullet: {fileID: 114890, guid: 960f7127fafd54ea5834a38b8bd82fcd, type: 2}
   rangeShootPerLevel:
+  - 0
+  - 6
   - 10
-  - 20
-  - 50
   attackSpeedPerLevel:
   - 0
   - 1.89999998
