@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 6b029f49efebb4813a280b16e9be7711
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: baby.pbg_0
+    21300002: baby.pbg_1
+    21300004: baby.pbg_2
+    21300006: baby.pbg_3
+    21300008: baby.pbg_4
+    21300010: baby.pbg_5
+    21300012: baby.pbg_6
+    21300014: baby.pbg_7
+    21300016: baby.pbg_8
+    21300018: baby.pbg_9
+    21300020: baby.pbg_10
+    21300022: baby.pbg_11
+    21300024: baby.pbg_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 70
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: baby.pbg_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 438
+        width: 35
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 512
+        width: 91
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 480
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 480
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_4
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 437
+        width: 95
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 273
+        width: 173
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 221
+        width: 57
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_7
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 204
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 145
+        width: 71
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_9
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 116
+        width: 50
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 74
+        width: 101
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_11
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 34
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby.pbg_12
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 24
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

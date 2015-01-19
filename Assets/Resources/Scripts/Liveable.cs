@@ -15,6 +15,7 @@ public abstract class Liveable : BaseObj {
 	public int health;
 	public int level;
 	public StatusType status;
+	public bool IsSelectable;
 	public float[] speedPerLevel = new float[]{0,2,1.5f,1.3f};
 	protected float speed {get {return speedPerLevel[level];}}
 	[Header("Sprites")]
