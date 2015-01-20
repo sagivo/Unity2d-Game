@@ -34,7 +34,6 @@ public abstract class Liveable : BaseObj {
 	HealthBarController healthBar;
 	string dynamicName = "Dynamic GO";
 
-	//inspecor
 	public int[] healthPerLevel; // {get { return _healthPerLevel; } set{ _healthPerLevel = value; health = healthPerLevel[level]; if (showHealthBar) healthBar.divider = health; }}
 
 	protected new void Awake(){
