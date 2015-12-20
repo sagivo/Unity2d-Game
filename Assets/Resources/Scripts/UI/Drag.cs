@@ -46,7 +46,7 @@ public class Drag : BaseObj, IDragHandler, IEndDragHandler {
 			switch (dragType) {
 			case DragType.Build:
 				if (!buildObj.canBuild()) return;
-				Building newObj = GameObject.Instantiate(buildObj, activeCell.transform.renderer.bounds.center,Quaternion.identity) as Building;
+				Building newObj = GameObject.Instantiate(buildObj, activeCell.transform.GetComponent<Renderer>().bounds.center,Quaternion.identity) as Building;
 				activeCell.liveObj = newObj;
 				break;
 			case DragType.Upgrade:

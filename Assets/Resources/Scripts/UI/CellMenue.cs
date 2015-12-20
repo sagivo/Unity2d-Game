@@ -42,7 +42,7 @@ public class CellMenue : BaseObj {
 	public void build(Building o){
 		if (!o.canBuild()) return;
 		Cell cell = Cell.getSelected();
-		Building newObj = GameObject.Instantiate(o, cell.transform.renderer.bounds.center,Quaternion.identity) as Building;
+		Building newObj = GameObject.Instantiate(o, cell.transform.GetComponent<Renderer>().bounds.center,Quaternion.identity) as Building;
 		cell.liveObj = newObj;
 		closeMenue(); cell.unSelect();
 	}

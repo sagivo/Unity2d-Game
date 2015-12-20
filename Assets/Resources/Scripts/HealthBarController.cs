@@ -29,10 +29,10 @@ public class HealthBarController : BaseObj
 		health = newHealth;
 
 		if (hbProgress != null){
-			float originalValue = hbProgress.renderer.bounds.min.x;
+			float originalValue = hbProgress.GetComponent<Renderer>().bounds.min.x;
 			float calculate = Mathf.Clamp (health / divider, 0f, 1f);
 			hbProgress.transform.localScale = new Vector3 (calculate, 1f, 1f);
-			float newValue = hbProgress.renderer.bounds.min.x;
+			float newValue = hbProgress.GetComponent<Renderer>().bounds.min.x;
 			float difference = newValue - originalValue;
 			hbProgress.transform.Translate(new Vector2 (-difference, 0));
 		}

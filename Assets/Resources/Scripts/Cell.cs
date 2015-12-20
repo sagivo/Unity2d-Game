@@ -58,7 +58,7 @@ public class Cell : Liveable {
 	public void unSelect(){	
 		if (status != StatusType.Live) return;
 		sprite.color = ColorBase;
-		renderer.material.color = ColorBase;
+		GetComponent<Renderer>().material.color = ColorBase;
 	}
 
 	public static void unselectSelected(){
