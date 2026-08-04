@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Hex Core Defense</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="hud">
+      <div class="hud-block gold">
+        <span class="hud-emoji">💰</span>
+        <div>
+          <div class="label">Gold</div>
+          <div id="minerals" class="value">40</div>
+        </div>
+      </div>
+      <div class="hud-block">
+        <span class="hud-emoji">❤️</span>
+        <div>
+          <div class="label">Core HP</div>
+          <div id="core-hp" class="value">300</div>
+        </div>
+      </div>
+      <div class="hud-block">
+        <span class="hud-emoji">🌊</span>
+        <div>
+          <div class="label">Wave</div>
+          <div id="wave" class="value">1</div>
+        </div>
+      </div>
+      <div class="hud-block quiet">
+        <div>
+          <div class="label">Score</div>
+          <div id="score" class="value">0</div>
+        </div>
+      </div>
+      <button id="btn-settings-hud" title="Asset settings">🎨</button>
+      <button id="btn-pause" title="Pause">⏸</button>
+    </header>
+
+    <div id="goal-bar">
+      <span id="goal-text">Protect the baby core. Build turrets. Survive waves.</span>
+      <span id="wave-timer"></span>
+    </div>
+
+    <canvas id="game"></canvas>
+
+    <div id="action-panel" class="hidden">
+      <div class="ap-title" id="ap-title">Empty tile</div>
+      <div class="ap-sub" id="ap-sub">What do you want to build?</div>
+      <div class="ap-btns" id="ap-btns"></div>
+      <button class="ap-close" id="ap-close">✕</button>
+    </div>
+
+    <div id="coach" class="hidden">
+      <div class="coach-step" id="coach-step">1/4</div>
+      <p id="coach-text">Welcome!</p>
+      <button id="coach-next">Got it</button>
+    </div>
+
+    <div id="toast" class="hidden"></div>
+
+    <div id="overlay">
+      <div class="panel">
+        <div class="panel-badge">EASY MODE</div>
+        <h1 id="overlay-title">Hex Core Defense</h1>
+        <p id="overlay-msg">Protect the baby. Enemies come in waves. Spend gold on turrets and miners.</p>
+        <ol class="flow">
+          <li><b>Gold</b> comes from your Miner factories</li>
+          <li><b>Click a blue tile</b> → build a Turret or Miner</li>
+          <li><b>Turrets shoot for you</b> — you just manage the base</li>
+          <li><b>Expand</b> when you need more room</li>
+        </ol>
+        <div class="panel-actions">
+          <button id="btn-start">Play</button>
+          <button id="btn-settings-open" class="btn-secondary">Settings</button>
+        </div>
+        <p class="tiny">Tip: open Asset Settings to swap sprites and tweak sizes</p>
+      </div>
+    </div>
+
+    <!-- Asset settings page -->
+    <div id="settings" class="hidden">
+      <div class="settings-shell">
+        <header class="settings-head">
+          <div>
+            <h2 id="settings-title">Game Settings</h2>
+            <p id="settings-sub">Tune difficulty, damage, spawns, and assets.</p>
+          </div>
+          <button type="button" id="btn-settings-close" class="btn-icon">✕</button>
+        </header>
+
+        <div id="settings-grid" class="settings-body"></div>
+
+        <footer class="settings-foot">
+          <span id="settings-status"></span>
+          <div class="settings-foot-actions">
+            <button type="button" id="btn-settings-import" class="btn-secondary">Import</button>
+            <button type="button" id="btn-settings-export" class="btn-secondary">Export</button>
+            <button type="button" id="btn-settings-reset-all" class="btn-danger">Reset all</button>
+            <button type="button" id="btn-settings-apply" class="btn-primary">Apply</button>
+          </div>
+        </footer>
+      </div>
+      <input type="file" id="settings-file" accept="image/*" hidden />
+      <input type="file" id="settings-import-file" accept="application/json,.json" hidden />
+    </div>
+  </div>
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>
